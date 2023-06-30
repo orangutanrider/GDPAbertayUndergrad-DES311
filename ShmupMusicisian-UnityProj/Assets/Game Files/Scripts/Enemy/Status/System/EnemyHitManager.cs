@@ -12,7 +12,8 @@ public class EnemyHitManager : MonoBehaviour
     [ReadOnly]
     [SerializeField] int cachedEnemies = 0;
 
-    List<EnemyStatusChanger> enemyList = null;
+    // (it has to be serialized for it to save the cache, otherwise it gets reset when you go in and out of play mode) (hence: [HideInInspector] [SerializeField])
+    [HideInInspector] [SerializeField] List<EnemyStatusChanger> enemyList = null; 
 
     #region Initialization
     [ContextMenu("Cache and Initialize Enemies")]
@@ -31,7 +32,7 @@ public class EnemyHitManager : MonoBehaviour
             enemyList.Add(enemyArray[loop]);
 
             // update enemy names
-            RenameEnemy(enemyArray[loop], loop); 
+            RenameEnemyStatusChanger(enemyArray[loop], loop); 
         }
 
         Debug.Log("Cached and initialized " + enemyArray.Length + " enemies.");
@@ -44,15 +45,20 @@ public class EnemyHitManager : MonoBehaviour
             enemyList = new List<EnemyStatusChanger>();
         }
 
-        RenameEnemy(enemy, enemyList.Count);
+        RenameEnemyStatusChanger(enemy, enemyList.Count);
         enemyList.Add(enemy);
 
         cachedEnemies = enemyList.Count;
     }
 
-    void RenameEnemy(EnemyStatusChanger enemy, int index)
+    void RenameEnemyStatusChanger(EnemyStatusChanger enemy, int index)
     {
         enemy.gameObject.name = index.ToString() + "-EnemyStatus";
+
+        foreach(EnemyHittable hittable in enemy.hittables)
+        {
+            hittable.gameObject.name = index.ToString() + "-EnemyHittable";
+        }
     }
 
     // Debug
@@ -91,13 +97,14 @@ public class EnemyHitManager : MonoBehaviour
         string indexPortionOfName = "";
         for (int loop = 0; loop < enemyName.Length; loop++)
         {
-            indexPortionOfName = indexPortionOfName + enemyName[loop];
             if (enemyName[loop] == '-')
             {
                 // end loop
                 loop = enemyName.Length;
                 continue;
             }
+
+            indexPortionOfName = indexPortionOfName + enemyName[loop];
         }
 
         bool parseSuccess = int.TryParse(indexPortionOfName, out int index);
@@ -106,6 +113,8 @@ public class EnemyHitManager : MonoBehaviour
             Debug.LogWarning("Parse unsucessful, name is likely formatted incorrectly (it must start with a number, and a '-' must be used to denote the end of the number)");
             return null; 
         }
+
+        // (index out of bounds isn't handled, it can happen but it's not up to this script to deal with it)
 
         return enemyList[index];
     }

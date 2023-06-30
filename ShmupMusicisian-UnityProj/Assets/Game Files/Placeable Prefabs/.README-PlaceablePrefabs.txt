@@ -1,0 +1,3 @@
+This folder is for prefabs that you place yourself while in the Unity editor. If you were making a level, you'd place certain things in it by using this folder.
+
+This folder is not for prefabs that get instantiated, though exceptions may apply. Simply put, there shouldn't be prefabs for things like bullets in here.

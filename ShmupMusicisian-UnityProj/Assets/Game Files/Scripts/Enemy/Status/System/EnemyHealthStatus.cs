@@ -4,9 +4,47 @@ using UnityEngine;
 
 public abstract class EnemyHealthStatus : MonoBehaviour
 {
+    [ReadOnly]
+    [SerializeField] float health = 0;
+
+    [Header("Required References")]
+    [SerializeField] EnemyStatusParams statusParams;
+
+    [Header("Component Refs (nullable)")]
+    public EnemyDeathHandler deathHandler;
+
     public float Health
     {
-        get;
-        set;
+        get
+        {
+            return health;
+        }
+        set
+        {
+            health = value;
+
+            if (health <= 0 && deathHandler != null)
+            {
+                deathHandler.ExecuteDeath();
+            }
+        }
+    }
+
+    private void Start()
+    {
+        health = statusParams.maxHealth;
+
+        if(deathHandler == null)
+        {
+            Debug.Log(gameObject.name + " has no death handler, if health drops below 0 this enemy will not die.");
+        }
+    }
+
+    private void OnValidate()
+    {
+        if(statusParams != null)
+        {
+            health = statusParams.maxHealth;
+        }
     }
 }

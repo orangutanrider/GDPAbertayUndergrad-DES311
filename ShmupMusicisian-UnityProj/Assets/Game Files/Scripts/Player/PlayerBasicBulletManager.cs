@@ -5,12 +5,42 @@ using UnityEngine;
 public class PlayerBasicBulletManager : MonoBehaviour
 {
     [Header("Required References")]
-    public BasicPlayerBulletParams bulletParams;
+    [SerializeField] BasicPlayerBulletParams bulletParams;
+    [Space]
+    public Transform firingPointA;
+    public Transform firingPointB;
+    public EnemyHitManager hitManager;
+    public GameObject playerRootObject;
 
     List<BasicPlayerBulletScript> bulletPool = new List<BasicPlayerBulletScript>();
 
     int activeBullets = 0;
     int bulletPoolCursor = 0;
+
+    public const string heirarchyObjectName = "BasicBullets";
+    GameObject heirarchyObject = null;
+
+    readonly Vector3 bulletSpawnPoint = new Vector3(100, 100);
+
+    // Initialize
+    private void Start()
+    {
+        // get params
+        int maxConcurrentBullets = bulletParams.maxConcurrentBullets;
+
+        // Spawn heirarchy object
+        heirarchyObject = new GameObject(heirarchyObjectName);
+        heirarchyObject.transform.position = Vector3.zero;
+
+        // Spawn bullets
+        for (int loop = 0; loop <= maxConcurrentBullets; loop++)
+        {
+            SpawnNewBulletIntoPool();
+        }
+
+        // Initialize BasicBullet class
+        BasicPlayerBulletScript.InitializeBullets(firingPointA, firingPointB, hitManager, playerRootObject);
+    }
 
     public void ShootBullet()
     {
@@ -18,11 +48,6 @@ public class PlayerBasicBulletManager : MonoBehaviour
         if (bullet == null) { return; }
 
         bullet.ShootBullet();
-    }
-
-    public void EndBullet(BasicPlayerBulletScript bullet)
-    {
-
     }
 
     BasicPlayerBulletScript GetPooledBullet()
@@ -61,5 +86,20 @@ public class PlayerBasicBulletManager : MonoBehaviour
         int maxConcurrentBullets = bulletParams.maxConcurrentBullets;
         bulletPoolCursor++;
         if (bulletPoolCursor > maxConcurrentBullets) { bulletPoolCursor = 0; }
+    }
+
+    void SpawnNewBulletIntoPool()
+    {
+        // get params
+        GameObject bulletPrefab = bulletParams.BulletPrefab;
+
+        // Instantiate new bullet
+        GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint, Quaternion.Euler(Vector3.zero), heirarchyObject.transform);
+        BasicPlayerBulletScript bulletScript = newBullet.GetComponent<BasicPlayerBulletScript>();
+
+        // Add bullet to pool
+        bulletPool.Add(bulletScript);
+
+        // (the bullets set themselves to inactive on start)
     }
 }

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         XYMovement(xyInput);
     }
 
+    // Input event
     public void XYMovementInput(InputAction.CallbackContext context)
     {
         xyInput = context.ReadValue<Vector2>();
