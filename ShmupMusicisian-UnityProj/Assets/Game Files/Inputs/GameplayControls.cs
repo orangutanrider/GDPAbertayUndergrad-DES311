@@ -35,6 +35,15 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FireBasicWeaponsInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""f67c4ef4-37ec-4ca0-b963-d15649ae9ceb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -257,6 +266,39 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
                     ""action"": ""XYMovementInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8974aef2-0d2f-40ba-ab44-4d3894742973"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBasicWeaponsInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd80762b-f4bf-48d6-a837-766461504240"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBasicWeaponsInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0cc020b-2d5f-4875-8059-7858a36af879"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireBasicWeaponsInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -266,6 +308,7 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
         // GameplayActionMap
         m_GameplayActionMap = asset.FindActionMap("GameplayActionMap", throwIfNotFound: true);
         m_GameplayActionMap_XYMovementInput = m_GameplayActionMap.FindAction("XYMovementInput", throwIfNotFound: true);
+        m_GameplayActionMap_FireBasicWeaponsInput = m_GameplayActionMap.FindAction("FireBasicWeaponsInput", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -328,11 +371,13 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GameplayActionMap;
     private List<IGameplayActionMapActions> m_GameplayActionMapActionsCallbackInterfaces = new List<IGameplayActionMapActions>();
     private readonly InputAction m_GameplayActionMap_XYMovementInput;
+    private readonly InputAction m_GameplayActionMap_FireBasicWeaponsInput;
     public struct GameplayActionMapActions
     {
         private @GameplayControls m_Wrapper;
         public GameplayActionMapActions(@GameplayControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @XYMovementInput => m_Wrapper.m_GameplayActionMap_XYMovementInput;
+        public InputAction @FireBasicWeaponsInput => m_Wrapper.m_GameplayActionMap_FireBasicWeaponsInput;
         public InputActionMap Get() { return m_Wrapper.m_GameplayActionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -345,6 +390,9 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
             @XYMovementInput.started += instance.OnXYMovementInput;
             @XYMovementInput.performed += instance.OnXYMovementInput;
             @XYMovementInput.canceled += instance.OnXYMovementInput;
+            @FireBasicWeaponsInput.started += instance.OnFireBasicWeaponsInput;
+            @FireBasicWeaponsInput.performed += instance.OnFireBasicWeaponsInput;
+            @FireBasicWeaponsInput.canceled += instance.OnFireBasicWeaponsInput;
         }
 
         private void UnregisterCallbacks(IGameplayActionMapActions instance)
@@ -352,6 +400,9 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
             @XYMovementInput.started -= instance.OnXYMovementInput;
             @XYMovementInput.performed -= instance.OnXYMovementInput;
             @XYMovementInput.canceled -= instance.OnXYMovementInput;
+            @FireBasicWeaponsInput.started -= instance.OnFireBasicWeaponsInput;
+            @FireBasicWeaponsInput.performed -= instance.OnFireBasicWeaponsInput;
+            @FireBasicWeaponsInput.canceled -= instance.OnFireBasicWeaponsInput;
         }
 
         public void RemoveCallbacks(IGameplayActionMapActions instance)
@@ -372,5 +423,6 @@ public partial class @GameplayControls: IInputActionCollection2, IDisposable
     public interface IGameplayActionMapActions
     {
         void OnXYMovementInput(InputAction.CallbackContext context);
+        void OnFireBasicWeaponsInput(InputAction.CallbackContext context);
     }
 }
