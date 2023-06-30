@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 public abstract class EnemyStatusChanger : MonoBehaviour
 {
+    [Header("Hitbox Objects")]
+    public List<EnemyHittable> hittables;
+
     [Header("Component Refs (nullable)")]
     public EnemyHealthStatus healthStatus;
 
