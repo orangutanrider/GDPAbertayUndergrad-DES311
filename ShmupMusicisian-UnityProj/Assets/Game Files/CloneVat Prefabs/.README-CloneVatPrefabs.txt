@@ -1,0 +1,3 @@
+This folders is for prefabs that get instantiated by scripts; prefabs that aren't made to be placed inside scenes by the developer.
+
+Stuff like bullets go in here.
