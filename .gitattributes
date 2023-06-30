@@ -130,3 +130,7 @@
 
 # Wwise
 *.bnk lfs
+
+# Misc
+*.pdf lfs
+*.ttf lfs
