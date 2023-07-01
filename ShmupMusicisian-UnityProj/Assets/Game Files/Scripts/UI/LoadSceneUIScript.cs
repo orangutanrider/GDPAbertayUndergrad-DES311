@@ -10,11 +10,21 @@ public class LoadSceneUIScript : MonoBehaviour
 
     public void LoadSceneByName()
     {
-        SceneManager.LoadScene(loadParams.name, loadParams.loadMode);
+        SceneManager.LoadScene(loadParams.sceneName, loadParams.loadMode);
     }
 
     public void LoadSceneByIndex()
     {
-        SceneManager.LoadScene(loadParams.sceneIndex, loadParams.loadMode);
+        SceneManager.LoadScene(loadParams.buildIndex, loadParams.loadMode);
+    }
+
+    public void UnLoadSceneByName()
+    {
+        SceneManager.UnloadSceneAsync(loadParams.sceneName);
+    }
+
+    public void UnLoadSceneByIndex()
+    {
+        SceneManager.UnloadSceneAsync(loadParams.buildIndex);
     }
 }

@@ -8,19 +8,25 @@ public class EnemyHitManagerCustomEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
-
         EnemyHitManager hitManager = (EnemyHitManager)target;
 
-        // cache button
-        if (GUILayout.Button("CacheAndInitializeEnemies"))
+        DrawDefaultInspector();
+
+        if (GUILayout.Button("Cache and Initialize Enemies"))
         {
             hitManager.CacheAndInitializeEnemies();
         }
 
-        if (GUILayout.Button("PrintAndHighlightEnemyList"))
+        if (GUILayout.Button("Print and Highlight Enemy List"))
         {
             hitManager.PrintAndHighlightEnemyList();
         }
+
+        if (GUILayout.Button("Try Cache Pre-Initialized Enemies"))
+        {
+            hitManager.TryCachePreInitializedEnemies();
+        }
+
+        serializedObject.ApplyModifiedProperties();
     }
 }
