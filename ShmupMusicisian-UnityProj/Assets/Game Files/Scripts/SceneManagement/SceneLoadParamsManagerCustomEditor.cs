@@ -11,11 +11,11 @@ public class SceneLoadParamsManagerCustomEditor : Editor
     SerializedProperty managedGroups;
 
     const string setBuildIndexesMessage = "Doing this will go through each group given and set their buildIndex values. " +
-        "The system gets their buildIndex values by using their name values to find their buildIndexes in the build settings." +
+        "The system gets their buildIndex values by using the path values to find each scene and its buildIndex, in the build settings." +
         "This will overwrite any previously set buildIndex values";
-    const string setNamesMessage = "Doing this will go through each group given and set their sceneName values." +
-        "The system gets their names by using their buildIndex values to find their names in the build settings." +
-        "This will overwrite any previously set names.";
+    const string setNamesAndPathsMessage = "Doing this will go through each group given and set their sceneName and path values." +
+        "The system gets their names and paths by using their buildIndex values to find each scene and its path, in the build settings." +
+        "This will overwrite any previously set names and paths.";
 
     private void OnEnable()
     {
@@ -35,7 +35,7 @@ public class SceneLoadParamsManagerCustomEditor : Editor
         EditorGUILayout.LabelField("Multi Edit", EditorStyles.boldLabel);
         if (GUILayout.Button("Set Names and Paths by using BuildIndexes"))
         {
-            if (EditorUtility.DisplayDialog("Set Names", setNamesMessage, "Ok", "Cancel") == true)
+            if (EditorUtility.DisplayDialog("Set Names", setNamesAndPathsMessage, "Ok", "Cancel") == true)
             {
                 paramsManager.SetNamesAndPathsByUsingBuildIndexes();
             }
@@ -68,11 +68,11 @@ public class SceneLoadParamsManagerCustomEditor : Editor
 
         // TARGET EDIT PARAMS
         EditorGUILayout.LabelField("Target Edit Params", EditorStyles.boldLabel);
-        if (GUILayout.Button("Set Target Name and Path by using its BuildIndex"))
+        if (GUILayout.Button("Set Target's Name and Path by using its BuildIndex"))
         {
             paramsManager.TargetLoadParamsSetNameAndPath();
         }
-        if (GUILayout.Button("Set Target BuildIndex by using its Path"))
+        if (GUILayout.Button("Set Target's BuildIndex by using its Path"))
         {
             paramsManager.TargetLoadParamsSetBuildIndex();
         }
