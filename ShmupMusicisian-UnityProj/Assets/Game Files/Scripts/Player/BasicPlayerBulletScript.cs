@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicPlayerBulletScript : MonoBehaviour
 {
     [Header("Required References")]
+    public GameObject bulletRoot;
     public Rigidbody2D rb2D;
     [SerializeField] BasicPlayerBulletParams bulletParams;
 
@@ -120,7 +121,7 @@ public class BasicPlayerBulletScript : MonoBehaviour
 
         // activate it
         active = true;
-        gameObject.SetActive(true);
+        bulletRoot.SetActive(true);
 
         // position it at a firing point
         firingPointABFlipFlop = !firingPointABFlipFlop;
@@ -142,7 +143,7 @@ public class BasicPlayerBulletScript : MonoBehaviour
     public void DeActivateBullet()
     {
         active = false;
-        gameObject.SetActive(false);
+        bulletRoot.SetActive(false);
     }
     #endregion
 }
