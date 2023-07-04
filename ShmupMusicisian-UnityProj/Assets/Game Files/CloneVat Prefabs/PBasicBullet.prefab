@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9f66b9d3e3ada4da1130e7e4b95d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletRoot: {fileID: 2356018554807283482}
   rb2D: {fileID: 611095047904052316}
   bulletParams: {fileID: 11400000, guid: 1413a828292948745a1a963290694854, type: 2}
 --- !u!50 &611095047904052316
