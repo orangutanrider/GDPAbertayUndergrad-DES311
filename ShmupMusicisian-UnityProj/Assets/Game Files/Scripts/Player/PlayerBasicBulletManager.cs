@@ -20,7 +20,7 @@ public class PlayerBasicBulletManager : MonoBehaviour
     public const string heirarchyObjectName = "BasicBullets";
     GameObject heirarchyObject = null;
 
-    readonly Vector3 bulletSpawnPoint = new Vector3(100, 100);
+    static readonly Vector3 bulletSpawnPoint = new Vector3(100, 100);
 
     // Initialize
     private void Start()
