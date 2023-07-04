@@ -9,6 +9,7 @@ public class SceneLoadParams : ScriptableObject
     public string sceneName = "";
     public string scenePath = "";
     public int buildIndex = 0;
-    [Space]
+
+    [Header("Additional Data")]
     public LoadSceneMode loadMode = LoadSceneMode.Single;
 }
