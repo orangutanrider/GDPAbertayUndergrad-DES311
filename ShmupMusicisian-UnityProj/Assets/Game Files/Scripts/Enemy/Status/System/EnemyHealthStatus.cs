@@ -13,7 +13,12 @@ public abstract class EnemyHealthStatus : MonoBehaviour
     [Header("Component Refs (nullable)")]
     public EnemyDeathHandler deathHandler;
 
-    public float Health
+    public EnemyStatusParams StatusParams
+    {
+        get { return statusParams; }
+    }
+
+    public virtual float Health
     {
         get
         {
@@ -30,7 +35,7 @@ public abstract class EnemyHealthStatus : MonoBehaviour
         }
     }
 
-    private void Start()
+    public virtual void Start()
     {
         health = statusParams.maxHealth;
 

@@ -7,7 +7,7 @@ public abstract class EnemyDeathHandler : MonoBehaviour
     [Header("Required References")]
     public GameObject enemyRoot; // temp variable for temp death soloution of destroying the root object
 
-    public void ExecuteDeath()
+    public virtual void ExecuteDeath()
     {
         // temp destroy enemy
         Destroy(enemyRoot);
