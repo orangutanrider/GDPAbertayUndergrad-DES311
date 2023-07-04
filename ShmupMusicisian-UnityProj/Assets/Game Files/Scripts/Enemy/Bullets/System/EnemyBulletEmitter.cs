@@ -10,7 +10,10 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     [SerializeField] EnemyBulletEmitterBaseParams emitterBaseParams;
 
     #region Variables
-    public static readonly Vector3 bulletSpawnPoint = new Vector3(-100, -100);
+    public EnemyBulletEmitterBaseParams EmitterBaseParams
+    {
+        get { return emitterBaseParams; }
+    }
 
     public List<GameObject> BulletPool
     {
@@ -25,24 +28,29 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     }
     List<GameObject> bulletPool = new List<GameObject>();
 
+    public float EmissionTimer { get; set; }
+    public const float fallbackEmissionRate = 0.5f;
+
+    public static readonly Vector3 bulletSpawnPoint = new Vector3(-100, -100);
+
     public int ActiveBullets { get; set; }
     public int BulletPoolCursor { get; set; }
     public GameObject HeirarchyObject { get; set; } // the heirarchy object is used to group all bullets under the same heirarchy (to keep things neat)
-
-    public virtual float EmissionTimer
-    {
-        get
-        {
-            return emissionTimer;
-        }
-        set
-        {
-            emissionTimer = value;
-        }
-    }
-    float emissionTimer = 0;
-    public const float fallbackEmissionRate = 0.5f;
     #endregion
+
+    // Important Overrides:
+    // Start() - override and use CreateHeirarchyObject(nameHere) and spawn your bullet pool here 
+    // Update() - override the emission rate here
+    // Emit() - override if you want to create bullet patterns 
+
+    // Important Functions:
+    // EmissionTimerUpdate() - use this instead of timer = timer + time.deltaTime
+    // GetPooledBullet() - self explanatory
+    // SpawnNewBulletIntoPool(GameObject bulletPrefab) - use to spawn your bullet pool
+    // CreateHeirarchyObject(nameHere) - use in start before you spawn your bullet pool
+
+    // Important Variables:
+    // activeAndFiring (the on/off switch)
 
     public virtual void Start()
     {
@@ -71,8 +79,19 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         EmissionTimer = 0;
 
         GameObject bulletBeingEmitted = GetPooledBullet();
-        if (bulletBeingEmitted == null) { return; }
+
+        if (bulletBeingEmitted == null && emitterBaseParams.printEmissionFails == true) 
+        {
+            Debug.Log("The emitter on gameobject '" + gameObject.name + "' couldn't get a bullet from its pool");
+            return; 
+        }
+        if (bulletBeingEmitted == null)
+        {
+            return;
+        }
+
         bulletBeingEmitted.SetActive(true);
+        bulletBeingEmitted.transform.position = transform.position;
     }
 
     public virtual float EmissionTimerUpdate()
@@ -99,7 +118,15 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         int maxConcurrentBullets = emitterBaseParams.maxConcurrentBullets;
 
         // if all bullets are active, return
-        if (ActiveBullets >= maxConcurrentBullets) { return null; }
+        if (ActiveBullets >= maxConcurrentBullets && emitterBaseParams.printEmissionFails == true) 
+        {
+            Debug.Log("The emitter on gameobject '" + gameObject.name + "' reached its maxConcurrentBullets, cannot emit");
+            return null; 
+        }
+        if (ActiveBullets >= maxConcurrentBullets)
+        {
+            return null;
+        }
 
         // both loops combined will go through the entire list of bullets (if required)
 
@@ -119,6 +146,12 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
 
             IncrementBulletPoolCursor();
             return bulletPool[loop];
+        }
+
+        if(emitterBaseParams.printEmissionFails == true)
+        {
+            Debug.LogWarning("The emitter on gameobject '" + gameObject.name + "' encountered an miscellaneous emission error");
+            return null;
         }
 
         return null;
