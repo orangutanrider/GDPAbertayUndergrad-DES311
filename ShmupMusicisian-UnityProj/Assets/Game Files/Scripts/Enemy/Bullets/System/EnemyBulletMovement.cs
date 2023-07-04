@@ -6,20 +6,22 @@ public abstract class EnemyBulletMovement : MonoBehaviour
 {
     [Header("(Base) Required References")]
     [SerializeField] EnemyBulletBaseParams bulletBaseParams;
-    public Rigidbody2D rb2D;
 
-    public const float fallbackSpeed = 1;
+    // Implement the speedMultiply from the base params so that groups of bullets can be edited and adjusted all at once
 
     public EnemyBulletBaseParams BulletBaseParams
     {
         get { return bulletBaseParams; }
     }
 
+    // Use this to represent the overall direction of movement
+    // What that means is that say you had a bullet moving along a sine wave pattern, and the sine wave was moving down
+    // Then this would be equal to down
     public Vector2 MovementDirection
     {
         get
         {
-            return movementDirection;
+            return movementDirection.normalized;
         }
         set
         {
@@ -28,14 +30,24 @@ public abstract class EnemyBulletMovement : MonoBehaviour
     }
     Vector2 movementDirection = Vector2.down;
 
-    public virtual void OnEnable()
+    // use this to represent the velocity
+    public Vector2 Velocity
     {
-        BulletMovement();
+        get
+        {
+            return velocity;
+        }
+        set
+        {
+            velocity = value;
+        }
     }
-
-    public virtual void BulletMovement()
+    Vector2 velocity = Vector2.down;
+    
+    // this is just here to make it simple (as all this class really needs from the other script is for them to update these values and to use the speed multiply)
+    public void UpdateBaseData(Vector2 _movementDirection, Vector2 _velocity)
     {
-        // it is down to the dev to abbide and implement the speedMultiply parameter, though this isn't to say there are no scenarios where it shouldn't be implemented
-        rb2D.velocity = movementDirection * fallbackSpeed * bulletBaseParams.speedMultiply;
+        movementDirection = _movementDirection;
+        velocity = _velocity;
     }
 }

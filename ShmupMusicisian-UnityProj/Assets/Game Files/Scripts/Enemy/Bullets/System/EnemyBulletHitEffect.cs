@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public abstract class EnemyBulletStatusAffector : MonoBehaviour
+public abstract class EnemyBulletHitEffect : MonoBehaviour
 {
     [Header("(Base) Required References")]
     [SerializeField] EnemyBulletBaseParams bulletBaseParams;
     public GameObject bulletRoot;
     public EnemyBulletMovement bulletMovement;
 
+    // Implement the damageMultiply from the base params so that groups of bullets can be edited and adjusted all at once
+
     #region Variables
-    public const float fallbackDamageAmount = 1;
     public EnemyBulletBaseParams BulletBaseParams
     {
         get { return bulletBaseParams; }
@@ -26,6 +26,9 @@ public abstract class EnemyBulletStatusAffector : MonoBehaviour
         MiscHit
     }
     #endregion
+
+    // Important Overrides:
+    // BulletPlayerHit(Collider2D collision) - override to make the bullet do things when hits
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,16 +45,8 @@ public abstract class EnemyBulletStatusAffector : MonoBehaviour
         PlayerStatusChanger playerStatus = collision.GetComponent<PlayerStatusChanger>();
         if (playerStatus == null) { return; }
 
-        ApplyDamage(fallbackDamageAmount, playerStatus);
-
+        Debug.Log("Bullet hit, but it does not override the BulletPlayerHit() function, so it has done nothing and deactivated.");
         DeActivateBullet();
-    }
-
-    public virtual void ApplyDamage(float damageAmount, PlayerStatusChanger playerStatus)
-    {
-        float damage = damageAmount * bulletBaseParams.damageMultiply;
-        AtPlayerDamageData damageData = new AtPlayerDamageData(damage, transform.position, bulletMovement.rb2D.velocity, BulletSourceObject);
-        playerStatus.ApplyDamage(damageData);
     }
 
     public CollisionResults HandleBulletCollision(Collider2D collision)
@@ -102,6 +97,8 @@ public abstract class EnemyBulletStatusAffector : MonoBehaviour
 
     public void DeActivateBullet()
     {
+        // in the future this could ping a deactivation handler or something
+        // cause there might be hit effects like an explosion or something 
         bulletRoot.SetActive(false);
     }
 }
