@@ -23,8 +23,8 @@ public class BasicPlayerBulletScript : MonoBehaviour
     static bool firingPointABFlipFlop = false; // false is A, true is B
     static Transform firingPointA = null;
     static Transform firingPointB = null;
-    static GameObject playerObject;
-    static EnemyHitManager hitManager;
+    static PlayerBasicBulletManager bulletManager = null;
+    static GameObject playerRootObject;
 
     void Start()
     {
@@ -60,6 +60,13 @@ public class BasicPlayerBulletScript : MonoBehaviour
 
     void HandleBulletCollision(Collider2D collision)
     {
+        if (initialized == false)
+        {
+            Debug.LogWarning("BasicBullets haven't been initialized, a BasicBulletManager is usually what does this.");
+            DeActivateBullet();
+            return;
+        }
+
         // get params
         LayerMask enemyMask = bulletParams.enemyMask;
         LayerMask bulletBoundaryMask = bulletParams.bulletBoundaryMask;
@@ -69,7 +76,7 @@ public class BasicPlayerBulletScript : MonoBehaviour
         // if enemy hit
         if ((enemyMask & (1 << layer)) != 0)
         {
-            BullletEnemyHit(collision);
+            bulletManager.RegisterBulletEnemyHit(collision, this);
             return;
         }
         // if boundary hit
@@ -80,38 +87,15 @@ public class BasicPlayerBulletScript : MonoBehaviour
         }
     }
 
-    void BullletEnemyHit(Collider2D collision)
-    {
-        if(initialized == false)
-        {
-            Debug.LogWarning("BasicBullets haven't been initialized, a BasicBulletManager is usually what does this.");
-            DeActivateBullet();
-            return;
-        }
-
-        // get enemy status
-        EnemyStatusChanger enemyStatus = hitManager.GetEnemyStatusViaFormattedName(collision.gameObject.name);
-        if(enemyStatus == null) { return; }
-
-        // get params
-        float damage = bulletParams.damage;
-
-        // construct damage data
-        AtEnemyDamageData damageData = new AtEnemyDamageData(damage, Vector2.up, transform.position, playerObject);
-
-        // apply damage
-        enemyStatus.ApplyDamage(damageData);
-    }
-
     #region Object Pooling Stuff
-    public static void InitializeBullets(Transform _firingPointA, Transform _firingPointB, EnemyHitManager _hitManager, GameObject _playerObject)
+    public static void InitializeBullets(Transform _firingPointA, Transform _firingPointB,PlayerBasicBulletManager _bulletManager, GameObject _playerRootObject)
     {
         initialized = true;
-
+  
         firingPointA = _firingPointA;
         firingPointB = _firingPointB;
-        hitManager = _hitManager;
-        playerObject = _playerObject;
+        bulletManager = _bulletManager;
+        playerRootObject = _playerRootObject;
     }
 
     void ActivateBullet()

@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game Files/Scenes/Menus.unity
+    path: Assets/Game Files/Scenes/MainMenuScene.unity
     guid: ddf44eece0c714b4cbed87e5109fabfe
   - enabled: 1
-    path: Assets/Game Files/Scenes/DemoScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Game Files/Scenes/PlayerScene.unity
+    guid: a77e912fa32fa794993072fc8698c2af
   - enabled: 1
     path: Assets/Game Files/Scenes/GameOverScreen.unity
     guid: f847906b3fc5b424e948c2c98f9f7741
+  - enabled: 1
+    path: Assets/Game Files/Scenes/DemoLevelScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Game Files/Scenes/DemoEnemiesScene.unity
+    guid: c975c69cb5b723747a88bb041b06fdc8
   m_configObjects: {}

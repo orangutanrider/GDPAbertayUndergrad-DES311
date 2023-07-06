@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff754b8d384e7bd448c7916b5f3c1532, type: 3}
+  m_Name: DemoLoadStack
+  m_EditorClassIdentifier: 
+  loadStack:
+  - name: DemoLevel  (SingleLoad)
+    sceneReference: {fileID: 11400000, guid: a6f6b64012dec21418d5a8781f094cbc, type: 2}
+    loadMode: 0
+  - name: DemoEnemies  (AdditiveLoad)
+    sceneReference: {fileID: 11400000, guid: e9acc781a7d4f124f812ee84f8ea466c, type: 2}
+    loadMode: 1
+  - name: Player  (AdditiveLoad)
+    sceneReference: {fileID: 11400000, guid: d4e8aba283f1cc2489d7c3ea15581b2a, type: 2}
+    loadMode: 1

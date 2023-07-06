@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SceneLoadParamsManager)), CanEditMultipleObjects]
-public class SceneLoadParamsManagerCustomEditor : Editor
+[CustomEditor(typeof(SceneReferenceManager)), CanEditMultipleObjects]
+public class SceneReferenceManagerCustomEditor : Editor
 {
-    SerializedProperty targetLoadParams;
+    SerializedProperty targetSingle;
     SerializedProperty targetGroup;
     SerializedProperty managedGroups;
 
@@ -19,14 +17,14 @@ public class SceneLoadParamsManagerCustomEditor : Editor
 
     private void OnEnable()
     {
-        targetLoadParams = serializedObject.FindProperty("targetLoadParams");
+        targetSingle = serializedObject.FindProperty("targetSingle");
         targetGroup = serializedObject.FindProperty("targetGroup");
         managedGroups = serializedObject.FindProperty("managedGroups");
     }
 
     public override void OnInspectorGUI()
     {
-        SceneLoadParamsManager paramsManager = (SceneLoadParamsManager)target;
+        SceneReferenceManager refManager = (SceneReferenceManager)target;
 
         EditorGUILayout.Space();
         EditorGUILayout.Space();
@@ -37,14 +35,14 @@ public class SceneLoadParamsManagerCustomEditor : Editor
         {
             if (EditorUtility.DisplayDialog("Set Names", setNamesAndPathsMessage, "Ok", "Cancel") == true)
             {
-                paramsManager.SetNamesAndPathsByUsingBuildIndexes();
+                refManager.SetNamesAndPathsByUsingBuildIndexes();
             }
         }
         if (GUILayout.Button("Set BuildIndexes by using Paths"))
         {
             if (EditorUtility.DisplayDialog("Set BuildIndexes", setBuildIndexesMessage, "Ok", "Cancel") == true)
             {
-                paramsManager.SetBuildIndexesByUsingPath();
+                refManager.SetBuildIndexesByUsingPath();
             }
         }
         EditorGUILayout.PropertyField(managedGroups);
@@ -56,27 +54,27 @@ public class SceneLoadParamsManagerCustomEditor : Editor
         EditorGUILayout.LabelField("Target Edit Group", EditorStyles.boldLabel);
         if (GUILayout.Button("Set Target's Names and Paths by using BuildIndexes"))
         {
-            paramsManager.TargetGroupSetNameAndPath();
+            refManager.TargetGroupSetNameAndPath();
         }
         if (GUILayout.Button("Set Target's BuildIndexes by using Paths"))
         {
-            paramsManager.TargetGroupSetBuildIndex();
+            refManager.TargetGroupSetBuildIndex();
         }
         EditorGUILayout.PropertyField(targetGroup);
 
         EditorGUILayout.Space();
 
-        // TARGET EDIT PARAMS
+        // TARGET EDIT SINGLE
         EditorGUILayout.LabelField("Target Edit Params", EditorStyles.boldLabel);
         if (GUILayout.Button("Set Target's Name and Path by using its BuildIndex"))
         {
-            paramsManager.TargetLoadParamsSetNameAndPath();
+            refManager.TargetLoadParamsSetNameAndPath();
         }
         if (GUILayout.Button("Set Target's BuildIndex by using its Path"))
         {
-            paramsManager.TargetLoadParamsSetBuildIndex();
+            refManager.TargetLoadParamsSetBuildIndex();
         }
-        EditorGUILayout.PropertyField(targetLoadParams);
+        EditorGUILayout.PropertyField(targetSingle);
 
         serializedObject.ApplyModifiedProperties();
     }

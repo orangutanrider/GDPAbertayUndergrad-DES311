@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 [CustomEditor(typeof(EnemyHitManager))]
 public class EnemyHitManagerCustomEditor : Editor
@@ -28,5 +29,10 @@ public class EnemyHitManagerCustomEditor : Editor
         }
 
         serializedObject.ApplyModifiedProperties();
+        if (GUI.changed)
+        {
+            EditorUtility.SetDirty(hitManager);
+            EditorSceneManager.MarkSceneDirty(hitManager.gameObject.scene);
+        }
     }
 }

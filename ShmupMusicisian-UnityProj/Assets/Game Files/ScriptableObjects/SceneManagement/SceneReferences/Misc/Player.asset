@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c65ac5f676555544a869cbaa6b45926, type: 3}
-  m_Name: MiscManager
+  m_Script: {fileID: 11500000, guid: 6c675d185d43ac141872203e6e95ff86, type: 3}
+  m_Name: Player
   m_EditorClassIdentifier: 
-  targetLoadParams: {fileID: 0}
-  targetGroup: {fileID: 0}
-  managedGroups:
-  - {fileID: 11400000, guid: 60f0668325d57ac44b729653204e2cd7, type: 2}
+  sceneName: PlayerScene.unity
+  scenePath: Assets/Game Files/Scenes/PlayerScene.unity
+  buildIndex: 1

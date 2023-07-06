@@ -1,15 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
-[CreateAssetMenu(fileName = "SceneLoadParamsManager", menuName = "SceneManagement/Manager")]
-public class SceneLoadParamsManager : ScriptableObject
+[CreateAssetMenu(fileName = "SceneReferenceManager", menuName = "SceneManagement/Manager")]
+public class SceneReferenceManager : ScriptableObject
 {
-    [SerializeField] SceneLoadParams targetLoadParams;
-    [SerializeField] SceneLoadParamsGroup targetGroup;
-    [SerializeField] List<SceneLoadParamsGroup> managedGroups = new List<SceneLoadParamsGroup>();
+    [SerializeField] SceneReferenceParams targetSingle;
+    [SerializeField] SceneReferenceGroup targetGroup;
+    [SerializeField] List<SceneReferenceGroup> managedGroups = new List<SceneReferenceGroup>();
 
     enum GroupResults
     {
@@ -21,21 +19,21 @@ public class SceneLoadParamsManager : ScriptableObject
     #region TargetEdit
     public void TargetLoadParamsSetBuildIndex()
     {
-        if(targetLoadParams == null)
+        if (targetSingle == null)
         {
             Debug.LogWarning("Target is null");
             return;
         }
-        TrySetBuildIndexViaPath(targetLoadParams);
+        TrySetBuildIndexViaPath(targetSingle);
     }
     public void TargetLoadParamsSetNameAndPath()
     {
-        if (targetLoadParams == null)
+        if (targetSingle == null)
         {
             Debug.LogWarning("Target is null");
             return;
         }
-        TrySetNameAndPathViaIndex(targetLoadParams);
+        TrySetNameAndPathViaIndex(targetSingle);
     }
 
     public void TargetGroupSetBuildIndex()
@@ -66,7 +64,7 @@ public class SceneLoadParamsManager : ScriptableObject
         int numPartialSuccess = 0;
         int numFailed = 0;
 
-        foreach (SceneLoadParamsGroup group in managedGroups)
+        foreach (SceneReferenceGroup group in managedGroups)
         {
             GroupResults results = SetBuildIndexesForGroup(group);
 
@@ -109,11 +107,11 @@ public class SceneLoadParamsManager : ScriptableObject
         }
     }
 
-    GroupResults SetBuildIndexesForGroup(SceneLoadParamsGroup group)
+    GroupResults SetBuildIndexesForGroup(SceneReferenceGroup group)
     {
         int numSucceeded = 0;
         int numFailed = 0;
-        foreach (SceneLoadParams sceneParams in group.paramsGroup)
+        foreach (SceneReferenceParams sceneParams in group.paramsGroup)
         {
             bool successful = TrySetBuildIndexViaPath(sceneParams);
             if (successful == true)
@@ -143,7 +141,7 @@ public class SceneLoadParamsManager : ScriptableObject
         return GroupResults.Some;
     }
 
-    bool TrySetBuildIndexViaPath(SceneLoadParams sceneParams)
+    bool TrySetBuildIndexViaPath(SceneReferenceParams sceneParams)
     {
         int buildIndex = SceneUtility.GetBuildIndexByScenePath(sceneParams.scenePath);
 
@@ -167,7 +165,7 @@ public class SceneLoadParamsManager : ScriptableObject
         int numPartialSuccess = 0;
         int numFailed = 0;
 
-        foreach (SceneLoadParamsGroup group in managedGroups)
+        foreach (SceneReferenceGroup group in managedGroups)
         {
             GroupResults results = SetNamesAndPathsForGroup(group);
             switch (results)
@@ -209,11 +207,11 @@ public class SceneLoadParamsManager : ScriptableObject
         }
     }
 
-    GroupResults SetNamesAndPathsForGroup(SceneLoadParamsGroup group)
+    GroupResults SetNamesAndPathsForGroup(SceneReferenceGroup group)
     {
         int numSucceeded = 0;
         int numFailed = 0;
-        foreach (SceneLoadParams sceneParams in group.paramsGroup)
+        foreach (SceneReferenceParams sceneParams in group.paramsGroup)
         {
             bool successful = TrySetNameAndPathViaIndex(sceneParams);
             if (successful == true)
@@ -243,7 +241,7 @@ public class SceneLoadParamsManager : ScriptableObject
         return GroupResults.Some;
     }
 
-    bool TrySetNameAndPathViaIndex(SceneLoadParams sceneParams)
+    bool TrySetNameAndPathViaIndex(SceneReferenceParams sceneParams)
     {
         string scenePath = SceneUtility.GetScenePathByBuildIndex(sceneParams.buildIndex);
 
@@ -277,7 +275,7 @@ public class SceneLoadParamsManager : ScriptableObject
         // set data
         Debug.Log
             (
-            "Succesfully set sceneParams Object '" + sceneParams + "'" + System.Environment.NewLine + 
+            "Succesfully set sceneParams Object '" + sceneParams + "'" + System.Environment.NewLine +
             "Name to '" + sceneName + "'" + System.Environment.NewLine +
             "And path to '" + scenePath + "'"
             );
