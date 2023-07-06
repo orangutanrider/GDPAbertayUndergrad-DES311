@@ -343,8 +343,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1621779972}
-        m_TargetAssemblyTypeName: LoadSceneUIScript, Assembly-CSharp
-        m_MethodName: LoadSceneByIndex
+        m_TargetAssemblyTypeName: LoadSceneStackUIScript, Assembly-CSharp
+        m_MethodName: LoadStack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1096,10 +1096,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621779970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff8e4a5cb4d17f4a8e9c8bdf1160e98, type: 3}
+  m_Script: {fileID: 11500000, guid: 676ae09f5cdc0e748817c44c8c9e413b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadParams: {fileID: 11400000, guid: a6f6b64012dec21418d5a8781f094cbc, type: 2}
+  loadStack: {fileID: 11400000, guid: cc1e59975d32fe347a1d55eb60a18859, type: 2}
 --- !u!1 &1630636715
 GameObject:
   m_ObjectHideFlags: 0
