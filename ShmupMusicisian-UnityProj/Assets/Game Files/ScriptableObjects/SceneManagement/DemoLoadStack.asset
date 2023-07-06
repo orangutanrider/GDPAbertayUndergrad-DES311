@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: DemoLoadStack
   m_EditorClassIdentifier: 
   loadStack:
-  - name: DemoLevel  (SingleLoad)
+  - name: DemoLevel (SingleLoad)
     sceneReference: {fileID: 11400000, guid: a6f6b64012dec21418d5a8781f094cbc, type: 2}
     loadMode: 0
-  - name: DemoEnemies  (AdditiveLoad)
+  - name: DemoEnemies (AdditiveLoad)
     sceneReference: {fileID: 11400000, guid: e9acc781a7d4f124f812ee84f8ea466c, type: 2}
     loadMode: 1
-  - name: Player  (AdditiveLoad)
+  - name: Player (AdditiveLoad)
     sceneReference: {fileID: 11400000, guid: d4e8aba283f1cc2489d7c3ea15581b2a, type: 2}
+    loadMode: 1
+  - name: LevelGadgets (AdditiveLoad)
+    sceneReference: {fileID: 11400000, guid: 47dd1b002b876ea489612e363970f4e7, type: 2}
     loadMode: 1
