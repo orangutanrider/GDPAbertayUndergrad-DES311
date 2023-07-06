@@ -11,7 +11,7 @@ public class PlayerBasicBulletManager : MonoBehaviour
     public Transform firingPointB;
     public GameObject playerRootObject;
 
-    EnemyHitManager enemyHitManager;
+    EnemyHitMaster enemyHitMaster;
 
     List<BasicPlayerBulletScript> bulletPool = new List<BasicPlayerBulletScript>();
 
@@ -53,18 +53,21 @@ public class PlayerBasicBulletManager : MonoBehaviour
 
     public void RegisterBulletEnemyHit(Collider2D collision, BasicPlayerBulletScript bullet)
     {
-        if(enemyHitManager == null)
+        // try get hit master (if one isn't already gotten)
+        if(enemyHitMaster == null)
         {
-            bool managerGotten = TryGetBulletManager(collision);
-            if(managerGotten == false) 
+            bool masterGotten = TryGetHitMaster(collision, out EnemyHitMaster outHitMaster);
+            if(masterGotten == false) 
             {
                 bullet.DeActivateBullet();
                 return; 
             }
+
+            enemyHitMaster = outHitMaster;
         }
 
         // get enemy status
-        EnemyStatusChanger enemyStatus = enemyHitManager.GetEnemyStatusViaFormattedName(collision.gameObject.name);
+        EnemyStatusChanger enemyStatus = enemyHitMaster.GetEnemyStatusViaFormattedName(collision.gameObject.name);
         if (enemyStatus == null) 
         {
             bullet.DeActivateBullet();
@@ -82,17 +85,35 @@ public class PlayerBasicBulletManager : MonoBehaviour
         bullet.DeActivateBullet();
     }
 
-    bool TryGetBulletManager(Collider2D collision)
+    bool TryGetHitMaster(Collider2D collision, out EnemyHitMaster outHitMaster)
     {
+        outHitMaster = null;
+
         EnemyHittable enemyHittable = collision.GetComponent<EnemyHittable>();
-        if(enemyHittable == null) { return false; }
-        enemyHitManager = enemyHittable.StatusChanger.HitManager;
-        if(enemyHitManager == null)
+        if (enemyHittable == null) { return false; }
+
+        EnemyStatusChanger enemyStatus = enemyHittable.StatusChanger;
+        if (enemyStatus == null)
         {
-            Debug.LogWarning("Got HitManager from enemy '" + collision.gameObject.name + "' at position " + collision.transform.position + " but their HitManager was null. This isn't meant to happen." + System.Environment.NewLine +
-                "It could be caused by an enemy being created during runtime, without being initialized by ManualEnemyInitializeAndCache().");
+            Debug.LogWarning("Succesfully got an EnemyHittable from enemy '" + collision.gameObject.name + "' at position " + collision.transform.position + " but their EnemyStatusChanger reference was null. This isn't meant to happen!");
             return false;
         }
+
+        EnemyHitManager hitManager = enemyHittable.StatusChanger.HitManager;
+        if (hitManager == null)
+        {
+            Debug.LogWarning("Succesfully got an EnemyStatusChanger from enemy '" + collision.gameObject.name + "' at position " + collision.transform.position + " but their EnemyHitManager reference was null. This isn't meant to happen!");
+            return false;
+        }
+
+        EnemyHitMaster hitmaster = enemyHittable.StatusChanger.HitManager.HitMaster;
+        if (hitmaster == null)
+        {
+            Debug.LogWarning("Succesfully got an EnemyHitManager from enemy '" + collision.gameObject.name + "' at position " + collision.transform.position + " but their EnemyHitMaster reference was null. This isn't meant to happen!");
+            return false;
+        }
+
+        outHitMaster = hitmaster;
         return true;
     }
 
