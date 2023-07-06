@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Game Files/Scenes/PlayerScene.unity
     guid: a77e912fa32fa794993072fc8698c2af
   - enabled: 1
-    path: Assets/Game Files/Scenes/GameOverScreen.unity
+    path: Assets/Game Files/Scenes/GameOverScene.unity
     guid: f847906b3fc5b424e948c2c98f9f7741
   - enabled: 1
     path: Assets/Game Files/Scenes/DemoLevelScene.unity
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game Files/Scenes/DemoEnemiesScene.unity
     guid: c975c69cb5b723747a88bb041b06fdc8
+  - enabled: 1
+    path: Assets/Game Files/Scenes/LevelGadgetsScene.unity
+    guid: 8c093e853f06dd54e8bf5c288278dcb8
   m_configObjects: {}
