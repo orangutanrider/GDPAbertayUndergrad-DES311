@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -7,15 +5,20 @@ using UnityEditor.SceneManagement;
 [CustomEditor(typeof(EnemyHitManager))]
 public class EnemyHitManagerCustomEditor : Editor
 {
+    SerializedProperty enemyList;
+
+    private void OnEnable()
+    {
+        enemyList = serializedObject.FindProperty("enemyList");
+    }
+
     public override void OnInspectorGUI()
     {
         EnemyHitManager hitManager = (EnemyHitManager)target;
 
-        DrawDefaultInspector();
-
-        if (GUILayout.Button("Cache and Initialize Enemies"))
+        if (GUILayout.Button("Find and Cache Enemies"))
         {
-            hitManager.CacheAndInitializeEnemies();
+            hitManager.FindAndCacheEnemies();
         }
 
         if (GUILayout.Button("Print and Highlight Enemy List"))
@@ -23,10 +26,9 @@ public class EnemyHitManagerCustomEditor : Editor
             hitManager.PrintAndHighlightEnemyList();
         }
 
-        if (GUILayout.Button("Try Cache Pre-Initialized Enemies"))
-        {
-            hitManager.TryCachePreInitializedEnemies();
-        }
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Use the 'Find and Cache Enemies' button to fill this list automatically, don't manually add enemies one by one.");
+        EditorGUILayout.PropertyField(enemyList);
 
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)
