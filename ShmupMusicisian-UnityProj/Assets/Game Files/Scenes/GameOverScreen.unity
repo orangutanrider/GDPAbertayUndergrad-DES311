@@ -365,9 +365,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 210831630}
-        m_TargetAssemblyTypeName: LoadSceneUIScript, Assembly-CSharp
-        m_MethodName: LoadSceneByIndex
+      - m_Target: {fileID: 210831632}
+        m_TargetAssemblyTypeName: LoadSceneReferenceUIScript, Assembly-CSharp
+        m_MethodName: LoadReference
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 210831631}
-  - component: {fileID: 210831630}
+  - component: {fileID: 210831632}
   m_Layer: 5
   m_Name: LoadMainMenu
   m_TagString: Untagged
@@ -432,19 +432,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &210831630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210831629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff8e4a5cb4d17f4a8e9c8bdf1160e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadParams: {fileID: 11400000, guid: 0707015532aec4e4daa4575e7352f553, type: 2}
 --- !u!224 &210831631
 RectTransform:
   m_ObjectHideFlags: 0
@@ -465,6 +452,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &210831632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210831629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fb5b7c07db6dd44af17a366a0c033f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneReference: {fileID: 11400000, guid: 0707015532aec4e4daa4575e7352f553, type: 2}
+  loadMode: 0
 --- !u!1 &268561975
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268643285}
-  - component: {fileID: 268643284}
+  - component: {fileID: 268643286}
   m_Layer: 5
   m_Name: Re-Load Game
   m_TagString: Untagged
@@ -619,19 +620,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &268643284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268643283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff8e4a5cb4d17f4a8e9c8bdf1160e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadParams: {fileID: 11400000, guid: a6f6b64012dec21418d5a8781f094cbc, type: 2}
 --- !u!224 &268643285
 RectTransform:
   m_ObjectHideFlags: 0
@@ -652,6 +640,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &268643286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268643283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676ae09f5cdc0e748817c44c8c9e413b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadStack: {fileID: 11400000, guid: cc1e59975d32fe347a1d55eb60a18859, type: 2}
 --- !u!1 &341742015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,9 +1201,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 268643284}
-        m_TargetAssemblyTypeName: LoadSceneUIScript, Assembly-CSharp
-        m_MethodName: LoadSceneByIndex
+      - m_Target: {fileID: 268643286}
+        m_TargetAssemblyTypeName: LoadSceneStackUIScript, Assembly-CSharp
+        m_MethodName: LoadStack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
