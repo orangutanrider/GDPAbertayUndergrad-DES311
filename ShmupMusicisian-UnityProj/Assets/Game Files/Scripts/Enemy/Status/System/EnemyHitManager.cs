@@ -39,7 +39,7 @@ public class EnemyHitManager : MonoBehaviour
             enemyList.Add(enemyArray[loop]);
 
             // update enemy names
-            RenameEnemyStatusChanger(enemyArray[loop], loop); 
+            RenameEnemyStatusChanger(enemyArray[loop], loop);
         }
 
         Debug.Log("Cached and initialized " + enemyArray.Length + " enemies.");
@@ -71,11 +71,12 @@ public class EnemyHitManager : MonoBehaviour
 
             EnemyStatusChanger enemy = enemyArray[loop];
 
+            #region Error Checking
             // is name formatted correctly?
             bool nameFormatted = CheckIfNameIsFormattedCorrectly(out int index, enemy, true); // when debug mode is true, this function handles the error message itself 
             if(nameFormatted == false) 
             {
-                Debug.LogWarning("This will not be cached due to the incorrectly formatted name.");
+                Debug.LogWarning("The enemy " + enemy.gameObject.name + " at position " + enemy.transform.position + " will not be cached due to the incorrectly formatted name.");
                 discardedEnemies++;
                 continue; 
             }
@@ -97,16 +98,17 @@ public class EnemyHitManager : MonoBehaviour
                 discardedEnemies++;
                 continue;
             }
+            #endregion
 
             // if an index given is greater than the number of list entries, then add null values until the number of list entries reaches the index
-            if(index >= newEnemyList.Count)
+            if (index >= newEnemyList.Count)
             {
                 AddNullValuesToListUntilCountX(index, ref newEnemyList);
                 Debug.Log("List has been extended beyond the actual number of enemies in the scene to match the index of enemy " + enemy.name + " at position " + enemy.transform.position);
                 EditorGUIUtility.PingObject(enemy.gameObject);
             }
 
-            // and finally, overwrite a null to add the enemy to the list
+            // overwrite a null to add the enemy to the list
             newEnemyList[index] = enemy;
 
             // add enemy to added indexes list so that other entries can check if they share this index
@@ -134,19 +136,6 @@ public class EnemyHitManager : MonoBehaviour
                 continue;
             }
         }
-    }
-
-    public void ManualEnemyInitializeAndCache(EnemyStatusChanger enemy)
-    {
-        if(enemyList == null)
-        {
-            enemyList = new List<EnemyStatusChanger>();
-        }
-
-        RenameEnemyStatusChanger(enemy, enemyList.Count);
-        enemyList.Add(enemy);
-
-        cachedEnemies = enemyList.Count;
     }
 
     void RenameEnemyStatusChanger(EnemyStatusChanger enemy, int index)
@@ -183,6 +172,27 @@ public class EnemyHitManager : MonoBehaviour
     }
     #endregion
 
+    private void Awake()
+    {
+        foreach(EnemyStatusChanger enemy in enemyList)
+        {
+            enemy.HitManager = this;
+        }
+    }
+
+    public void ManualEnemyInitializeAndCache(EnemyStatusChanger enemy)
+    {
+        if (enemyList == null)
+        {
+            enemyList = new List<EnemyStatusChanger>();
+        }
+
+        RenameEnemyStatusChanger(enemy, enemyList.Count);
+        enemyList.Add(enemy);
+        enemy.HitManager = this;
+        cachedEnemies = enemyList.Count;
+    }
+
     public EnemyStatusChanger GetEnemyStatusViaFormattedName(string enemyName)
     {
         if(enemyList == null)
@@ -217,6 +227,7 @@ public class EnemyHitManager : MonoBehaviour
         return enemyList[index];
     }
 
+    // returns -1 out index if the name is formatted incorrectly
     public static bool CheckIfNameIsFormattedCorrectly(out int outIndex, EnemyStatusChanger enemy, bool debugMode = false)
     {
         outIndex = -1;
