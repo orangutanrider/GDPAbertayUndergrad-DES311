@@ -10,8 +10,8 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2022.1.4.8202</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../ShmupMusicisian-UnityProj_WwiseProject/ShmupMusicisian-UnityProj_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2022.1.5.8242</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../../ShmupMusicisian-UnityProj/ShmupMusicisian-UnityProj_WwiseProject/ShmupMusicisian-UnityProj_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
