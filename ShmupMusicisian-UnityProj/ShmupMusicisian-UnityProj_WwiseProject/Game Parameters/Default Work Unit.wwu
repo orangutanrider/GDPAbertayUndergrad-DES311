@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9A77A6B5-D332-480B-84FB-E747A21166E7}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{9A77A6B5-D332-480B-84FB-E747A21166E7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{9A77A6B5-D332-480B-84FB-E747A21166E7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="BasicSynth" ID="{6C9C2F02-544B-49E1-BC73-8C893E540620}" ShortID="879562574">
+					<ChildrenList>
+						<GameParameter Name="BasicSynthPitch" ID="{570F225F-42F9-468D-93C5-E44FE0C70F74}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="23"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="BasicSynthPWM" ID="{1D86AED3-53E0-4986-AC45-559A09E82B1D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="BasicSynthNoiseLevel" ID="{A5E17FB6-5425-4164-85CB-931601E3D89E}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="22"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="BasicSynthTranspose" ID="{89570EF6-AC71-4964-A9FF-991FD0D3109D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="BasicSynthFM" ID="{7E56C36C-12D7-46D8-B46E-41FB134C4C9B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="BasicSynthVolume" ID="{8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888}"/>
+						<GameParameter Name="BasicSynthWaveform" ID="{09324BAC-EB3F-4955-A1E7-2AA4DDC1A24D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="18"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
