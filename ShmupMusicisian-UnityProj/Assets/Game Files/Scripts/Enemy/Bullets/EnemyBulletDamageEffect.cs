@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBulletDamageEffect : EnemyBulletHitEffect
@@ -7,7 +5,9 @@ public class EnemyBulletDamageEffect : EnemyBulletHitEffect
     [Header("Required References")]
     [SerializeField] EnemyBasicBulletParams bulletParams;
 
-    public override void BulletPlayerHit(Collider2D collision)
+    public override IEnemyBulletActivatable GetActivationInterface() { return null; }
+
+    protected override void BulletPlayerHit(Collider2D collision)
     {
         PlayerStatusChanger playerStatus = collision.GetComponent<PlayerStatusChanger>();
         if (playerStatus == null) { return; }

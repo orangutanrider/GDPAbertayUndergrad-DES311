@@ -1,6 +1,474 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="BasicSynth" ID="{FEADFA17-79F1-4978-AAFB-E67FBD646D6F}" ShortID="736943531">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C9EF2C04-3009-4BB8-AA77-C936CA52DD8C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F84D7172-EBFA-4808-A727-CBC81332A942}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="BasicSynth" ID="{6D4D7FE6-64BA-488C-8C7B-806BCDF4743D}" ShortID="322507469" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
+							<PropertyList>
+								<Property Name="BaseFrequency" Type="Real32" Value="850"/>
+								<Property Name="FmAmount" Type="Real32" Value="75"/>
+								<Property Name="NoiseLevel" Type="Real32" Value="0"/>
+								<Property Name="NoiseShape" Type="int32" Value="3"/>
+								<Property Name="Osc1Level" Type="Real32" Value="-12"/>
+								<Property Name="Osc1Transpose" Type="int32" Value="-12"/>
+								<Property Name="Osc1Waveform" Type="int32" Value="3"/>
+								<Property Name="Osc2Invert" Type="bool" Value="True"/>
+								<Property Name="Osc2Level" Type="Real32" Value="-12"/>
+								<Property Name="Osc2Transpose" Type="int32" Value="12"/>
+								<Property Name="Osc2Waveform" Type="int32" Value="3"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{A13808F9-298E-43D4-B2B9-09BAFE263075}" ShortID="694818727">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="OutputLevel"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<Custom>
+															<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{F3C17BC9-F874-47E6-BFBA-516AB04BFA43}" ShortID="336103614">
+																<PropertyList>
+																	<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
+																</PropertyList>
+															</ModulatorEnvelope>
+														</Custom>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{F3EF59C5-958B-4A6A-A17A-693E669D9DE3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-96</YPos>
+																		<Flags>21</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>53</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C17E634E-24D7-4A8F-B905-E6DC10BAC55A}" ShortID="940041139">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BaseFrequency"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthPitch" ID="{570F225F-42F9-468D-93C5-E44FE0C70F74}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{DB20F5C0-C659-4C7A-8DCD-3DD9560B8818}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="5"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>100</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>2980.07233</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{6F05AD36-6ABB-4811-B76B-BC4414D2427F}" ShortID="1005064990">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc1Transpose"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthTranspose" ID="{89570EF6-AC71-4964-A9FF-991FD0D3109D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{0D615C3F-3953-49DD-B44A-ABD00AF75538}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>12</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-18</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{9CDF6985-AE41-4830-8949-AAA094786F89}" ShortID="170727300">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc2Transpose"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthTranspose" ID="{89570EF6-AC71-4964-A9FF-991FD0D3109D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{101BD3B7-3540-4667-9B8E-B26AEE8F2FE7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-12</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>18</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{2F9FE262-C115-46FA-B9ED-C129E85A1984}" ShortID="756573361">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc1Pwm"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthPWM" ID="{1D86AED3-53E0-4986-AC45-559A09E82B1D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{48C94778-AEDD-4431-BEA1-4FFA65A09A54}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>40</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>60</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{8DFF4F5D-BFC7-4FE0-9552-AB1710BFA8DD}" ShortID="953059941">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc2Pwm"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthPWM" ID="{1D86AED3-53E0-4986-AC45-559A09E82B1D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{B98E0930-868B-45E6-B84D-B0F699767635}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>100</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{AB8FFD5C-9DA1-4420-8B83-7129AD2714FF}" ShortID="17208139">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="FmAmount"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthFM" ID="{7E56C36C-12D7-46D8-B46E-41FB134C4C9B}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{9F31624B-DF80-4AE9-88B9-BD1FE585E25B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>29.90655</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{354A74D7-6FAF-463E-83BB-FEC780721D67}" ShortID="889779042">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="NoiseLevel"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthNoiseLevel" ID="{A5E17FB6-5425-4164-85CB-931601E3D89E}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{0320D781-6F29-4430-BBD9-BACE0C5BFE58}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-96</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>-96</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>24</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{92EA505B-80A0-46C6-A407-66B124A58594}" ShortID="732077589">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc1Waveform"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthWaveform" ID="{09324BAC-EB3F-4955-A1E7-2AA4DDC1A24D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{39538AA8-1EEB-43EC-B6C6-4FDAA2A0E135}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>3</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>25</XPos>
+																		<YPos>1</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>3</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{89F92F28-007B-42C1-9C3D-5DC8D65AF699}" ShortID="659354619">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Osc2Waveform"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BasicSynthWaveform" ID="{09324BAC-EB3F-4955-A1E7-2AA4DDC1A24D}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{EF89B4DD-3B43-49EE-9D90-28916582249B}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>25</XPos>
+																		<YPos>3</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>75</XPos>
+																		<YPos>1</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>1</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<Language>SFX</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{EA0F21CC-A060-4119-88C2-7F5DC7D9BA96}" ShortID="618462925">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="BasicSynthVolume" ID="{8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888}" WorkUnitID="{9A77A6B5-D332-480B-84FB-E747A21166E7}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{B8612F4E-F3E9-4480-94ED-BA271DE10746}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>50</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-5</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+					<ActiveSourceList>
+						<ActiveSource Name="BasicSynth" ID="{6D4D7FE6-64BA-488C-8C7B-806BCDF4743D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
