@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBasicEmitter : EnemyBulletEmitter
@@ -7,32 +5,32 @@ public class EnemyBasicEmitter : EnemyBulletEmitter
     [Header("Required References")]
     [SerializeField] EnemyBasicEmitterParams emitterParams;
 
-    const string heirarchyObjectName = "EnemyBasicEmitter Bullets";
+    protected override float EmissionRate() { return emitterParams.emissionRate; }
+    public override string HeirarchyObjectName() { return emitterParams.heirarchyObjectName; }
 
-    public override void Start()
+    protected override void SpawnBulletPool()
     {
-        CreateHeirarchyObject(heirarchyObjectName);
-
-        // get params
-        List<WeightedBulletPrefab> bulletPrefabs = emitterParams.BulletPalette.bulletPrefabs;
-
-        // spawn bullet pool
-        for (int prefabLoop = 0; prefabLoop < bulletPrefabs.Count; prefabLoop++)
+        for (int loop = 0; loop <= EmitterBaseParams.maxConcurrentBullets; loop++)
         {
-            for (int spawnLoop = 0; spawnLoop <= EmitterBaseParams.maxConcurrentBullets / bulletPrefabs.Count; spawnLoop++)
-            {
-                SpawnNewBulletIntoPool(bulletPrefabs[prefabLoop].BulletPrefab);
-            }
+            SpawnNewBulletIntoPool(emitterParams.BulletPrefab);
         }
     }
 
-    public override void Update()
+    protected override void Emit()
     {
-        EmissionTimerUpdate();
+        GameObject bulletBeingEmitted = GetPooledBullet();
 
-        if (activeAndFiring == false || EmissionTimer < emitterParams.emissionInterval) { return; }
+        if (bulletBeingEmitted == null && EmitterBaseParams.printEmissionFails == true)
+        {
+            Debug.Log("The emitter on gameobject '" + gameObject.name + "' couldn't get a bullet from its pool");
+            return;
+        }
+        if (bulletBeingEmitted == null)
+        {
+            return;
+        }
 
-        Emit();
-        EmissionTimer = 0;
+        bulletBeingEmitted.SetActive(true);
+        bulletBeingEmitted.transform.position = transform.position;
     }
 }

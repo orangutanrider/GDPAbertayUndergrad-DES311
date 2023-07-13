@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +28,6 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     List<GameObject> bulletPool = new List<GameObject>();
 
     public float EmissionTimer { get; set; }
-    public const float fallbackEmissionRate = 0.5f;
 
     public static readonly Vector3 bulletSpawnPoint = new Vector3(-100, -100);
 
@@ -38,11 +36,6 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     public GameObject HeirarchyObject { get; set; } // the heirarchy object is used to group all bullets under the same heirarchy (to keep things neat)
     #endregion
 
-    // Important Overrides:
-    // Start() - override and use CreateHeirarchyObject(nameHere) and spawn your bullet pool here 
-    // Update() - override the emission rate here
-    // Emit() - override if you want to create bullet patterns 
-
     // Important Functions:
     // EmissionTimerUpdate() - use this instead of timer = timer + time.deltaTime
     // GetPooledBullet() - self explanatory
@@ -50,34 +43,41 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     // CreateHeirarchyObject(nameHere) - use in start before you spawn your bullet pool
 
     // Important Variables:
+    // EmitterBaseParams (look to class to see what it contains)
     // activeAndFiring (the on/off switch)
 
-    public virtual void Start()
+    private void Start()
     {
-        CreateHeirarchyObject();
-
-        // Spawn bullets
-        for (int loop = 0; loop <= emitterBaseParams.maxConcurrentBullets; loop++)
-        {
-            SpawnNewBulletIntoPool(new GameObject("Empty EnemyBullet"));
-        }
+        CreateHeirarchyObject(HeirarchyObjectName());
+        SpawnBulletPool();
     }
 
-    public virtual void Update()
+    private void Update()
     {
-        EmissionTimerUpdate();
+        EmissionTimer = EmissionTimer + (Time.deltaTime * emitterBaseParams.emissionTimerMultiply);
 
-        if (activeAndFiring == false || EmissionTimer < fallbackEmissionRate) { return; }
+        if (activeAndFiring == false || EmissionTimer < EmissionRate()) { return; }
 
-        Debug.Log("Firing at the, default, fallback emission rate of " + fallbackEmissionRate + ", you can edit the emission rate by overriding the Update() function, and by overriding the EmissionTimerUpdate() function too.");
         Emit();
         EmissionTimer = 0;
     }
 
-    public virtual void Emit()
-    {
-        EmissionTimer = 0;
+    public abstract string HeirarchyObjectName();
 
+    protected abstract float EmissionRate();
+
+    protected abstract void SpawnBulletPool();
+    // Example mono bullet pool (mono as in they're all the same bullet type)
+    /*
+        for (int loop = 0; loop <= emitterBaseParams.maxConcurrentBullets; loop++)
+        {
+            SpawnNewBulletIntoPool(bulletPrefab);
+        }
+    */
+
+    protected abstract void Emit();
+    // Example of basic emission (it simply emits a single bullet when called)
+    /*
         GameObject bulletBeingEmitted = GetPooledBullet();
 
         if (bulletBeingEmitted == null && emitterBaseParams.printEmissionFails == true) 
@@ -92,15 +92,10 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
 
         bulletBeingEmitted.SetActive(true);
         bulletBeingEmitted.transform.position = transform.position;
-    }
-
-    public virtual float EmissionTimerUpdate()
-    {
-        return EmissionTimer = EmissionTimer + (Time.deltaTime * emitterBaseParams.emissionTimerMultiply);
-    }
+    */
 
     #region Object Pooling Stuff
-    public void CreateHeirarchyObject(string heirarchyObjectName = "EnemyBullets (unnamed)")
+    protected void CreateHeirarchyObject(string heirarchyObjectName = "EnemyBullets (unnamed)")
     {
         if (heirarchyObjectName == "EnemyBullets (unnamed)")
         {
@@ -112,7 +107,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         HeirarchyObject.transform.position = Vector3.zero;
     }
 
-    public GameObject GetPooledBullet()
+    protected GameObject GetPooledBullet()
     {
         // get params
         int maxConcurrentBullets = emitterBaseParams.maxConcurrentBullets;
@@ -157,14 +152,14 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         return null;
     }
 
-    public void IncrementBulletPoolCursor()
+    protected void IncrementBulletPoolCursor()
     {
         int maxConcurrentBullets = emitterBaseParams.maxConcurrentBullets;
         BulletPoolCursor++;
         if (BulletPoolCursor > maxConcurrentBullets) { BulletPoolCursor = 0; }
     }
 
-    public void SpawnNewBulletIntoPool(GameObject bulletPrefab)
+    protected void SpawnNewBulletIntoPool(GameObject bulletPrefab)
     {
         GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint, Quaternion.Euler(Vector3.zero), HeirarchyObject.transform);
         bulletPool.Add(newBullet);

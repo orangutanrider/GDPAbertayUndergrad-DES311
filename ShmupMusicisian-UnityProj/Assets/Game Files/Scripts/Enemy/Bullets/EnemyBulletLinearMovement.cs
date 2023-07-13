@@ -1,21 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletLinearMovement : EnemyBulletMovement
+public class EnemyBulletLinearMovement : EnemyBulletMovement, IEnemyBulletActivatable
 {
     [Header("Required References")]
     [SerializeField] EnemyBasicBulletParams bulletParams;
     public Rigidbody2D rb2D;
 
-    private void OnDrawGizmos()
-    {
-        if(bulletParams.debugMode == false) { return; }
+    public override IEnemyBulletActivatable GetActivationInterface() { return this; }
 
-        Gizmos.DrawRay(transform.position, bulletParams.movementVector);
-    }
-
-    private void OnEnable()
+    void IEnemyBulletActivatable.Activate()
     {
         rb2D.velocity = bulletParams.movementVector * BulletBaseParams.speedMultiply;
         UpdateBaseData(bulletParams.movementVector, rb2D.velocity);

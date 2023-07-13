@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyBulletHitEffect : MonoBehaviour
+public abstract class EnemyBulletHitEffect : EnemyBulletComponent
 {
     [Header("(Base) Required References")]
     [SerializeField] EnemyBulletBaseParams bulletBaseParams;
@@ -27,29 +25,34 @@ public abstract class EnemyBulletHitEffect : MonoBehaviour
     }
     #endregion
 
-    // Important Overrides:
-    // BulletPlayerHit(Collider2D collision) - override to make the bullet do things when hits
-
-    public virtual void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         HandleBulletCollision(collision);
     }
 
-    public virtual void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         HandleBulletCollision(collision.collider);
     }
 
-    public virtual void BulletPlayerHit(Collider2D collision)
-    {
+    protected abstract void BulletPlayerHit(Collider2D collision);
+    // Example implementation of a damage hit effect
+    /*
         PlayerStatusChanger playerStatus = collision.GetComponent<PlayerStatusChanger>();
         if (playerStatus == null) { return; }
 
-        Debug.Log("Bullet hit, but it does not override the BulletPlayerHit() function, so it has done nothing and deactivated.");
+        DealDamage();
         DeActivateBullet();
+    */
+
+    public void DeActivateBullet()
+    {
+        // in the future this could ping a deactivation handler or something
+        // cause there might be hit effects like an explosion or something 
+        bulletRoot.SetActive(false);
     }
 
-    public CollisionResults HandleBulletCollision(Collider2D collision)
+    CollisionResults HandleBulletCollision(Collider2D collision)
     {
         // get params
         LayerMask playerMask = bulletBaseParams.playerMask;
@@ -93,12 +96,5 @@ public abstract class EnemyBulletHitEffect : MonoBehaviour
         }
         // if other hit
         return CollisionResults.MiscHit;
-    }
-
-    public void DeActivateBullet()
-    {
-        // in the future this could ping a deactivation handler or something
-        // cause there might be hit effects like an explosion or something 
-        bulletRoot.SetActive(false);
     }
 }
