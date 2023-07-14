@@ -2,14 +2,14 @@
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
 		<ProjectRoot>../..</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SourceFilesRoot>../../.cache/Windows/</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BA027978-145E-4959-6DDB-EDA5925136A7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,11 +21,44 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="184779118" Name="BasicSynthFM"/>
+				<GameParameter Id="1007555003" Name="BasicSynthVolume"/>
+				<GameParameter Id="1012422440" Name="BasicSynthWaveform"/>
+				<GameParameter Id="1883906721" Name="BasicSynthNoiseLevel"/>
+				<GameParameter Id="1954215905" Name="BasicSynthPitch"/>
+				<GameParameter Id="2273055070" Name="BasicSynthTranspose"/>
+				<GameParameter Id="3396022747" Name="BasicSynthPWM"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{7B83AC94-D9E0-C1A6-D93C-10465FB7C450}">
+		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{85CC1DAE-1E44-B601-B6EE-2293905DD8D9}">
 			<ShortName>Soundbank1</ShortName>
 			<Path>Soundbank1.bnk</Path>
+			<Plugins>
+				<Custom>
+					<Plugin Id="322507469" Name="BasicSynth" LibName="Wwise Synth One" LibId="9699330"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1563321731" Name="PlayBasicSynth" DurationType="Unknown">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="322507469"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3306568485" Name="StopBasicSynth" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="184779118" Name="BasicSynthFM"/>
+				<GameParameter Id="1007555003" Name="BasicSynthVolume"/>
+				<GameParameter Id="1012422440" Name="BasicSynthWaveform"/>
+				<GameParameter Id="1883906721" Name="BasicSynthNoiseLevel"/>
+				<GameParameter Id="1954215905" Name="BasicSynthPitch"/>
+				<GameParameter Id="2273055070" Name="BasicSynthTranspose"/>
+				<GameParameter Id="3396022747" Name="BasicSynthPWM"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{83349421-2C92-D0CD-4381-5BF75C8B0C10}</FileHash>
+	<FileHash>{237C943B-7944-B735-9D85-E80A88F07296}</FileHash>
 </SoundBanksInfo>
