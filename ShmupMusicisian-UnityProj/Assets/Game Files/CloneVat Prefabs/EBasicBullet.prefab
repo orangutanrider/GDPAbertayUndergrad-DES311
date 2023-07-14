@@ -116,6 +116,56 @@ Transform:
   m_Father: {fileID: 3949194244764700840}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1273879400172839463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7535301958950072316}
+  - component: {fileID: 5287868321926103151}
+  m_Layer: 8
+  m_Name: BulletMusicalAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7535301958950072316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273879400172839463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3949194244764700840}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5287868321926103151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273879400172839463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8865ee35008b17648bdbf622fa0412ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletEnvelope: {fileID: 11400000, guid: 8273cae85d3b908468d8c9efd55d1a72, type: 2}
+  bulletRoot: {fileID: 5111490739584333152}
+  overrideHoldTime: 0
+  holdTimeOverride: 0
+  bulletParams: {fileID: 11400000, guid: 581a54c7819402c42bdd00713ec3a558, type: 2}
+  movement: {fileID: 5690972245066816619}
 --- !u!1 &1743188321574200064
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +213,70 @@ MonoBehaviour:
   bulletBaseParams: {fileID: 11400000, guid: 2db54bb6e47099b4fb1b27284beec168, type: 2}
   bulletParams: {fileID: 11400000, guid: 581a54c7819402c42bdd00713ec3a558, type: 2}
   rb2D: {fileID: 4068462299643082011}
+--- !u!1 &2688398315241716021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4438858041114022979}
+  - component: {fileID: 6684174033784694875}
+  - component: {fileID: 609734678747515268}
+  m_Layer: 8
+  m_Name: BulletActivation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4438858041114022979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688398315241716021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3949194244764700840}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6684174033784694875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688398315241716021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f44b03bee74bee4783a0ed5986ef46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationStack:
+  - {fileID: 5690972245066816619}
+  - {fileID: 5287868321926103151}
+--- !u!114 &609734678747515268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2688398315241716021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bd274cc2fc43046b0ad5614b86a2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handlerParams: {fileID: 11400000, guid: fcb0c4f2759bb63448624f2a249da733, type: 2}
+  bulletRoot: {fileID: 5111490739584333152}
+  onDeactivationStack: []
+  onDeactivatingStack: []
 --- !u!1 &3144538161845684401
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +289,7 @@ GameObject:
   - component: {fileID: 7385310766689078595}
   - component: {fileID: 3003357080790440302}
   m_Layer: 8
-  m_Name: Bullet Damage
+  m_Name: BulletDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,6 +390,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4438858041114022979}
+  - {fileID: 7535301958950072316}
   - {fileID: 5211108212489636691}
   - {fileID: 2593565774066232533}
   - {fileID: 5185041778667834043}
