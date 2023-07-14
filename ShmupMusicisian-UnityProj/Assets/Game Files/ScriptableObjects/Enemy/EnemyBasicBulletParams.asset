@@ -12,6 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b6ff84e5d906f4eb4d5c483ef3cc71, type: 3}
   m_Name: EnemyBasicBulletParams
   m_EditorClassIdentifier: 
-  debugMode: 0
   movementVector: {x: 0, y: -1}
   damage: 3
+  playSynthEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9b4f0d96adbdfbf40916e2b11a9fb5cf, type: 2}
+  stopSynthEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0935b0e18fa80df429819ff6c068f5c1, type: 2}
+  pitchRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7fdaf6e5d5cc8d24f81bbc3c79828a84, type: 2}
+  pwmRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8c95bd10bd659e2439dbe25f1e9d55dd, type: 2}
+  transposeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1aa0707df7c784b4c996d1ed118b0278, type: 2}
+  volumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 29c4fddcbe09c48449b2d3d452079600, type: 2}
+  pitchXPositionRange: {x: 0, y: 10}
+  pwmAngleRange: {x: -180, y: 180}
+  transposeSpeedRange: {x: 0, y: 10}

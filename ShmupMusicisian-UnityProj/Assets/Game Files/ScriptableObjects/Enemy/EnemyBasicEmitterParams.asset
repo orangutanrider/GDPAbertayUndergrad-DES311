@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0841b50784a47f479ad85a3cb2e7253, type: 3}
   m_Name: EnemyBasicEmitterParams
   m_EditorClassIdentifier: 
-  bulletPalette: {fileID: 11400000, guid: c2c7d118e2a552045b96d328efffda75, type: 2}
-  emissionInterval: 1
+  bulletPrefab: {fileID: 5111490739584333152, guid: 0536bea1edd06b746b6606d5cdcbe592, type: 3}
+  emissionRate: 1
+  heirarchyObjectName: BasicEmitter
