@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0841b50784a47f479ad85a3cb2e7253, type: 3}
-  m_Name: EnemyBasicEmitterParams
+  m_Script: {fileID: 11500000, guid: 78c8bca573178404e8d21ee28074f142, type: 3}
+  m_Name: EnemyBulletDeactivationHandlerParams
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5111490739584333152, guid: 0536bea1edd06b746b6606d5cdcbe592, type: 3}
-  emissionRate: 1
-  heirarchyObjectName: BasicEmitter
+  printNegativeFlagWarnings: 1
+  allowNegativeFlags: 0

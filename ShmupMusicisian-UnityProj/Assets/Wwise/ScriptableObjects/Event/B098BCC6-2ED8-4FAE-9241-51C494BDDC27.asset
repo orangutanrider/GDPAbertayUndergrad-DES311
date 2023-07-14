@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0841b50784a47f479ad85a3cb2e7253, type: 3}
-  m_Name: EnemyBasicEmitterParams
+  m_Script: {fileID: 11500000, guid: 162079d8032ccb74c9857c1ee82c88d9, type: 3}
+  m_Name: B098BCC6-2ED8-4FAE-9241-51C494BDDC27
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5111490739584333152, guid: 0536bea1edd06b746b6606d5cdcbe592, type: 3}
-  emissionRate: 1
-  heirarchyObjectName: BasicEmitter
+  objectName: StopBasicSynth
+  id: 3306568485
+  guid: B098BCC6-2ED8-4FAE-9241-51C494BDDC27

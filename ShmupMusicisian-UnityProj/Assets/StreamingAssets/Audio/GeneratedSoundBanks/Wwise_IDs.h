@@ -11,6 +11,23 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID PLAYBASICSYNTH = 1563321731U;
+        static const AkUniqueID STOPBASICSYNTH = 3306568485U;
+    } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID BASICSYNTHFM = 184779118U;
+        static const AkUniqueID BASICSYNTHNOISELEVEL = 1883906721U;
+        static const AkUniqueID BASICSYNTHPITCH = 1954215905U;
+        static const AkUniqueID BASICSYNTHPWM = 3396022747U;
+        static const AkUniqueID BASICSYNTHTRANSPOSE = 2273055070U;
+        static const AkUniqueID BASICSYNTHVOLUME = 1007555003U;
+        static const AkUniqueID BASICSYNTHWAVEFORM = 1012422440U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

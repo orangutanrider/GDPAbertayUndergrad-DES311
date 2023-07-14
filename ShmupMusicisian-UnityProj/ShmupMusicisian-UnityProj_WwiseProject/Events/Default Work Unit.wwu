@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{75DE8637-3166-44E7-88AA-CC03AF416094}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{75DE8637-3166-44E7-88AA-CC03AF416094}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{75DE8637-3166-44E7-88AA-CC03AF416094}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlayBasicSynth" ID="{D80A1FD7-FDD4-4258-B7C3-5052506F6F04}">
+					<ChildrenList>
+						<Action Name="" ID="{34DCAABE-480E-443D-98E6-CC4DE92F60AA}" ShortID="383363525">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BasicSynth" ID="{FEADFA17-79F1-4978-AAFB-E67FBD646D6F}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopBasicSynth" ID="{B098BCC6-2ED8-4FAE-9241-51C494BDDC27}">
+					<ChildrenList>
+						<Action Name="" ID="{F5142A7C-4455-48F2-A5F9-AA41373AA2B7}" ShortID="191746285">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BasicSynth" ID="{FEADFA17-79F1-4978-AAFB-E67FBD646D6F}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

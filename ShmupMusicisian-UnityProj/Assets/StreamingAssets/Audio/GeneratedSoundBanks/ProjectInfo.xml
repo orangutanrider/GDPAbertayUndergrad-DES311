@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo>
-	<Project Name="ShmupMusicisian-UnityProj_WwiseProject" GUID="{7132E8AF-04E7-4E01-87CA-EE42D929EEBE}" Generator="2022.1.4.8202"/>
+	<Project Name="ShmupMusicisian-UnityProj_WwiseProject" GUID="{7132E8AF-04E7-4E01-87CA-EE42D929EEBE}" Generator="2022.1.5.8242"/>
 	<CacheRoot>../../../../ShmupMusicisian-UnityProj_WwiseProject/.cache</CacheRoot>
 	<Platforms>
 		<Platform Name="Mac" GUID="{E8B4B126-B206-4623-9AED-6462296C169D}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../ShmupMusicisian-UnityProj_WwiseProject/GeneratedSoundBanks/Mac"/>
@@ -9,5 +9,5 @@
 	<Languages>
 		<Language Name="English(US)" Id="684519430" GUID="{04B44E07-0C56-442E-8087-5980AF5A5DAB}" Default="true" UseAsStandIn="true"/>
 	</Languages>
-	<FileHash>{FBB6CE6F-F350-5569-6B6F-F15FE9BBF47B}</FileHash>
+	<FileHash>{3E51A047-DD50-D6D3-B2BF-87D00A662CB5}</FileHash>
 </ProjectInfo>

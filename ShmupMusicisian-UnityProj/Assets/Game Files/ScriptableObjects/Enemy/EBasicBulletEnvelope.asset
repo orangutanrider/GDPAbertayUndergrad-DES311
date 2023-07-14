@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0841b50784a47f479ad85a3cb2e7253, type: 3}
-  m_Name: EnemyBasicEmitterParams
+  m_Script: {fileID: 11500000, guid: d5bb3b63f4d083b4a85a49a0eeb3a7ba, type: 3}
+  m_Name: EBasicBulletEnvelope
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5111490739584333152, guid: 0536bea1edd06b746b6606d5cdcbe592, type: 3}
-  emissionRate: 1
-  heirarchyObjectName: BasicEmitter
+  envelopeObj:
+    holdTime: 0.2
+    attack: 0.1
+    decay: 0.2
+    sustain: 0.66
+    release: 0.3

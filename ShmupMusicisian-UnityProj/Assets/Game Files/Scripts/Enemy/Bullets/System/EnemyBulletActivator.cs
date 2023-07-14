@@ -3,16 +3,15 @@ using UnityEngine;
 
 public class EnemyBulletActivator : MonoBehaviour
 {
-    // The purpose of this script is to handle the execution order of OnEnable()
+    // The purpose of this script is to handle the execution order of OnEnable() on bullet components
 
-    [Header("Activation Stack")]
-    public List<EnemyBulletComponent> componentActivationStack = new List<EnemyBulletComponent>();
+    public List<EnemyBulletComponent> activationStack = new List<EnemyBulletComponent>();
 
     private void OnEnable()
     {
-        for(int loop = 0; loop < componentActivationStack.Count; loop++)
+        for (int loop = 0; loop < activationStack.Count; loop++)
         {
-            EnemyBulletComponent component = componentActivationStack[loop];
+            EnemyBulletComponent component = activationStack[loop];
             IEnemyBulletActivatable componentInterface = component.GetActivationInterface();
 
             if(componentInterface == null)

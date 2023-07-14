@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1563321731	PlayBasicSynth			\Default Work Unit\PlayBasicSynth	
+	3306568485	StopBasicSynth			\Default Work Unit\StopBasicSynth	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	184779118	BasicSynthFM			\Default Work Unit\BasicSynth\BasicSynthFM	
+	1007555003	BasicSynthVolume			\Default Work Unit\BasicSynth\BasicSynthVolume	
+	1012422440	BasicSynthWaveform			\Default Work Unit\BasicSynth\BasicSynthWaveform	
+	1883906721	BasicSynthNoiseLevel			\Default Work Unit\BasicSynth\BasicSynthNoiseLevel	
+	1954215905	BasicSynthPitch			\Default Work Unit\BasicSynth\BasicSynthPitch	
+	2273055070	BasicSynthTranspose			\Default Work Unit\BasicSynth\BasicSynthTranspose	
+	3396022747	BasicSynthPWM			\Default Work Unit\BasicSynth\BasicSynthPWM	
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	336103614	Modulator Envelope (Custom)				
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	322507469	BasicSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\BasicSynth\BasicSynth	
+
