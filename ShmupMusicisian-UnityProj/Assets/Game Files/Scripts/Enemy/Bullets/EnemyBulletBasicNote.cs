@@ -11,12 +11,27 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
     [SerializeField] EnemyBulletBasicNoteParams noteParams;
     public Rigidbody2D rb2D;
 
+    bool isPlaying = false;
+
     public override IEnemyBulletActivatable GetActivationInterface() { return this; }
+    public override IEnemyBulletOnDeactivating GetOnDeactivatingInterface() { return null; }
+    public override IEnemyBulletOnDeactivate GetOnDeactivationInterface() { return null; }
 
     private void Update()
     {
+        // Get Params
+        AK.Wwise.Event stopSynth = noteParams.playSynthEvent;
         RTPC volume = noteParams.volumeRTPC;
+
+        // Set Volume RTPC to envelope lerp value
         volume.SetValue(gameObject, Mathf.Lerp(0, 100, BulletEnvelope.envelopeObj.Current01Value));
+
+        // Read envelope status and stop synth if it is over
+        if (BulletEnvelope.envelopeObj.CurrentStatus() == EnemyBulletEnvelopeState.END && isPlaying == true)
+        {
+            stopSynth.Post(gameObject);
+            isPlaying = false;
+        }
     }
 
     void IEnemyBulletActivatable.Activate()
@@ -26,6 +41,7 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
         RTPC pwm = noteParams.pwmRTPC;
         RTPC transpose = noteParams.transposeRTPC;
         RTPC volume = noteParams.volumeRTPC;
+        AK.Wwise.Event playSynth = noteParams.playSynthEvent;
 
         // for the vector2 range variables on the noteparams object x is min y is max
         // formula is: 01Range = (value - min) / (max - min)
@@ -42,5 +58,7 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
         // Begin Envelope Volume Lerp
         BulletEnvelope.envelopeObj.TriggerEnvelopeCoroutineLerp(this);
         volume.SetValue(gameObject, Mathf.Lerp(0, 100, BulletEnvelope.envelopeObj.Current01Value));
+        playSynth.Post(gameObject);
+        isPlaying = true;
     }
 }

@@ -3,6 +3,9 @@ using AK.Wwise;
 
 public class EnemyBulletBasicNoteParams : ScriptableObject
 {
+    public AK.Wwise.Event playSynthEvent;
+    public AK.Wwise.Event stopSynthEvent;
+
     [Header("RTPC References")]
     public RTPC pitchRTPC;      // tied to xPosition
     public RTPC pwmRTPC;        // tiedToAngle

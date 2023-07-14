@@ -7,6 +7,8 @@ public class EnemyBulletLinearMovement : EnemyBulletMovement, IEnemyBulletActiva
     public Rigidbody2D rb2D;
 
     public override IEnemyBulletActivatable GetActivationInterface() { return this; }
+    public override IEnemyBulletOnDeactivating GetOnDeactivatingInterface() { return null; }
+    public override IEnemyBulletOnDeactivate GetOnDeactivationInterface() { return null; }
 
     void IEnemyBulletActivatable.Activate()
     {

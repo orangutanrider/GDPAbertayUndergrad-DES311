@@ -6,6 +6,8 @@ public class EnemyBulletDamageEffect : EnemyBulletHitEffect
     [SerializeField] EnemyBasicBulletParams bulletParams;
 
     public override IEnemyBulletActivatable GetActivationInterface() { return null; }
+    public override IEnemyBulletOnDeactivating GetOnDeactivatingInterface() { return null; }
+    public override IEnemyBulletOnDeactivate GetOnDeactivationInterface() { return null; }
 
     protected override void BulletPlayerHit(Collider2D collision)
     {
