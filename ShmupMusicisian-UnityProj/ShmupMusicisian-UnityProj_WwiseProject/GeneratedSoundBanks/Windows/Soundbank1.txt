@@ -14,6 +14,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	336103614	Modulator Envelope (Custom)				
 
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	322507469	BasicSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\BasicSynth\BasicSynth	
 

@@ -31,7 +31,7 @@
 				<GameParameter Id="3396022747" Name="BasicSynthPWM"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{85CC1DAE-1E44-B601-B6EE-2293905DD8D9}">
+		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{EAB31AAF-36DD-DCF2-B965-23C57965D95A}">
 			<ShortName>Soundbank1</ShortName>
 			<Path>Soundbank1.bnk</Path>
 			<Plugins>
@@ -47,8 +47,17 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3306568485" Name="StopBasicSynth" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3306568485" Name="StopBasicSynth" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="322507469"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 			</Events>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
 			<GameParameters>
 				<GameParameter Id="184779118" Name="BasicSynthFM"/>
 				<GameParameter Id="1007555003" Name="BasicSynthVolume"/>
@@ -60,5 +69,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{65B50ECF-4E28-F344-0979-D484F1B22126}</FileHash>
+	<FileHash>{6BA27829-9000-90C0-C06B-C518E4FA80D3}</FileHash>
 </SoundBanksInfo>
