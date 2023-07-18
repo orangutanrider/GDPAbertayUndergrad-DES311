@@ -1,34 +1,28 @@
 using System.Collections;
 using UnityEngine;
+using Unity.EditorCoroutines.Editor;
 
-[System.Serializable]
-public class EnemyBulletEnvelopeObj
+public class EnemyBulletEnvelopeEditorObj
 {
-    public EnemyBulletEnvelopeObj(EnemyBulletEnvelope envelope)
+    public EnemyBulletEnvelopeEditorObj(EnemyBulletEnvelope envelope)
     {
         Envelope = envelope;
     }
 
     [Range(0f, 1f)]
     [SerializeField] float magnitude = 1;
-    [Range(0f, 10f)]
     [SerializeField] float holdTime = 0;
     [Space]
     [Range(0f, 1f)]
-    [SerializeField] float attack = 0.1f;
+    [SerializeField] float attack;
     [Range(0f, 10f)]
-    [SerializeField] float decay = 1f;
+    [SerializeField] float decay;
     [Range(0f, 1f)]
-    [SerializeField] float sustain = 0.66f;
+    [SerializeField] float sustain;
     [Range(0f, 10f)]
-    [SerializeField] float release = 1f;
+    [SerializeField] float release;
 
     #region Variables
-    public EnemyBulletEnvelopeEditorObj GetEditorEnvelope()
-    {
-        return new EnemyBulletEnvelopeEditorObj(Envelope);
-    }
-
     public EnemyBulletEnvelope Envelope
     {
         get
@@ -50,13 +44,14 @@ public class EnemyBulletEnvelopeObj
         get
         {
             return attack + decay + holdTime + release;
+
         }
     }
 
+    public const float coroutineUpdateRate = 0.01667f; //60Hz
     const float cancelLerpDuration = 0.1f;
 
-    public Coroutine CurrentCoroutine { get; private set; }
-    public MonoBehaviour CurrentTriggerSource { get; private set; }
+    public EditorCoroutine CurrentCoroutine { get; private set; }
     public float Current01Value { get; private set; }
     public float CurrentTime { get; private set; }
 
@@ -67,51 +62,47 @@ public class EnemyBulletEnvelopeObj
     }
     #endregion
 
-    public void TriggerEnvelopeCoroutineLerp(MonoBehaviour triggerSource)
+    public void TriggerEnvelopeCoroutineLerp()
     {
         // automatically handle the cancelling of that one
-        if(CurrentCoroutine != null)
+        if (CurrentCoroutine != null)
         {
             // cancel the current one (it's a lerp to avoid audio popping)
-            triggerSource.StartCoroutine(CancelLerp());
+            EditorCoroutineUtility.StartCoroutine(CancelLerp(), this);
 
             // start a new one on a delay so that it starts as the cancel lerp ends
-            IEnumerator delayedFollowEnvelope = DelayFollowEnvelope(cancelLerpDuration, triggerSource); 
-            CurrentCoroutine = triggerSource.StartCoroutine(delayedFollowEnvelope);
+            IEnumerator delayedFollowEnvelope = DelayFollowEnvelope(cancelLerpDuration);
+            CurrentCoroutine = EditorCoroutineUtility.StartCoroutine(delayedFollowEnvelope, this);
 
-            CurrentTriggerSource = triggerSource;
             return;
         }
 
-        Current01Value = 0;
-        CurrentTime = 0;
-        currentStatus = EnemyBulletEnvelopeState.Attack;
-
-        CurrentTriggerSource = triggerSource;
-        CurrentCoroutine = triggerSource.StartCoroutine(FollowEnvelope());
+        CurrentCoroutine = EditorCoroutineUtility.StartCoroutine(FollowEnvelope(), this);
     }
 
-    public void InterruptEnvelopeLerp(MonoBehaviour triggerSource)
+    public void InterruptEnvelopeLerp()
     {
-        if (CurrentTriggerSource == null) { return; }
-        CurrentTriggerSource.StopCoroutine(CurrentCoroutine);
-        CurrentCoroutine = null;
-        CurrentTriggerSource = null;
+        if(CurrentCoroutine == null) { return; }
 
-        triggerSource.StartCoroutine(CancelLerp());
+        EditorCoroutineUtility.StopCoroutine(CurrentCoroutine);
+        CurrentCoroutine = null;
+
+        EditorCoroutineUtility.StartCoroutine(CancelLerp(), this);
     }
 
     IEnumerator FollowEnvelope()
     {
+        EditorWaitForSeconds updateRate = new EditorWaitForSeconds(coroutineUpdateRate);
+
         Current01Value = 0;
         CurrentTime = 0;
 
         while (CurrentTime < TotalDuration)
         {
-            CurrentTime += Time.deltaTime;
+            CurrentTime += updateRate.WaitTime;
             Current01Value = Envelope.LerpEnvelope(CurrentTime, out EnemyBulletEnvelopeState status);
             currentStatus = status;
-            yield return null;
+            yield return updateRate;
         }
 
         Current01Value = 0;
@@ -119,22 +110,23 @@ public class EnemyBulletEnvelopeObj
         currentStatus = EnemyBulletEnvelopeState.END;
 
         CurrentCoroutine = null;
-        CurrentTriggerSource = null;
 
         yield break;
     }
 
     IEnumerator CancelLerp()
     {
+        EditorWaitForSeconds updateRate = new EditorWaitForSeconds(coroutineUpdateRate);
+
         float volumeAtCall = Current01Value;
 
         CurrentTime = 0;
         while (CurrentTime < cancelLerpDuration)
         {
-            CurrentTime += Time.deltaTime;
+            CurrentTime += updateRate.WaitTime;
             Current01Value = Mathf.Lerp(volumeAtCall, 0, CurrentTime / TotalDuration);
             currentStatus = EnemyBulletEnvelopeState.CANCELLING;
-            yield return null;
+            yield return updateRate;
         }
 
         Current01Value = 0;
@@ -144,10 +136,12 @@ public class EnemyBulletEnvelopeObj
         yield break;
     }
 
-    IEnumerator DelayFollowEnvelope(float duration, MonoBehaviour triggerSource)
+    IEnumerator DelayFollowEnvelope(float duration)
     {
-        yield return new WaitForSeconds(duration);
-        CurrentCoroutine = triggerSource.StartCoroutine(FollowEnvelope());
+        EditorWaitForSeconds waitForDuration = new EditorWaitForSeconds(duration);
+        yield return waitForDuration;
+
+        CurrentCoroutine = EditorCoroutineUtility.StartCoroutine(FollowEnvelope(), this); 
         yield break;
     }
 }

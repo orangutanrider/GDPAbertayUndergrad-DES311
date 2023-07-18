@@ -7,8 +7,16 @@ public class EnemyBulletActivator : MonoBehaviour
 
     public List<EnemyBulletComponent> activationStack = new List<EnemyBulletComponent>();
 
+    bool firstEnable = true; // the first enable happens when the bullet is instantiated, and it shouldn't be activated when that happens
+
     private void OnEnable()
     {
+        if (firstEnable == true)
+        {
+            firstEnable = false;
+            return;
+        }
+
         for (int loop = 0; loop < activationStack.Count; loop++)
         {
             EnemyBulletComponent component = activationStack[loop];

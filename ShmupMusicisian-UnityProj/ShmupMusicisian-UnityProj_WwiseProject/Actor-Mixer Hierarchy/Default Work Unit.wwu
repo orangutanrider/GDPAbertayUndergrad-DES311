@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="BasicSynth" ID="{FEADFA17-79F1-4978-AAFB-E67FBD646D6F}" ShortID="736943531">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-350</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C9EF2C04-3009-4BB8-AA77-C936CA52DD8C}"/>
@@ -89,12 +96,12 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>100</YPos>
+																		<YPos>194.46447</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>2980.07233</YPos>
+																		<YPos>2011.63169</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>

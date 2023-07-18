@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5bb3b63f4d083b4a85a49a0eeb3a7ba, type: 3}
   m_Name: EBasicBulletEnvelope
   m_EditorClassIdentifier: 
-  envelopeObj:
-    holdTime: 0.2
-    attack: 0.1
-    decay: 0.2
-    sustain: 0.66
-    release: 0.3
+  magnitude: 0.18
+  holdTime: 0
+  attack: 0.125
+  decay: 1.37
+  sustain: 0.156
+  release: 3.32

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b6ff84e5d906f4eb4d5c483ef3cc71, type: 3}
   m_Name: EnemyBasicBulletParams
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: -1}
+  movementVector: {x: 0, y: -2}
   damage: 3
   playSynthEvent:
     idInternal: 0
@@ -38,6 +38,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 29c4fddcbe09c48449b2d3d452079600, type: 2}
-  pitchXPositionRange: {x: 0, y: 10}
-  pwmAngleRange: {x: -180, y: 180}
+  pitchXPositionRange: {x: -8, y: 8}
+  pwmAngleRange: {x: -170, y: 170}
   transposeSpeedRange: {x: 0, y: 10}

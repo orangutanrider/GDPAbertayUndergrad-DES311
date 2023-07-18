@@ -3,15 +3,16 @@ using UnityEngine;
 public abstract class EnemyBulletMusicalNote : EnemyBulletComponent
 {
     [Header("(Base) Required References")]
-    [SerializeField] EnemyBulletEnvelopeParams bulletEnvelope;
+    [SerializeField] private EnemyBulletEnvelopeParams bulletEnvelope;
     public GameObject bulletRoot; // root of the prefab instance, not the absolute root in the scene.
 
     [Header("(Base) Envelope Settings")]
     public bool overrideHoldTime = false;
     public float holdTimeOverride = 0;
 
-    public EnemyBulletEnvelopeParams BulletEnvelope
+    private void Awake()
     {
-        get { return bulletEnvelope; }
+        envelope = new EnemyBulletEnvelopeObj(bulletEnvelope.Envelope);
     }
+    protected EnemyBulletEnvelopeObj envelope = null;
 }

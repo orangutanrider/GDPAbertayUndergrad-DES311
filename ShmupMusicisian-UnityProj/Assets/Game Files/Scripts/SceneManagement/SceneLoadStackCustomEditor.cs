@@ -6,13 +6,6 @@ using UnityEditor;
 [CustomEditor(typeof(SceneLoadStack)), CanEditMultipleObjects]
 public class SceneLoadStackCustomEditor : Editor
 {
-    SerializedProperty loadStack;
-
-    private void OnEnable()
-    {
-        loadStack = serializedObject.FindProperty("loadStack");
-    }
-
     public override void OnInspectorGUI()
     {
         SceneLoadStack sceneLoadStack = (SceneLoadStack)target;
@@ -24,6 +17,7 @@ public class SceneLoadStackCustomEditor : Editor
             return;
         }
 
+        // gives the list entries names
         for (int loop = 0; loop < sceneLoadStack.loadStack.Count; loop++)
         {
             if(sceneLoadStack.loadStack[loop] == null)

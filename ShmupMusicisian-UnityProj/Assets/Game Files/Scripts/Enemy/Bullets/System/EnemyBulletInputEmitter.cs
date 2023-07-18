@@ -1,10 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyBulletEmitter : MonoBehaviour
+public abstract class EnemyBulletInputEmitter : MonoBehaviour
 {
-    public bool autoEmit = false;
-
     [Header("(Base) Required References")]
     [SerializeField] EnemyBulletEmitterBaseParams emitterBaseParams;
 
@@ -27,9 +26,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     }
     List<GameObject> bulletPool = new List<GameObject>();
 
-    public float EmissionTimer { get; set; }
-
-    public static readonly Vector3 bulletSpawnPoint = new Vector3(-100, -100);
+    public static readonly Vector3 bulletSpawnPoint = new Vector3(100, -100);
 
     public int ActiveBullets { get; set; }
     public int BulletPoolCursor { get; set; }
@@ -51,19 +48,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         SpawnBulletPool();
     }
 
-    private void Update()
-    {
-        EmissionTimer = EmissionTimer + (Time.deltaTime * emitterBaseParams.emissionTimerMultiply);
-
-        if (autoEmit == false || EmissionTimer < EmissionRate()) { return; }
-
-        Emit();
-        EmissionTimer = 0;
-    }
-
     public abstract string HeirarchyObjectName();
-
-    protected abstract float EmissionRate();
 
     protected abstract void SpawnBulletPool();
     // Example mono bullet pool (mono as in they're all the same bullet type)
@@ -74,7 +59,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         }
     */
 
-    public abstract void Emit();
+    public abstract void Emit(float volume, float firingAngle);
     // Example of basic emission (it simply emits a single bullet when called)
     /*
         GameObject bulletBeingEmitted = GetPooledBullet();
@@ -112,10 +97,10 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         int maxConcurrentBullets = emitterBaseParams.maxConcurrentBullets;
 
         // if all bullets are active, return
-        if (ActiveBullets >= maxConcurrentBullets && emitterBaseParams.printEmissionFails == true) 
+        if (ActiveBullets >= maxConcurrentBullets && emitterBaseParams.printEmissionFails == true)
         {
             Debug.Log("The emitter on gameobject '" + gameObject.name + "' reached its maxConcurrentBullets, cannot emit");
-            return null; 
+            return null;
         }
         if (ActiveBullets >= maxConcurrentBullets)
         {
@@ -142,7 +127,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
             return bulletPool[loop];
         }
 
-        if(emitterBaseParams.printEmissionFails == true)
+        if (emitterBaseParams.printEmissionFails == true)
         {
             Debug.LogWarning("The emitter on gameobject '" + gameObject.name + "' encountered an miscellaneous emission error");
             return null;
