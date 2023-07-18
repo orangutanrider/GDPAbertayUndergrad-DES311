@@ -16,7 +16,7 @@ public class EnemyBasicEmitter : EnemyBulletEmitter
         }
     }
 
-    protected override void Emit()
+    public override void Emit()
     {
         GameObject bulletBeingEmitted = GetPooledBullet();
 
@@ -30,7 +30,7 @@ public class EnemyBasicEmitter : EnemyBulletEmitter
             return;
         }
 
-        bulletBeingEmitted.SetActive(true);
         bulletBeingEmitted.transform.position = transform.position;
+        bulletBeingEmitted.SetActive(true);
     }
 }

@@ -13,6 +13,7 @@ public struct EnemyBulletEnvelope
 
     // release is how long the lerp takes to go from sustain to no volume
 
+    public float magnitude;
 
     public float holdTime;
 
@@ -21,8 +22,9 @@ public struct EnemyBulletEnvelope
     public float sustain;
     public float release;
 
-    public EnemyBulletEnvelope(float _holdTime, float _attack, float _decay, float _sustain, float _release)
+    public EnemyBulletEnvelope(float _magnitude, float _holdTime, float _attack, float _decay, float _sustain, float _release)
     {
+        magnitude = _magnitude;
         holdTime = _holdTime;
         attack = _attack;
         sustain = _sustain;
@@ -37,7 +39,7 @@ public struct EnemyBulletEnvelope
         if(t < 0)
         {
             status = EnemyBulletEnvelopeState.NEGATIVE;
-            return 0;
+            return 0 * magnitude;
         }
 
         float totalDuration = attack;
@@ -47,7 +49,7 @@ public struct EnemyBulletEnvelope
         {
             float volAttack = Mathf.Lerp(0, 1, t / totalDuration); // t / attack
             status = EnemyBulletEnvelopeState.Attack;
-            return volAttack;
+            return volAttack * magnitude;
         }
 
         totalDuration += decay;
@@ -57,7 +59,7 @@ public struct EnemyBulletEnvelope
         {
             float volDecay = Mathf.Lerp(1, sustain, t / totalDuration); // t / (attack + decay)
             status = EnemyBulletEnvelopeState.Decay;
-            return volDecay;
+            return volDecay * magnitude;
         }
 
         totalDuration += holdTime;
@@ -67,7 +69,7 @@ public struct EnemyBulletEnvelope
         {
             float volSustain = Mathf.Lerp(1, sustain, t / totalDuration); // t / (attack + decay + holdTime)
             status = EnemyBulletEnvelopeState.Sustain;
-            return volSustain;
+            return volSustain * magnitude;
         }
 
         totalDuration += release;
@@ -77,11 +79,11 @@ public struct EnemyBulletEnvelope
         {
             float volRelease = Mathf.Lerp(sustain, 0, t / totalDuration); // t / (attack + decay + holdTime + release)
             status = EnemyBulletEnvelopeState.Release;
-            return volRelease;
+            return volRelease * magnitude;
         }
 
         // End
         status = EnemyBulletEnvelopeState.END;
-        return 0;
+        return 0 * magnitude;
     }
 }

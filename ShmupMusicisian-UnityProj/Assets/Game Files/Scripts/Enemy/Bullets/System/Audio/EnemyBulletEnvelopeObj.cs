@@ -4,23 +4,36 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyBulletEnvelopeObj
 {
+    public EnemyBulletEnvelopeObj(EnemyBulletEnvelope envelope)
+    {
+        Envelope = envelope;
+    }
+
+    [Range(0f, 1f)]
+    [SerializeField] float magnitude = 1;
+    [Range(0f, 10f)]
     [SerializeField] float holdTime = 0;
     [Space]
     [Range(0f, 1f)]
-    [SerializeField] float attack;
+    [SerializeField] float attack = 0.1f;
     [Range(0f, 10f)]
-    [SerializeField] float decay;
+    [SerializeField] float decay = 1f;
     [Range(0f, 1f)]
-    [SerializeField] float sustain;
+    [SerializeField] float sustain = 0.66f;
     [Range(0f, 10f)]
-    [SerializeField] float release;
+    [SerializeField] float release = 1f;
 
     #region Variables
+    public EnemyBulletEnvelopeEditorObj GetEditorEnvelope()
+    {
+        return new EnemyBulletEnvelopeEditorObj(Envelope);
+    }
+
     public EnemyBulletEnvelope Envelope
     {
         get
         {
-            return new EnemyBulletEnvelope(holdTime, attack, decay, sustain, release);
+            return new EnemyBulletEnvelope(magnitude, holdTime, attack, decay, sustain, release);
         }
         set
         {
@@ -37,7 +50,6 @@ public class EnemyBulletEnvelopeObj
         get
         {
             return attack + decay + holdTime + release;
-            
         }
     }
 
@@ -70,6 +82,10 @@ public class EnemyBulletEnvelopeObj
             CurrentTriggerSource = triggerSource;
             return;
         }
+
+        Current01Value = 0;
+        CurrentTime = 0;
+        currentStatus = EnemyBulletEnvelopeState.Attack;
 
         CurrentTriggerSource = triggerSource;
         CurrentCoroutine = triggerSource.StartCoroutine(FollowEnvelope());

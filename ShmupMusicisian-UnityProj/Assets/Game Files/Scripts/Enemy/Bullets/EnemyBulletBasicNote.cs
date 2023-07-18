@@ -19,17 +19,14 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
 
     private void Update()
     {
-        // Get Params
-        AK.Wwise.Event stopSynth = bulletParams.stopSynthEvent;
-        RTPC volume = bulletParams.volumeRTPC;
-
         // Set Volume RTPC to envelope lerp value
-        volume.SetValue(gameObject, Mathf.Lerp(0, 100, BulletEnvelope.envelopeObj.Current01Value));
+        RTPC volume = bulletParams.volumeRTPC;
+        volume.SetValue(gameObject, Mathf.Lerp(0, 100, envelope.Current01Value));
 
         // Read envelope status and stop synth if it is over
-        if (BulletEnvelope.envelopeObj.CurrentStatus() == EnemyBulletEnvelopeState.END && isPlaying == true)
+        if (envelope.CurrentStatus() == EnemyBulletEnvelopeState.END && isPlaying == true)
         {
-            stopSynth.Post(gameObject);
+            bulletParams.stopSynthEvent.Post(gameObject);
             isPlaying = false;
         }
     }
@@ -41,6 +38,11 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
 
     void IEnemyBulletActivatable.Activate()
     {
+        // it probably would've been better to have somekind of synth class for handling the parameter linking part of this
+        // then this could just call that and feed in it's own data, rather than this
+        // which essentially limits this synth to always being used via EnemyBasicBulletParams
+        // if it wasn't this way then there'd theoeretically only need to be one test script, while with this there'll need to be a custom one per musical audio component
+
         // Get Params
         RTPC pitch = bulletParams.pitchRTPC;
         RTPC pwm = bulletParams.pwmRTPC;
@@ -61,8 +63,8 @@ public class EnemyBulletBasicNote : EnemyBulletMusicalNote, IEnemyBulletActivata
         transpose.SetValue(gameObject, Mathf.Lerp(0, 100, speedRange01));
 
         // Begin Envelope Volume Lerp
-        BulletEnvelope.envelopeObj.TriggerEnvelopeCoroutineLerp(this);
-        volume.SetValue(gameObject, Mathf.Lerp(0, 100, BulletEnvelope.envelopeObj.Current01Value));
+        envelope.TriggerEnvelopeCoroutineLerp(this);
+        volume.SetValue(gameObject, Mathf.Lerp(0, 100, envelope.Current01Value));
         playSynth.Post(gameObject);
         isPlaying = true;
     }

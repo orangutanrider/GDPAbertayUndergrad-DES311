@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class EnemyBulletEmitter : MonoBehaviour
 {
-    public bool activeAndFiring = false;
+    public bool autoEmit = false;
 
     [Header("(Base) Required References")]
     [SerializeField] EnemyBulletEmitterBaseParams emitterBaseParams;
@@ -37,10 +37,9 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     #endregion
 
     // Important Functions:
-    // EmissionTimerUpdate() - use this instead of timer = timer + time.deltaTime
-    // GetPooledBullet() - self explanatory
-    // SpawnNewBulletIntoPool(GameObject bulletPrefab) - use to spawn your bullet pool
-    // CreateHeirarchyObject(nameHere) - use in start before you spawn your bullet pool
+    // GetPooledBullet() 
+    // SpawnNewBulletIntoPool(GameObject bulletPrefab)
+    // Emit() - shoots the bullet(s)
 
     // Important Variables:
     // EmitterBaseParams (look to class to see what it contains)
@@ -56,7 +55,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     {
         EmissionTimer = EmissionTimer + (Time.deltaTime * emitterBaseParams.emissionTimerMultiply);
 
-        if (activeAndFiring == false || EmissionTimer < EmissionRate()) { return; }
+        if (autoEmit == false || EmissionTimer < EmissionRate()) { return; }
 
         Emit();
         EmissionTimer = 0;
@@ -75,7 +74,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
         }
     */
 
-    protected abstract void Emit();
+    public abstract void Emit();
     // Example of basic emission (it simply emits a single bullet when called)
     /*
         GameObject bulletBeingEmitted = GetPooledBullet();
@@ -162,6 +161,7 @@ public abstract class EnemyBulletEmitter : MonoBehaviour
     protected void SpawnNewBulletIntoPool(GameObject bulletPrefab)
     {
         GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint, Quaternion.Euler(Vector3.zero), HeirarchyObject.transform);
+
         bulletPool.Add(newBullet);
         newBullet.SetActive(false);
     }
