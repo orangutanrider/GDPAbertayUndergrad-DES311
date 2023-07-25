@@ -16,8 +16,8 @@ MonoBehaviour:
   - name: DemoLevel (SingleLoad)
     sceneReference: {fileID: 11400000, guid: a6f6b64012dec21418d5a8781f094cbc, type: 2}
     loadMode: 0
-  - name: DemoEnemies (AdditiveLoad)
-    sceneReference: {fileID: 11400000, guid: e9acc781a7d4f124f812ee84f8ea466c, type: 2}
+  - name: DemonBox (AdditiveLoad)
+    sceneReference: {fileID: 11400000, guid: 4b1921a7e992fc94bb43f93345583630, type: 2}
     loadMode: 1
   - name: Player (AdditiveLoad)
     sceneReference: {fileID: 11400000, guid: d4e8aba283f1cc2489d7c3ea15581b2a, type: 2}

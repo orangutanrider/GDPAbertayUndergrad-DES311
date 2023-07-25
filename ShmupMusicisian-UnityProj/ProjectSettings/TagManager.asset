@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: DebugBehind
+    uniqueID: 2304138761
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sprite Backgrounds
+    uniqueID: 920324743
+    locked: 0
+  - name: Sprite Individual Backgrounds
+    uniqueID: 4086867503
+    locked: 0
+  - name: Sprite Outlines
+    uniqueID: 2519260639
     locked: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EBulletGlobalParams", menuName = "Enemy/Bullet/Global")]
+[CreateAssetMenu(fileName = "EBulletGlobalParams", menuName = "EBullet/Global")]
 public class EBulletGlobalParams : ScriptableObject
 {
     public bool printNegativeFlagWarnings;

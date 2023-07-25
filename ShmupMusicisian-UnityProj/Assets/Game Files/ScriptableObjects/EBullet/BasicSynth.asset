@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b30758ee4f4c72438d769e9d90e6786, type: 3}
+  m_Name: BasicSynth
+  m_EditorClassIdentifier: 
+  pitchPositionRange: {x: -8, y: 8}
+  pwmAngleRange: {x: -120, y: 120}
+  transposeSpeedRange: {x: 2, y: 6}
+  waveformValue: 50
+  fmValue: 50
+  noiseLevelValue: 50
+  playEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9b4f0d96adbdfbf40916e2b11a9fb5cf, type: 2}
+  stopEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0935b0e18fa80df429819ff6c068f5c1, type: 2}
+  volumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 29c4fddcbe09c48449b2d3d452079600, type: 2}
+  envelopeParams: {fileID: 11400000, guid: 5f4b280ccc230d94e918180702c3823e, type: 2}
+  pitchRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7fdaf6e5d5cc8d24f81bbc3c79828a84, type: 2}
+  pwmRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8c95bd10bd659e2439dbe25f1e9d55dd, type: 2}
+  transposeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1aa0707df7c784b4c996d1ed118b0278, type: 2}
+  waveformRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e71d3876c5d44c944b1d12561140f59c, type: 2}
+  FMAmountRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad19be35d99ca0a4f96380735c86ebc6, type: 2}
+  NoiseLevelRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7282fdd39b2faa64a940eb30b970640c, type: 2}

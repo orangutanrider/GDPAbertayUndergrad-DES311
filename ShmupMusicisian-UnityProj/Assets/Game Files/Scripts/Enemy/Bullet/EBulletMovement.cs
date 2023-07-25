@@ -12,7 +12,7 @@ public class EBulletMovement : EBulletComponent, IEBulletOnActivate
 
     void IEBulletOnActivate.OnActivate()
     {
-        StartMovement(transform.up * globalParams.speedMultiply);
+        StartMovement(-transform.up);
     }
 
     public void StartMovement(Vector2 movementVector)

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class RawTransformMover : Mover
 {
+    public Transform targetTransform;
     public float moveSpeed = 1;
 
     Vector2 currentMoveSpeed = Vector2.zero;
@@ -31,6 +32,6 @@ public class RawTransformMover : Mover
 
     private void FixedUpdate()
     {
-        transform.position = transform.position + (new Vector3(currentMoveSpeed.x, currentMoveSpeed.y) * speedAdjustment);
+        targetTransform.position = targetTransform.position + (new Vector3(currentMoveSpeed.x, currentMoveSpeed.y) * speedAdjustment);
     }
 }

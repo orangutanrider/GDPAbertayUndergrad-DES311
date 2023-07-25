@@ -125,9 +125,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7535301958950072316}
-  - component: {fileID: 5287868321926103151}
+  - component: {fileID: 4550722631148850148}
   m_Layer: 8
-  m_Name: BulletMusicalAudio
+  m_Name: Synth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ Transform:
   m_Father: {fileID: 3949194244764700840}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5287868321926103151
+--- !u!114 &4550722631148850148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,15 +157,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273879400172839463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8865ee35008b17648bdbf622fa0412ec, type: 3}
+  m_Script: {fileID: 11500000, guid: b594e7152d005744c8564145a0e1e26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEnvelope: {fileID: 11400000, guid: 8273cae85d3b908468d8c9efd55d1a72, type: 2}
-  bulletRoot: {fileID: 5111490739584333152}
-  overrideHoldTime: 0
-  holdTimeOverride: 0
-  bulletParams: {fileID: 11400000, guid: 581a54c7819402c42bdd00713ec3a558, type: 2}
-  movement: {fileID: 5690972245066816619}
+  bullet: {fileID: 8900470053270048479}
+  synth: {fileID: 11400000, guid: c1951e30fc694b54faebb90507c28ba9, type: 2}
 --- !u!1 &1743188321574200064
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +171,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5211108212489636691}
-  - component: {fileID: 5690972245066816619}
+  - component: {fileID: 4984268900595368990}
+  - component: {fileID: 8660328130060311398}
+  - component: {fileID: 7246478820170233946}
   m_Layer: 8
-  m_Name: BulletMovement
+  m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +196,7 @@ Transform:
   m_Father: {fileID: 3949194244764700840}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5690972245066816619
+--- !u!114 &4984268900595368990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,76 +205,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1743188321574200064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6af4453ee0dea864c85317e60b9f19ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d73457ab96e59e458af2a20d082b0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletBaseParams: {fileID: 11400000, guid: 2db54bb6e47099b4fb1b27284beec168, type: 2}
-  bulletParams: {fileID: 11400000, guid: 581a54c7819402c42bdd00713ec3a558, type: 2}
-  rb2D: {fileID: 4068462299643082011}
---- !u!1 &2688398315241716021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4438858041114022979}
-  - component: {fileID: 6684174033784694875}
-  - component: {fileID: 609734678747515268}
-  m_Layer: 8
-  m_Name: BulletActivation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4438858041114022979
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2688398315241716021}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3949194244764700840}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6684174033784694875
+  globalParams: {fileID: 11400000, guid: f7a4176c6a27a1945bff2267f9c47bfe, type: 2}
+  mover: {fileID: 8660328130060311398}
+--- !u!114 &8660328130060311398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2688398315241716021}
+  m_GameObject: {fileID: 1743188321574200064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f44b03bee74bee4783a0ed5986ef46e, type: 3}
+  m_Script: {fileID: 11500000, guid: 959238efc1d4c74408784fe962cb98c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationStack:
-  - {fileID: 5690972245066816619}
-  - {fileID: 5287868321926103151}
---- !u!114 &609734678747515268
+  targetTransform: {fileID: 3949194244764700840}
+  moveSpeed: 1
+--- !u!114 &7246478820170233946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2688398315241716021}
+  m_GameObject: {fileID: 1743188321574200064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bd274cc2fc43046b0ad5614b86a2fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 606483ff8aa4e82419ce75d12df8bf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handlerParams: {fileID: 11400000, guid: fcb0c4f2759bb63448624f2a249da733, type: 2}
-  bulletRoot: {fileID: 5111490739584333152}
-  onDeactivationStack: []
-  onDeactivatingStack: []
+  targetTransform: {fileID: 3949194244764700840}
+  mover: {fileID: 8660328130060311398}
 --- !u!1 &3144538161845684401
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +248,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2593565774066232533}
   - component: {fileID: 7385310766689078595}
-  - component: {fileID: 3003357080790440302}
+  - component: {fileID: 6623587680536265080}
   m_Layer: 8
-  m_Name: BulletDamage
+  m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,7 +306,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
---- !u!114 &3003357080790440302
+--- !u!114 &6623587680536265080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,13 +315,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3144538161845684401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50476e6d58567eb429779d3dab07f5de, type: 3}
+  m_Script: {fileID: 11500000, guid: c5bc165c93710a34b8eb3fdeee399eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletBaseParams: {fileID: 11400000, guid: 2db54bb6e47099b4fb1b27284beec168, type: 2}
-  bulletRoot: {fileID: 5111490739584333152}
-  bulletMovement: {fileID: 5690972245066816619}
-  bulletParams: {fileID: 11400000, guid: 581a54c7819402c42bdd00713ec3a558, type: 2}
+  eBulletGlobalParams: {fileID: 11400000, guid: f7a4176c6a27a1945bff2267f9c47bfe, type: 2}
+  bullet: {fileID: 8900470053270048479}
+  mover: {fileID: 0}
 --- !u!1 &5111490739584333152
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +330,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3949194244764700840}
-  - component: {fileID: 4068462299643082011}
+  - component: {fileID: 8900470053270048479}
+  - component: {fileID: 5549091967571603213}
   m_Layer: 8
   m_Name: EBasicBullet
   m_TagString: Untagged
@@ -393,12 +354,33 @@ Transform:
   - {fileID: 7535301958950072316}
   - {fileID: 5211108212489636691}
   - {fileID: 2593565774066232533}
-  - {fileID: 4438858041114022979}
   - {fileID: 5185041778667834043}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &4068462299643082011
+--- !u!114 &8900470053270048479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111490739584333152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364eb1f7b20a38947a0a87368592f5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eBulletGlobalParams: {fileID: 11400000, guid: f7a4176c6a27a1945bff2267f9c47bfe, type: 2}
+  mover: {fileID: 8660328130060311398}
+  movement: {fileID: 4984268900595368990}
+  hitDamage: {fileID: 6623587680536265080}
+  synth: {fileID: 4550722631148850148}
+  onActivateStack:
+  - {fileID: 4984268900595368990}
+  - {fileID: 4550722631148850148}
+  onDeactivateStack: []
+  OnDeactivationStack: []
+--- !u!50 &5549091967571603213
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -406,7 +388,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5111490739584333152}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
