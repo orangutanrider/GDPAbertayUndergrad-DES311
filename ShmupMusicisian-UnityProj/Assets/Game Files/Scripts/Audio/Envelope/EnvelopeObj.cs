@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnvelopeObj 
 {
+    public EnvelopeObj() { }
+
     public EnvelopeObj(Envelope envelope)
     {
         Envelope = envelope;
