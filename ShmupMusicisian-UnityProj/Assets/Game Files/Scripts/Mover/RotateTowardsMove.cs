@@ -3,7 +3,7 @@ using System;
 
 public class RotateTowardsMove : MonoBehaviour
 {
-    [Header("Required References")]
+    public Transform targetTransform;
     public Mover mover;
 
     private void Start()
@@ -13,6 +13,6 @@ public class RotateTowardsMove : MonoBehaviour
 
     private void RotateToMovement(object sender, EventArgs e)
     {
-        transform.up = mover.CurrentMovement;
+        targetTransform.up = mover.CurrentMovement;
     }
 }
