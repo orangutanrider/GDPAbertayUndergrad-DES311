@@ -19,7 +19,7 @@ public class EEmitterAutoFireAddOn : MonoBehaviour
 
         foreach (EEmitter emitter in emitters)
         {
-            emitter.Emit(this);
+            emitter.Emit();
         }
     }
 }
