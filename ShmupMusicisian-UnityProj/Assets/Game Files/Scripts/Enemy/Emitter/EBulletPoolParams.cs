@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EBulletPoolParams", menuName = "Enemy/Emitter/PoolParams")]
+[CreateAssetMenu(fileName = "EBulletPoolParams", menuName = "EBullet/BulletPoolParams")]
 public class EBulletPoolParams : ScriptableObject
 {
     public GameObject bulletPrefab;

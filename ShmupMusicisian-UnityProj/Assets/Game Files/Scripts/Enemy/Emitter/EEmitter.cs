@@ -5,10 +5,11 @@ public class EEmitter : MonoBehaviour
     [Header("Required References")]
     public EBulletPool bulletPool;
 
-    public virtual void Emit(object emissionCaller)
+    public void Emit()
     {
         EBullet emittedBullet = bulletPool.GetPooledBullet();
         emittedBullet.transform.position = transform.position;
+        emittedBullet.transform.up = transform.up;
         emittedBullet.ActivateAll();
     }
 }

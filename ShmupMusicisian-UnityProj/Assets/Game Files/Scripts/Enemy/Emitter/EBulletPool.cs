@@ -16,11 +16,11 @@ public class EBulletPool : MonoBehaviour
 
     void Start()
     {
+        CreateHeirarchyObject(poolParams.heirarchyName);
         for (int loop = 0; loop <= poolParams.maxConcurrentBullets; loop++)
         {
             SpawnNewBulletIntoPool();
         }
-        CreateHeirarchyObject(poolParams.heirarchyName);
     }
 
     public void SpawnNewBulletIntoPool()

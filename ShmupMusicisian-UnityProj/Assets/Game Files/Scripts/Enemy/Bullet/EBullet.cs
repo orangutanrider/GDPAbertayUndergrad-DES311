@@ -45,6 +45,7 @@ public class EBullet : MonoBehaviour
                     " Returned a null IEnemyBulletActivatable interface, if this is intentional, then you don't need to add it to the componentActivationStack.");
                 continue;
             }
+
             componentInterface.OnActivate();
         }
     }
