@@ -1,22 +1,42 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1563321731	PlayBasicSynth			\Default Work Unit\PlayBasicSynth	
-	3306568485	StopBasicSynth			\Default Work Unit\StopBasicSynth	
+	175007690	CrunchSynthPlay			\Default Work Unit\CrunchSynthPlay	
+	440748405	BasicSynthStop			\Default Work Unit\BasicSynthStop	
+	1620786420	CrunchSynthStop			\Default Work Unit\CrunchSynthStop	
+	1705609511	BasicSynthPlay			\Default Work Unit\BasicSynthPlay	
+	2500849506	CannonSynthPlay			\Default Work Unit\CannonSynthPlay	
+	3102285500	CannonSynthStop			\Default Work Unit\CannonSynthStop	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	184779118	BasicSynthFM			\Default Work Unit\BasicSynth\BasicSynthFM	
-	1007555003	BasicSynthVolume			\Default Work Unit\BasicSynth\BasicSynthVolume	
+	596299267	SynthVolume			\Default Work Unit\SynthVolume	
+	628067611	CrunchSynthFM			\Default Work Unit\CrunchSynth\CrunchSynthFM	
 	1012422440	BasicSynthWaveform			\Default Work Unit\BasicSynth\BasicSynthWaveform	
+	1524479102	CrunchSynthPitch			\Default Work Unit\CrunchSynth\CrunchSynthPitch	
+	1855118520	EngineSynthTranspose			\Default Work Unit\EngineSynthTranspose	
 	1883906721	BasicSynthNoiseLevel			\Default Work Unit\BasicSynth\BasicSynthNoiseLevel	
 	1954215905	BasicSynthPitch			\Default Work Unit\BasicSynth\BasicSynthPitch	
+	2200632578	CrunchSynthNoise			\Default Work Unit\CrunchSynth\CrunchSynthNoise	
 	2273055070	BasicSynthTranspose			\Default Work Unit\BasicSynth\BasicSynthTranspose	
+	2456191439	SynthUnlinkedPitch			\Default Work Unit\SynthUnlinkedPitch	
+	2561723385	CrunchSynthTranspose			\Default Work Unit\CrunchSynth\CrunchSynthTranspose	
 	3396022747	BasicSynthPWM			\Default Work Unit\BasicSynth\BasicSynthPWM	
+	4286087148	CrunchSynthPWM			\Default Work Unit\CrunchSynth\CrunchSynthPWM	
+
+Modulator LFO	ID	Name			Wwise Object Path	Notes
+	301772523	CannonLFO			\Default Work Unit\CannonLFO	
 
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	336103614	Modulator Envelope (Custom)				
+	364070029	Modulator Envelope (Custom)				
+	801477847	Modulator Envelope (Custom)				
+	943149855	Modulator Envelope (Custom)				
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	289047409	BasicSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\CannonSynth (BasicSynth)\BasicSynth	
 	322507469	BasicSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\BasicSynth\BasicSynth	
+	655578248	CrunchSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\CrunchSynth\CrunchSynth	
+	851022094	EngineSynth	Wwise Synth One		\Actor-Mixer Hierarchy\Default Work Unit\EngineSynth\EngineSynth	
 

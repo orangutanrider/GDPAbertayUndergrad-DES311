@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0174868f6afb6d943978c2623bf85982, type: 3}
   m_Name: 8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888
   m_EditorClassIdentifier: 
-  objectName: BasicSynthVolume
-  id: 1007555003
+  objectName: SynthVolume
+  id: 596299267
   guid: 8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888
