@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9056604, g: 0.33748665, b: 0.6614211, a: 1}
+  m_Color: {r: 0.90588236, g: 0.79397297, b: 0.3372549, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8900470053270048479}
-  synth: {fileID: 11400000, guid: c1951e30fc694b54faebb90507c28ba9, type: 2}
+  synth: {fileID: 11400000, guid: f87cecb2a0e3ac54e8689c2437e9253c, type: 2}
 --- !u!1 &1743188321574200064
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eBulletGlobalParams: {fileID: 11400000, guid: f7a4176c6a27a1945bff2267f9c47bfe, type: 2}
   bullet: {fileID: 8900470053270048479}
-  mover: {fileID: 0}
+  mover: {fileID: 8660328130060311398}
 --- !u!1 &5111490739584333152
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 8900470053270048479}
   - component: {fileID: 5549091967571603213}
   m_Layer: 8
-  m_Name: EBasicBullet
+  m_Name: EShotgunCrashBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
