@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30f8c2e152260a4cb7121dd47fcd53a, type: 3}
   m_Name: BasicSynthEnvelope
   m_EditorClassIdentifier: 
-  magnitude: 3
+  magnitude: 1
   holdTime: 0
-  attack: 0.1
-  decay: 1
+  attack: 0.2
+  decay: 0.2
   sustain: 0.66
-  release: 1
+  release: 3

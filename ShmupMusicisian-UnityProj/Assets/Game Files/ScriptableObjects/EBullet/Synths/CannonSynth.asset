@@ -10,27 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b30758ee4f4c72438d769e9d90e6786, type: 3}
-  m_Name: BasicSynth
+  m_Name: CannonSynth
   m_EditorClassIdentifier: 
   pitchPositionRange: {x: -8, y: 8}
-  pwmAngleRange: {x: -120, y: 120}
-  transposeSpeedRange: {x: 2, y: 6}
-  waveformValue: 50
+  pwmAngleRange: {x: -60, y: 60}
+  transposeSpeedRange: {x: 1, y: 6}
+  waveformValue: 85.7
   fmValue: 50
-  noiseLevelValue: 50
+  noiseLevelValue: 0
+  unlinkedPitchValue: 25
   playEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9b4f0d96adbdfbf40916e2b11a9fb5cf, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 420658f96f5eace449b6e33c9e5bb54a, type: 2}
   stopEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0935b0e18fa80df429819ff6c068f5c1, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9ac675eccc8b1dd418643adba3042ca4, type: 2}
   volumeRTPC:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 29c4fddcbe09c48449b2d3d452079600, type: 2}
-  envelopeParams: {fileID: 11400000, guid: 5f4b280ccc230d94e918180702c3823e, type: 2}
+  envelopeParams: {fileID: 11400000, guid: 39b049fcebec7fa4dad7d263e69fd23a, type: 2}
   pitchRTPC:
     idInternal: 0
     valueGuidInternal: 
@@ -43,6 +44,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1aa0707df7c784b4c996d1ed118b0278, type: 2}
+  unlinkedPitchRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5edc5e879b8a8e94193f6fe4b4c1bd4a, type: 2}
   waveformRTPC:
     idInternal: 0
     valueGuidInternal: 
@@ -51,7 +56,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ad19be35d99ca0a4f96380735c86ebc6, type: 2}
-  NoiseLevelRTPC:
+  noiseLevelRTPC:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 7282fdd39b2faa64a940eb30b970640c, type: 2}

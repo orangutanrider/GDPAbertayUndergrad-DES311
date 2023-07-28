@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f364ec1835c50a64dae09e7b1075a2a7, type: 3}
+  m_Name: ShotgunCrunchSynth
+  m_EditorClassIdentifier: 
+  pitchYPositionRange: {x: 4, y: 6.75}
+  fmXPositionRange: {x: -8, y: 8}
+  pwmAngleRange: {x: -120, y: 120}
+  transposeSpeedRange: {x: 2, y: 6}
+  noiseLevelValue: 25
+  unlinkedPitchValue: 66
+  playEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ba3631bd58e821b439d954bc7c75dd7e, type: 2}
+  stopEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a50453a8893424a479d91a4dfaf461ae, type: 2}
+  volumeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 29c4fddcbe09c48449b2d3d452079600, type: 2}
+  volumeEnvelope: {fileID: 11400000, guid: 84150ff8b082d494f9a9843cd5b93007, type: 2}
+  pitchRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9724873d68d739f49ad20c9fbb9a45eb, type: 2}
+  pwmRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8fd3eb797ec46af448db94f367ed8124, type: 2}
+  transposeRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 65ac3fa8896edef40b4e3e6c3189bef9, type: 2}
+  FMAmountRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 972097f60c568154996a544917984291, type: 2}
+  unlinkedPitchRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5edc5e879b8a8e94193f6fe4b4c1bd4a, type: 2}
+  noiseLevelRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0ce31c59cd996024f8bd6328d4961a73, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   printNegativeFlagWarnings: 1
   allowNegativeFlags: 0
-  speedMultiply: 100
+  speedMultiply: 5
   bulletDamage: 1
   playerMask:
     serializedVersion: 2

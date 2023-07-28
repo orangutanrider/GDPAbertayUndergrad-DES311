@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 866bb88c98996d24f8471e71f2f5839b, type: 3}
-  m_Name: ShotgunPool
+  m_Name: CannonBulletPool
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5111490739584333152, guid: d2d791ff8e82bf4448a4280bf8d4f008, type: 3}
-  heirarchyName: ShotgunBulletPool
-  maxConcurrentBullets: 66
-  poolSpawnPoint: {x: 0, y: -400, z: 0}
-  printFails: 1
+  bulletPrefab: {fileID: 5111490739584333152, guid: 9f656c0211d2c9d4b8dfbf03cd42e661, type: 3}
+  heirarchyName: CannonBulletPool
+  maxConcurrentBullets: 50
+  poolSpawnPoint: {x: 0, y: -600, z: 0}
+  printFails: 0
