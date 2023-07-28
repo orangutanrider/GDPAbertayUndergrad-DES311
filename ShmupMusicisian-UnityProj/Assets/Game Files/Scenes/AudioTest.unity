@@ -788,6 +788,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37757199107960770, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3491847239428594649, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4498256380943790101, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
       propertyPath: m_Name
       value: Shotgun Crash Attack
@@ -798,11 +806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4932269635067858807, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.36915874
+      value: -3.98
       objectReference: {fileID: 0}
     - target: {fileID: 4932269635067858807, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.186698
+      value: 5.46
       objectReference: {fileID: 0}
     - target: {fileID: 4932269635067858807, guid: 58dc535651063ab4aa99bd3a52d7291a, type: 3}
       propertyPath: m_LocalPosition.z

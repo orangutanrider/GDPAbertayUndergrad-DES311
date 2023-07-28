@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using AK.Wwise;
@@ -17,6 +18,8 @@ public class BasicSynth : EBulletWwiseRTPCSynth
     [SerializeField] float fmValue = 50;
     [Range(0, 100)]
     [SerializeField] float noiseLevelValue = 50;
+    [Range(0, 100)]
+    [SerializeField] float unlinkedPitchValue = 50;
 
     [Header("Required")]
     [SerializeField] AK.Wwise.Event playEvent;
@@ -30,21 +33,35 @@ public class BasicSynth : EBulletWwiseRTPCSynth
     [SerializeField] RTPC transposeRTPC;
 
     [Header("Required, Unlinked RTPCs")]
+    [SerializeField] RTPC unlinkedPitchRTPC;
     [SerializeField] RTPC waveformRTPC;
     [SerializeField] RTPC FMAmountRTPC;
-    [SerializeField] RTPC NoiseLevelRTPC;
+    [SerializeField] RTPC noiseLevelRTPC;
 
-    public override Envelope Envelope
+    // this kinda sucks but the alternative is reworking the flag system as a whole.
+    List<EBullet> flagBearers = new List<EBullet>();
+
+    Envelope[] envelopeCache = new Envelope[1];
+
+    public override Envelope[] Envelopes
     {
         get
         {
-            return envelopeParams.GetDataCopy();
+            envelopeCache[0] = envelopeParams.GetDataCopy();
+            return envelopeCache;
         }
     }
 
-    public override void Play(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true)
+    public override void Play(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj[] envelopeObjs, bool printErrors = true)
     {
+        EnvelopeObj envelopeObj = envelopeObjs[0];
+
+        // Raise Flag
+        flagBearers.Add(audioHost);
+        audioHost.RaiseStayActiveFlag();
+
         // play
+        playEvent.Post(synthComponent.gameObject);
         envelopeObj.TriggerEnvelopeCoroutine(synthComponent);
 
         // set linked RTPCs
@@ -73,42 +90,75 @@ public class BasicSynth : EBulletWwiseRTPCSynth
         // set unlinked rtpcs
         waveformRTPC.SetValue(synthComponent.gameObject, waveformValue);
         FMAmountRTPC.SetValue(synthComponent.gameObject, fmValue);
-        NoiseLevelRTPC.SetValue(synthComponent.gameObject, noiseLevelValue);
+        noiseLevelRTPC.SetValue(synthComponent.gameObject, noiseLevelValue);
+        unlinkedPitchRTPC.SetValue(synthComponent.gameObject, unlinkedPitchValue);
 
         // start update coroutine
-        if (synthComponent.SynthCoroutine == null)
-        {
-            IEnumerator updateVolume = UpdateVolume(audioHost, synthComponent, envelopeObj, printErrors);
-            synthComponent.StartCoroutine(updateVolume);
-        }
+        synthComponent.StopAllSynthUpdateCoroutines();
+
+        CoroutineBox newBox = new CoroutineBox(null);
+        IEnumerator updateVolume = UpdateVolume(newBox, audioHost, synthComponent, envelopeObj, printErrors);
+        newBox.Coroutine = synthComponent.StartCoroutine(updateVolume);
+        synthComponent.AddSynthUpdateCoroutine(newBox.Coroutine);
     }
 
-    public override void Stop(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true)
+    /*
+    public override void Stop(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj[] envelopeObjs, bool printErrors = true)
     {
-        if(envelopeObj.CurrentState() == EnvelopeState.END || envelopeObj.CurrentState() == EnvelopeState.NEGATIVE)
+        EnvelopeObj envelopeObj = envelopeObjs[0];
+
+        // can only stop immediatly if the update coroutines have already ran their course (in which case this function shouldn't even be needed)
+        if (envelopeObj.CurrentState() == EnvelopeState.END || envelopeObj.CurrentState() == EnvelopeState.NEGATIVE)
         {
+            // Lower Flag
+            if (flagBearers.Contains(audioHost) == true)
+            {
+                flagBearers.Remove(audioHost);
+                audioHost.LowerStayActiveFlag();
+            }
+
+            // Stop playing
             stopEvent.Post(synthComponent.gameObject);
+
             return;
         }
 
         envelopeObj.InterruptEnvelope(synthComponent);
 
-        if (synthComponent.SynthCoroutine == null)
-        {
-            IEnumerator updateVolume = UpdateVolume(audioHost, synthComponent, envelopeObj, printErrors);
-            synthComponent.StartCoroutine(updateVolume);
-        }
-    }
+        // start update coroutine
+        synthComponent.StopAllSynthUpdateCoroutines();
 
-    IEnumerator UpdateVolume(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true)
+        CoroutineBox newBox = new CoroutineBox(null);
+        IEnumerator updateVolume = UpdateVolume(newBox, audioHost, synthComponent, envelopeObj, printErrors);
+        newBox.Coroutine = synthComponent.StartCoroutine(updateVolume);
+        synthComponent.AddSynthUpdateCoroutine(newBox.Coroutine);
+
+        // the update coroutines are self stopping, hence no stop even post or anything like that
+    }
+    */
+
+    IEnumerator UpdateVolume(CoroutineBox box, EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true)
     {
-        while (envelopeObj.CurrentState() != EnvelopeState.END || envelopeObj.CurrentState() != EnvelopeState.NEGATIVE)
+        while (envelopeObj.CurrentState() != EnvelopeState.END && envelopeObj.CurrentState() != EnvelopeState.NEGATIVE)
         {
             volumeRTPC.SetValue(synthComponent.gameObject, Mathf.Lerp(0, 100, envelopeObj.Current01Value));
             yield return null;
         }
 
+        yield return null;
+
+        // Lower Flag
+        if (flagBearers.Contains(audioHost) == true)
+        {
+            flagBearers.Remove(audioHost);
+            audioHost.LowerStayActiveFlag();
+        }
+
+        // Stop playing
         stopEvent.Post(synthComponent.gameObject);
+        synthComponent.RemoveSynthUpdateCoroutine(box.Coroutine);
+        synthComponent.StopCoroutine(box.Coroutine);
+
         yield break;
     }
 }

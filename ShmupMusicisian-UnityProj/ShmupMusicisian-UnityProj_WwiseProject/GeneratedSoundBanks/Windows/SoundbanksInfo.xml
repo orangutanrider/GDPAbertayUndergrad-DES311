@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BA027978-145E-4959-6DDB-EDA5925136A7}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FE7660E4-60BB-7EE8-2A67-02E38C8FD456}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -23,34 +23,72 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="184779118" Name="BasicSynthFM"/>
-				<GameParameter Id="1007555003" Name="BasicSynthVolume"/>
+				<GameParameter Id="596299267" Name="SynthVolume"/>
+				<GameParameter Id="628067611" Name="CrunchSynthFM"/>
 				<GameParameter Id="1012422440" Name="BasicSynthWaveform"/>
+				<GameParameter Id="1524479102" Name="CrunchSynthPitch"/>
+				<GameParameter Id="1855118520" Name="EngineSynthTranspose"/>
 				<GameParameter Id="1883906721" Name="BasicSynthNoiseLevel"/>
 				<GameParameter Id="1954215905" Name="BasicSynthPitch"/>
+				<GameParameter Id="2200632578" Name="CrunchSynthNoise"/>
 				<GameParameter Id="2273055070" Name="BasicSynthTranspose"/>
+				<GameParameter Id="2456191439" Name="SynthUnlinkedPitch"/>
+				<GameParameter Id="2561723385" Name="CrunchSynthTranspose"/>
 				<GameParameter Id="3396022747" Name="BasicSynthPWM"/>
+				<GameParameter Id="4286087148" Name="CrunchSynthPWM"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{EAB31AAF-36DD-DCF2-B965-23C57965D95A}">
+		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{C7976A90-1645-895B-FBBD-DD6904BBB283}">
 			<ShortName>Soundbank1</ShortName>
 			<Path>Soundbank1.bnk</Path>
 			<Plugins>
 				<Custom>
+					<Plugin Id="289047409" Name="BasicSynth" LibName="Wwise Synth One" LibId="9699330"/>
 					<Plugin Id="322507469" Name="BasicSynth" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="655578248" Name="CrunchSynth" LibName="Wwise Synth One" LibId="9699330"/>
+					<Plugin Id="851022094" Name="EngineSynth" LibName="Wwise Synth One" LibId="9699330"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1563321731" Name="PlayBasicSynth" DurationType="Unknown">
+				<Event Id="1705609511" Name="BasicSynthPlay" DurationType="Unknown">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="322507469"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="3306568485" Name="StopBasicSynth" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="440748405" Name="BasicSynthStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<PluginRefs>
 						<Custom>
 							<PluginRef Id="322507469"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2500849506" Name="CannonSynthPlay" DurationType="Unknown">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="289047409"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3102285500" Name="CannonSynthStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="289047409"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="175007690" Name="CrunchSynthPlay" DurationType="Unknown">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="655578248"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="1620786420" Name="CrunchSynthStop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="655578248"/>
 						</Custom>
 					</PluginRefs>
 				</Event>
@@ -60,14 +98,21 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="184779118" Name="BasicSynthFM"/>
-				<GameParameter Id="1007555003" Name="BasicSynthVolume"/>
+				<GameParameter Id="596299267" Name="SynthVolume"/>
+				<GameParameter Id="628067611" Name="CrunchSynthFM"/>
 				<GameParameter Id="1012422440" Name="BasicSynthWaveform"/>
+				<GameParameter Id="1524479102" Name="CrunchSynthPitch"/>
+				<GameParameter Id="1855118520" Name="EngineSynthTranspose"/>
 				<GameParameter Id="1883906721" Name="BasicSynthNoiseLevel"/>
 				<GameParameter Id="1954215905" Name="BasicSynthPitch"/>
+				<GameParameter Id="2200632578" Name="CrunchSynthNoise"/>
 				<GameParameter Id="2273055070" Name="BasicSynthTranspose"/>
+				<GameParameter Id="2456191439" Name="SynthUnlinkedPitch"/>
+				<GameParameter Id="2561723385" Name="CrunchSynthTranspose"/>
 				<GameParameter Id="3396022747" Name="BasicSynthPWM"/>
+				<GameParameter Id="4286087148" Name="CrunchSynthPWM"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{845B973D-08A6-AE4A-C007-D53667368461}</FileHash>
+	<FileHash>{3E48FA5B-4FE5-06CB-6D05-651DDAD71A04}</FileHash>
 </SoundBanksInfo>

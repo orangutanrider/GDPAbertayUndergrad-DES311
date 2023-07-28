@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0174868f6afb6d943978c2623bf85982, type: 3}
+  m_Name: 79DB72B6-FA17-48C5-BD22-A6F3288424E0
+  m_EditorClassIdentifier: 
+  objectName: CrunchSynthNoise
+  id: 2200632578
+  guid: 79DB72B6-FA17-48C5-BD22-A6F3288424E0

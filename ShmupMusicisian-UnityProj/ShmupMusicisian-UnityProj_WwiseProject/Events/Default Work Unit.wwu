@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{75DE8637-3166-44E7-88AA-CC03AF416094}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="PlayBasicSynth" ID="{D80A1FD7-FDD4-4258-B7C3-5052506F6F04}">
+				<Event Name="BasicSynthPlay" ID="{D80A1FD7-FDD4-4258-B7C3-5052506F6F04}">
 					<ChildrenList>
 						<Action Name="" ID="{34DCAABE-480E-443D-98E6-CC4DE92F60AA}" ShortID="383363525">
 							<ReferenceList>
@@ -14,7 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="StopBasicSynth" ID="{B098BCC6-2ED8-4FAE-9241-51C494BDDC27}">
+				<Event Name="BasicSynthStop" ID="{B098BCC6-2ED8-4FAE-9241-51C494BDDC27}">
 					<ChildrenList>
 						<Action Name="" ID="{F5142A7C-4455-48F2-A5F9-AA41373AA2B7}" ShortID="191746285">
 							<PropertyList>
@@ -23,6 +23,56 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BasicSynth" ID="{FEADFA17-79F1-4978-AAFB-E67FBD646D6F}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CrunchSynthStop" ID="{3495FF74-96D0-4E03-BE33-AE968B32900B}">
+					<ChildrenList>
+						<Action Name="" ID="{E0CEBB95-EB4B-4E76-A976-D7BEC54748EB}" ShortID="1049826861">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrunchSynth" ID="{619A3847-1662-4B5D-ABFC-2D814EA43323}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CrunchSynthPlay" ID="{4A55326B-3198-4846-A4A4-B2FBD8EA16DF}">
+					<ChildrenList>
+						<Action Name="" ID="{C588FA92-0675-4D65-AE8C-850E9AB57A7D}" ShortID="669266223">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrunchSynth" ID="{619A3847-1662-4B5D-ABFC-2D814EA43323}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CannonSynthPlay" ID="{B9B01B0D-9993-41EC-BAE5-42BB60270339}">
+					<ChildrenList>
+						<Action Name="" ID="{E99EA528-030D-417F-8036-23C3353FD279}" ShortID="228365112">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CannonSynth (BasicSynth)" ID="{C9BEF5C9-7C54-41C4-9239-45F33DA385F8}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="CannonSynthStop" ID="{E4367296-568B-40A5-9FF1-731892721E55}">
+					<ChildrenList>
+						<Action Name="" ID="{B7E4EF9B-A47C-4EAD-99F2-7FF757A19203}" ShortID="468042819">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CannonSynth (BasicSynth)" ID="{C9BEF5C9-7C54-41C4-9239-45F33DA385F8}" WorkUnitID="{AED407D0-9F83-4E3A-98C9-CE59E914401A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

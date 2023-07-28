@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3a74a4ceae63c47bcb30276fa0fde5, type: 3}
   m_Name: SetSynthToCannon
   m_EditorClassIdentifier: 
-  synth: {fileID: 11400000, guid: c1951e30fc694b54faebb90507c28ba9, type: 2}
+  synth: {fileID: 11400000, guid: a11bf98971bacdc4daf9e1d1790ff7a3, type: 2}

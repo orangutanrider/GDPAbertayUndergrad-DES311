@@ -7,8 +7,8 @@ public abstract class EBulletWwiseRTPCSynth : ScriptableObject
     // not sure if this is the best way to go about that kind of thing though
     // could probably use a EBulletSynth property with somekind of error return instead
 
-    public abstract void Play(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true);
-    public abstract void Stop(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj envelopeObj, bool printErrors = true);
+    public abstract void Play(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj[] envelopeObjs, bool printErrors = true);
+    //public abstract void Stop(EBullet audioHost, EBulletSynth synthComponent, EnvelopeObj[] envelopeObjs, bool printErrors = true);
 
-    public abstract Envelope Envelope { get; }
+    public abstract Envelope[] Envelopes { get; }
 }

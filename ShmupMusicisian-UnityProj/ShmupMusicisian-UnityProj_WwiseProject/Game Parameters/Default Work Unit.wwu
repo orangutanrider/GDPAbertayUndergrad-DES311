@@ -35,7 +35,6 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="BasicSynthVolume" ID="{8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888}"/>
 						<GameParameter Name="BasicSynthWaveform" ID="{09324BAC-EB3F-4955-A1E7-2AA4DDC1A24D}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="18"/>
@@ -44,6 +43,18 @@
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="SynthVolume" ID="{8A1E4AD9-DEC5-4D18-8C4F-EE5F8668D888}"/>
+				<Folder Name="CrunchSynth" ID="{A4B76D90-E6FC-4C9F-9ED0-7948AA69653E}" ShortID="835533765">
+					<ChildrenList>
+						<GameParameter Name="CrunchSynthNoise" ID="{79DB72B6-FA17-48C5-BD22-A6F3288424E0}"/>
+						<GameParameter Name="CrunchSynthPWM" ID="{F7921ED6-6BAE-44D3-B3E3-56B80CC92573}"/>
+						<GameParameter Name="CrunchSynthTranspose" ID="{BECDC53A-2A5A-4603-9034-3B73D6059156}"/>
+						<GameParameter Name="CrunchSynthFM" ID="{A17D50E2-6005-42DC-B962-72256C0277B4}"/>
+						<GameParameter Name="CrunchSynthPitch" ID="{6C242799-1A2D-4EDF-9D31-45AEEE0EC39C}"/>
+					</ChildrenList>
+				</Folder>
+				<GameParameter Name="EngineSynthTranspose" ID="{E6136073-C84D-4771-845F-BC545A450F5B}"/>
+				<GameParameter Name="SynthUnlinkedPitch" ID="{79269844-379D-4DB2-AEBA-AB1DE8EECC2C}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

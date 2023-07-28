@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866bb88c98996d24f8471e71f2f5839b, type: 3}
   m_Name: ShotgunPool
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5111490739584333152, guid: 0536bea1edd06b746b6606d5cdcbe592, type: 3}
+  bulletPrefab: {fileID: 5111490739584333152, guid: d2d791ff8e82bf4448a4280bf8d4f008, type: 3}
   heirarchyName: ShotgunBulletPool
   maxConcurrentBullets: 66
   poolSpawnPoint: {x: 0, y: -400, z: 0}

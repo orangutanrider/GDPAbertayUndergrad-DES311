@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30f8c2e152260a4cb7121dd47fcd53a, type: 3}
+  m_Name: CannonEnvelope
+  m_EditorClassIdentifier: 
+  magnitude: 0.33
+  holdTime: 0.15
+  attack: 0.15
+  decay: 0.2
+  sustain: 0.2
+  release: 0.2
