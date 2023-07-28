@@ -50,7 +50,7 @@ public struct Envelope
         if (t < 0)
         {
             state = EnvelopeState.NEGATIVE;
-            return 0 * magnitude;
+            return 0;
         }
 
         float duration = attack;
@@ -58,7 +58,7 @@ public struct Envelope
         // attack
         if (t < duration)
         {
-            float attackLevel = Mathf.Lerp(0, 1, t / duration); // t / attack
+            float attackLevel = Mathf.Lerp(0, 1, t / attack); // t / attack
             state = EnvelopeState.Attack;
             return attackLevel * magnitude;
         }
@@ -68,7 +68,7 @@ public struct Envelope
         // decay
         if (t < duration)
         {
-            float decayLevel = Mathf.Lerp(1, sustain, t / duration); // t / (attack + decay)
+            float decayLevel = Mathf.Lerp(1, sustain, (t - attack) / decay); // (t - attack) / decay
             state = EnvelopeState.Decay;
             return decayLevel * magnitude;
         }
@@ -78,7 +78,7 @@ public struct Envelope
         // sustain
         if (t < duration)
         {
-            float sustainLevel = Mathf.Lerp(1, sustain, t / duration); // t / (attack + decay + holdTime)
+            float sustainLevel = sustain;
             state = EnvelopeState.Sustain;
             return sustainLevel * magnitude;
         }
@@ -88,13 +88,13 @@ public struct Envelope
         // release
         if (t < duration)
         {
-            float releaseLevel = Mathf.Lerp(sustain, 0, t / duration); // t / (attack + decay + holdTime + release)
+            float releaseLevel = Mathf.Lerp(sustain, 0, (t - attack - decay - holdTime) / release); // (t - attack - decay - holdtime) / release
             state = EnvelopeState.Release;
             return releaseLevel * magnitude;
         }
 
         // End
         state = EnvelopeState.END;
-        return 0 * magnitude;
+        return 0;
     }
 }

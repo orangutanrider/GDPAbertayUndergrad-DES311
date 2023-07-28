@@ -32,7 +32,9 @@ public class EnvelopeObj
         }
         set
         {
+            magnitude = value.magnitude;
             holdTime = value.holdTime;
+
             attack = value.attack;
             decay = value.decay;
             sustain = value.sustain;
