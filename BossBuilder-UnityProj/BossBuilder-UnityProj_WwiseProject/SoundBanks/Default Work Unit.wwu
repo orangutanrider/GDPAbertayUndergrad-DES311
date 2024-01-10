@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{059860D7-A980-445F-A7C0-C6772159A6B1}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{059860D7-A980-445F-A7C0-C6772159A6B1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Soundbank1" ID="{62336C54-4735-4BD7-A084-C21A4088A45F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{B7AA2A3C-3C79-403E-A93A-21BB220162FD}" WorkUnitID="{B7AA2A3C-3C79-403E-A93A-21BB220162FD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{966D2D7F-C459-429C-93AB-1B543F513A5B}" WorkUnitID="{966D2D7F-C459-429C-93AB-1B543F513A5B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{9F40532C-0A25-437D-9B91-48A4B2FD1B7D}" WorkUnitID="{9F40532C-0A25-437D-9B91-48A4B2FD1B7D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{56D734CC-8464-448B-AD1C-575AD8FA437F}" WorkUnitID="{56D734CC-8464-448B-AD1C-575AD8FA437F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Factory Effects" ID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{E8FBAC6F-ED85-4945-956C-E3189B5F46A8}" WorkUnitID="{E8FBAC6F-ED85-4945-956C-E3189B5F46A8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{B2BF0976-0990-4A2F-8839-34397F16F1F3}" WorkUnitID="{B2BF0976-0990-4A2F-8839-34397F16F1F3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{39E0D05B-FA32-4A9B-936D-9A94B6D1209C}" WorkUnitID="{39E0D05B-FA32-4A9B-936D-9A94B6D1209C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

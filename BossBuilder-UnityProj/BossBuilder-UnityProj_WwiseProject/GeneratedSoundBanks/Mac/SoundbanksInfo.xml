@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{66908986-B903-E968-586F-AC19680853F3}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="1647770721" Type="User" Language="SFX" Hash="{1502281D-C36E-80E8-0CEB-68C09C7EDB04}">
+			<ShortName>Soundbank1</ShortName>
+			<Path>Soundbank1.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="4496003" Name="Dirty_Washing_Machine" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="59662939" Name="Dialog_Too_Quiet" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="86245554" Name="Attack_Remover" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="109045632" Name="Vibrato" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="131511410" Name="Let_The_Power_Fall" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="136714882" Name="_500ms_Per_Hour" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="145028528" Name="Static_Sibilance_Remover_Female" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="176439046" Name="Caught_in_a_loop" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="199095971" Name="Dialog_Through_AC_Vents" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="389252396" Name="Next_Room" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="400317747" Name="Hall_Large_TooBright" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="415841907" Name="Space_Garage" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="484890516" Name="Church_Small_Wood" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="506891147" Name="Plate_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="535667444" Name="Bathroom1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="602546716" Name="Room_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="654807232" Name="Chipmunk" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="701863527" Name="Inside_My_Head" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="702543456" Name="Tunnel1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="776837744" Name="Born_In_1950" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="819943492" Name="Fear_no_Evil" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="927250686" Name="Rhythmic_Talk" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="949863463" Name="Many_Even_Harm_Notches" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="992902880" Name="Small_Tiled_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1008402193" Name="Low_Pass_20KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1110677034" Name="Underwater_Echoes" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="1125262053" Name="Blue_Distant_Echoes" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="1144018367" Name="Plate_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1159390747" Name="Room_Medium_Tiled" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1182561210" Name="Cut_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1198215643" Name="Boomerang" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="1203617187" Name="Machine_Gun_Hangar" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1232017842" Name="LR_Slap_with_CrossFeed" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="1237275451" Name="Octave_Up" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1252796875" Name="Light_Expander" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="1291433344" Name="Bass" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="1293178626" Name="In_My_Car" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1416967478" Name="All_Buttons_IN" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="1431209347" Name="One_Tap_One_Second" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="1431265797" Name="Monsterize" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="1443902288" Name="_1_Second_Delay" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="1459522457" Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="1520064353" Name="Hall_Medium_Bright" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1551236760" Name="Small_Wooden_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1588715066" Name="Echoes_Linear" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="1590660382" Name="Nearly_Forever" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="1655770832" Name="High_Freq_Cut_11" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1655770833" Name="High_Freq_Cut_10" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1674078407" Name="Chorus_Like" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="1675424737" Name="Extreme_Limiting_1" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="1675424738" Name="Extreme_Limiting_2" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="1675424739" Name="Extreme_Limiting_3" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="1706684651" Name="Plate_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1711423976" Name="Many_Odd_Harm_Notches" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="1735130781" Name="Aliasing" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="1759944409" Name="Cut_3dB_100Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1820854077" Name="Noise_Gate_Fast_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="1863245162" Name="Noise_Gate_Slow_Attack" LibName="Wwise Expander" LibId="7143427"/>
+					<Plugin Id="1866712626" Name="High_Freq_Cut_8" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712627" Name="High_Freq_Cut_9" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712632" Name="High_Freq_Cut_2" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712633" Name="High_Freq_Cut_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712635" Name="High_Freq_Cut_1" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712636" Name="High_Freq_Cut_6" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712637" Name="High_Freq_Cut_7" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712638" Name="High_Freq_Cut_4" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1866712639" Name="High_Freq_Cut_5" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="1904434771" Name="Medium_Room1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="1976939195" Name="Deep" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2038996943" Name="Plate_Sizzle" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2080872166" Name="Brick_Wall_Minus_6dB_Peak_Fast_Release" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="2098638826" Name="Underground_Parking1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2135883084" Name="Nasty_Radio" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="2171127646" Name="Hall_Conversation" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2171939413" Name="Dialog_Leveler_Hard" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2180422931" Name="One_Tap_Quarter_Second" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="2202047219" Name="Few_Even_Notches" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="2230265344" Name="Very_Bad_Connection" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="2258521792" Name="Brick_Wall_Minus_1dB_Peak_Slow_Release" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="2265839006" Name="Not_A_Yellow_Submarine" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2301880513" Name="Many_Even_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="2394809124" Name="Very_Slow_Modulation" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="2513915904" Name="Hall_Large" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2539557199" Name="Treble" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="2547645744" Name="Boost_3dB_100Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2568359573" Name="Secret_message" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="2648499661" Name="Hall_Medium_Dark" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2652646462" Name="Dialog_Leveler_Soft" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2653529179" Name="Three_Voices" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="2656259783" Name="PA_Announcement1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2662085913" Name="Large_Church1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="2667647788" Name="Single_Band_1Khz_Wide" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2755291684" Name="Pumping_and_Breathing_1" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2755291686" Name="Pumping_and_Breathing_3" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2755291687" Name="Pumping_and_Breathing_2" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2781261543" Name="Brick_Wall_Minus_6dB_Peak_Slow_Release" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="2791153688" Name="Hall_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2805769450" Name="Special_Effect_1" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2900412812" Name="Robotic_Trash" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2945072214" Name="My_Closet" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2949243095" Name="Hall_Small_Bright" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2952825346" Name="Dual_Filters_Radio_Comm" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2998002419" Name="Boost_3dB_10KHz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737254" Name="Bass_Remover_8" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737255" Name="Bass_Remover_9" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737256" Name="Bass_Remover_6" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737257" Name="Bass_Remover_7" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737258" Name="Bass_Remover_4" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737259" Name="Bass_Remover_5" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737260" Name="Bass_Remover_2" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737261" Name="Bass_Remover_3" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3013737263" Name="Bass_Remover_1" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3025917178" Name="Standard" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="3036946058" Name="Inside_Your_Head" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3043085106" Name="High_Impact" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3157398371" Name="Few_Odd_Harm_Notches" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="3164629247" Name="Holy" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3209444191" Name="Static_Sibilance_Remover_Male" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3216246379" Name="Space_Dreaming" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3250156175" Name="Say_what" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="3290519051" Name="Aluminium_Tank" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3332138788" Name="Few_Even_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="3354577677" Name="Fast_LF_Tremolo" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="3395979371" Name="Straight_Delay" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="3407225994" Name="Phone_Booth" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3442768367" Name="Hall_Large_Dark" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3451596814" Name="Hall_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3487820010" Name="One_Tap_Half_Second" LibName="Wwise Delay" LibId="6946819"/>
+					<Plugin Id="3491912472" Name="Club_Music_Distant_02" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3491912473" Name="Club_Music_Distant_03" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3491912475" Name="Club_Music_Distant_01" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3491912478" Name="Club_Music_Distant_04" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3497757918" Name="Fast_LF_Tremolo_No_Smoothing" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="3546444380" Name="Big_Garage1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="3559982155" Name="Hall_Stop_Screaming" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3563901164" Name="Halfway_There" LibName="Wwise Tremolo" LibId="8585219"/>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="3614057183" Name="_1_Frame_Delay" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="3673681183" Name="Large_Bright_Chamber1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
+					<Plugin Id="3701691487" Name="Hall_Large_Bright" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3796564934" Name="Hard_Knee_Minus_3dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3851006675" Name="Secret_message_Distant" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="3900114836" Name="Metal_Hangar" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3948262040" Name="Octave_Down" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="4113267698" Name="Hall_Guns" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="4136714357" Name="Few_Odd_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="4143868620" Name="Bass_Remover_11" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="4143868621" Name="Bass_Remover_10" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="4185773483" Name="Dual_Filters_Reset" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="4190220820" Name="Voice_CenterOnly_Lowered" LibName="Wwise Pitch Shifter" LibId="8912899"/>
+					<Plugin Id="4202347640" Name="Repeat_after_me" LibName="Wwise Harmonizer" LibId="9043971"/>
+					<Plugin Id="4212217734" Name="Personnel_Advisor" LibName="Wwise Stereo Delay" LibId="8847363"/>
+					<Plugin Id="4236290354" Name="Many_Odd_Harm_Peaks" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="4239446561" Name="Dual_Filters_Narrow_Bandwidth" LibName="Wwise Parametric EQ" LibId="6881283"/>
+					<Plugin Id="4269441574" Name="Heavy_Metal" LibName="Wwise Flanger" LibId="8192003"/>
+					<Plugin Id="4286906788" Name="Gentle_Program_Compressor_Minus_20dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{64F7E21A-9301-5686-E47F-9D53E941F9F4}</FileHash>
+</SoundBanksInfo>
