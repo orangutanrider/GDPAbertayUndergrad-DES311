@@ -1,0 +1,102 @@
+========
+https://discussions.unity.com/t/is-there-anyway-to-batch-renaming-via-editor-not-on-runtime-multiple-game-objects-in-the-hierarchy/238420/2
+
+Make this
+
+========
+Somekind of editor thing that makes list fields automatically have somekind of multi-edit capability
+
+They should have automatically get a button for getting references from childs as well
+
+could also make it automatically hook up the element name to the reference's gameobject name
+though, there'd have to be some logic around which reference it picks
+ideally it should pick whichever one is at the the top
+
+========
+Make something for minMax float values
+It'd be nicer than doing it with vector2s
+
+could possibly generalise this to a minmax for any type
+
+========
+Make a string function for me to paste into a Debug.Log that automatically formats and prints stuff like position and gameobject name 
+
+========
+https://assetstore.unity.com/users/5772729302048/saveForLater
+
+These
+I'm considering some of them
+Mainly Odin
+I'm not 100% sure though, for the most part I've been burned by the asset store
+These are 'verified' though, but the strange thing is, is that they have less reviews than a lot of other stuff, despite the fact they look way more useful
+
+ngl, looking at all that asset store stuff is mildly depressing
+it sort of makes me wanna just make my own game engine and become a hermit
+
+========
+Find a way to automatically serialize interface fields
+
+========
+Try and get PureData to work with Unity and Wwise
+
+========
+My SceneManagement system as a unity package
+
+========
+Utils Package
+
+EasingFunctions
+EasyVectorMath
+
+========
+Somekind of struct scriptable object hybrid base class.
+
+Basically a struct that can be stored as a scriptable object and then returned as new data.
+
+This allows scripts to share their scriptable object data without allowing data modification.
+
+This is already possible, but it'd be nice if I could just make a scriptable object inheritor that does this automatically.
+
+========
+An editor attribute for [required reference] would be nice.
+If it could put all those fields into a nice drop-down list.
+And even possibly combine those drop-downs when the base has it's own required references.
+
+should do this for a few things, and document their meanings
+
+Required Reference
+Nullable Required
+Component Nullable
+
+========
+Document some of the conventions that have arisen in my code
+
+(Required References) (Nullable Fields)
+When and why [SerializeField] is used over public
+CamelCase naming convention
+Params scriptable objects
+
+========
+Document coding style tips
+
+Naming convention importance
+Never Nesting
+If my understanding of inheritance improves enough
+I could also try writing about what to watch out for (inheritance wise) when creating systems
+
+========
+Document good practices in Unity
+
+Multi-scene benefits (generally just tell them to consider doing this when they see the opportunity to do it)
+Prefabs as an end-product completed object
+No singletons
+Using the heirarchy to structure objects properly, seperating scripts onto different objects
+
+Try and emphasise the importance of automation
+link DoshDoshingtons channel
+and that one GMTK video
+and DocMc
+Warn against chasing progress (game jams encourage this as an example of what that looks like)
+
+========
+My own issue tracking software would be nice, but this is on the back-burner. I think it shouldn't be too complicated to make one for myself, but it will take a lil' bit of time.

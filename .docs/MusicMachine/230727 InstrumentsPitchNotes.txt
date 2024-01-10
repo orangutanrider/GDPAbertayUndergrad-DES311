@@ -1,0 +1,53 @@
+========
+Aim:
+To gain an understanding of music production  
+And
+To investigate the practices behind designing and producing good UX.
+
+========
+Objectives:
+
+Research virtual instruments and performance in games, in relation to ux.
+	Compare against music production software and composer workflows.
+
+Create a prototype game in Unity, that allows for musical performance.
+
+Produce and record live performance song, by using the game, and improve the ux of the game through  that production.
+
+Evaluate the fun and usability of game, and reflect on the project as a whole.
+
+========
+Skills Gaps
+
+UI design and integration
+Gamer's Brain book, but did bad
+
+Music production
+Reaper  But music  No theory
+
+========
+Game about making music.
+Host to different virtual instruments.  Enables one person to perform a full song.
+
+Win? End?
+
+========
+A game.
+
+A live video recording of a song being made in the game.
+
+And
+a PDP
+That shows:
+Research notes
+Technical jargin that I find noteworthy
+Iterations of the song and the process for creating it  Iterations on the instruments and systems in the game  Inspiration
+My reflections
+And an evaluation of the project
+
+
+========
+My concerns
+
+Audio programming
+It may be a technical challenge

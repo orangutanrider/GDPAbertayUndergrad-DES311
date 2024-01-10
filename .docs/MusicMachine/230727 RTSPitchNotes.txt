@@ -1,0 +1,68 @@
+========
+Aim:
+To gain an understanding of music theory and the practice of making music for games.  And
+To investigate the practices behind designing and producing UI for desktop games.
+
+And I hope to do both of these things by creating UI and Music for my personal project.  Which is a game that's attempting to adapt the gameplay of devil daggers to an rts format.
+
+========
+Objectives:
+Gain and demonstrate an understanding of basic music theory and a further understanding of music in games.  Research composer workflows and create interactive music for the gameplay, and menus of my project.
+
+Research the practices and workflows of UI designers and design and implement UI for my project.
+
+Reflect and evaluate the usability of the game's interfaces and how well the music meshes with the  gameplay.
+
+========
+Skills Gaps
+
+UI design and integration
+I've read most of The Gamer's Brain book, but I'm bad at making UI
+
+Music production
+I essentially know nothing about music
+
+I hope to gain a better understanding of these fields so I can gain a more wholistic understanding of  how games get made.
+
+========
+I don't aim to finish the game that i'm adding UI and Music too.
+
+I don't aim for this because I don't think I'd be able to get it to the level of quality I'm looking for  with the time I have.
+
+I'm looking to make UI for the following
+A HUD for the gameplay
+A pause screen
+A start menu - reference to gamepack (haunted ps1)  And a settings menu
+
+For the settings I'm atleast looking to have all the controls re-mappable
+But I'm unsure as to how far I could go with the settings as the game won't be finished
+
+For the music I'm looking to make something pretty detailed and complex for the gameplay  And something more calm and simple for the menus
+
+========
+So deliverables
+
+1.
+The Unity project with
+
+All the UI I mentioned implemented in Unity
+And the music but with limited interactivity due to the un-finished state of the game
+
+
+2.
+I'll provide all the files for the music
+(which will include the interactive elements that possibley ended up not being implemented)
+
+3.
+And finally a PDP that details the following:
+How the music's interactive elements will work in the final game  The vision for the completed game
+A demonstration of the UI's functionality  And my research notes
+
+========
+My concerns
+
+There is a split between the UI and Music elements
+Though the project addresses both of them it does so by individually addressing each of them  
+They're seperated
+
+And I think this makes scoping and time management more difficult
