@@ -1,0 +1,977 @@
+commit 81f6ffbb7cb6abbe4526cf28ee8089ff83bbc813 (origin/main, origin/HEAD, main)
+Merge: eb93d04 20bd57c
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jul 28 02:47:51 2023 +0100
+
+    Merge pull request #15 from orangutanrider/pre-submission-completed-work
+
+    230727 - Pre-submission completed work
+
+commit 20bd57cc55814b41bdd9c9cb76003e90c1bc5449 (origin/pre-submission-completed-work)
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:50:57 2023 +0100
+
+    Scene changes
+
+commit e7f720bd0a36247d7436cadbdb7d01ea898a1997
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:50:49 2023 +0100
+
+    Prefab Changes
+
+commit 16e5d8f7ddf5f05ffa4776e2aafe1ddd11cf73e5
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:50:37 2023 +0100
+
+    Animation Changes
+
+commit c398ac3fe08c17f95b449709e0f3b5c639121eba
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:50:19 2023 +0100
+
+    Synth Scriptable Object Changes
+
+commit bcd9e4e6ef5e87b6993c035e85f8e50e38d03c83
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:49:37 2023 +0100
+
+    Wwise Changes
+
+commit 3f83fa131a0eb871dec7151c225c9b4bc743094e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 28 01:49:18 2023 +0100
+
+    Script changes
+
+commit eb93d04c516670b5b4e0f1778b0695d591c38d85
+Merge: e37195e 15d8f3d
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Wed Jul 26 00:12:35 2023 +0100
+
+    Merge pull request #14 from orangutanrider/DemonBox
+
+    230725 - Boss Progress
+
+commit 15d8f3d441b48b61f6fe49208428a61a64651e53
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:46:15 2023 +0100
+
+    Load stack changes
+
+commit 1ac0b35b9d4b156c3c8d3513a624d9e9f006c2a6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:45:59 2023 +0100
+
+    Scene changes
+
+commit aa68fe88db9581e523373016d36b9bdaa3ff6a1d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:45:46 2023 +0100
+
+    Shotgun crash attack prefab
+
+commit 35ab15448006d4bb5a62bbc56f99d18f42d57eab
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:45:37 2023 +0100
+
+    EBasicBullet prefab changes
+
+commit 899d8f4590eddb09d4c84838985af433a838a2d4
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:45:21 2023 +0100
+
+    Animation file updates
+
+    I deleted old stuff and decided to merge the AnimControllers folder into the Animations folder. I do this because AnimControllers should just be stored with their animation files inside sub-folders.
+
+commit 589a459ac6e5d51b309a3be4525b80c2efbdf5b6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:43:54 2023 +0100
+
+    Sorting layers updated
+
+commit 6930768b4697a72484edced4268c49b8c7abad2a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:43:42 2023 +0100
+
+    Wwise Unity reference objects
+
+commit 2d33aff5d52d491d1e4021b3901d7e814912965d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:43:27 2023 +0100
+
+    new Wwise synth
+
+commit ffc3dae90a7ad6f6044623c623ee3630b6a662d3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:43:11 2023 +0100
+
+    EBullet related scriptable objects
+
+commit cb382e41c78132d14069db8a0f92262a50e9e576
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:34:04 2023 +0100
+
+    Player art assets imported
+
+commit 8138beeaee4e60fed6bb42fcb342dac505e9cfcb
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:33:43 2023 +0100
+
+    DemonBox sineWave
+
+commit 8a2d25bf3d262d640d99eded90abd445e251b089
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:33:13 2023 +0100
+
+    DemonBox art assets imported.
+
+commit 9221a53c5c5ae7da0f026c13f9d5084ad142bbc8
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:32:08 2023 +0100
+
+    Shaders update
+
+    These were updated for the sinewave effect on the DemonBox boss.
+
+commit 7311ebdb3262de2fb17c790194f7e8fb5a308ad1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:31:37 2023 +0100
+
+    Emitter Add-ons
+
+    I made them into scriptable objects now. It's a good system.
+
+commit bad179bd243ddd55d74bdd9a0a73dd1e53816f39
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:31:07 2023 +0100
+
+    Emitter Groups
+
+    I made these to keep things tidy in the animation window (which is how I'm creating the attack patterns).
+    Basically, it just groups a bunch of emitters under one monobehaviour, and then you can call emit on that group to emit all groups at once.
+    Then there are these bonus scripts, the AnimEventLink ones. They just exist because animation events can't call on scripts on child gameobjects, and I want the groups to be on child gameobjects for organisation reasons. So, the link things just store a reference to a group and can then be called by the animation event; A middle man.
+
+commit 92904b04c7b4d1103806b67f7787410186556e7e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:28:07 2023 +0100
+
+    Mover script changes
+
+    made it use a transform reference instead of having it use the transform of what it's attached to.
+
+commit 2c88fecd552e97bd7593f778a0555526d638cae6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:27:22 2023 +0100
+
+    EBullet+EEmitter changes
+
+    Mostly touch ups. The main area of change is the InputEmitter.
+
+commit 0a34778fec6c9f884d39a656acecc74ce14a66ff
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:23:30 2023 +0100
+
+    CoroutineBox
+
+    This isn't actually used in anything. I've just committed it because I don't wanna forget about them, there's a link in the script you can read for more information.
+
+commit a9d76d6ef8414be102d89d9295ca0103b19a5689
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:22:15 2023 +0100
+
+    Wwise synth scripts
+
+    Basic synth is the only functional one as of now.
+
+commit 1d51bc7a2c45ea7d969ee5e94f4175d22ee4db6e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:21:52 2023 +0100
+
+    Wwise Synth class updated
+
+    It's been made to use a EBullet reference instead of a GameObject reference.
+
+commit 94ec3008d9e48656fcc5ec40c3a7d95c1b4ef9b6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 25 23:13:00 2023 +0100
+
+    Old scriptable objects deleted
+
+commit e37195e512a44cd7de13438f54407c85d8bdf5dd
+Merge: 70e7d74 eca4987
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jul 21 22:27:25 2023 +0100
+
+    Merge pull request #13 from orangutanrider/NewBullets
+
+    230721 - New bullets
+
+commit eca4987da9d5e15d54ae6df195bb4ab4d840bb9b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 21 18:37:05 2023 +0100
+
+    old system removed
+
+commit 6a8d2c50c659dcc2a64a51b427dd1e5aa1fcd8ea
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 21 18:36:49 2023 +0100
+
+    Emitter Scripts
+
+commit fc112341fa2ba24f5e5a8a3c8a8e03edbcd29fb3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 21 18:36:35 2023 +0100
+
+    Bullet Scripts
+
+commit 294d63a8cfc0c203a05c38b32926463a4505cc22
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 21 18:36:13 2023 +0100
+
+    Audio Scripts
+
+commit 8e4a27ba74dbc0946f6d074367cd0a37b33cf86b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 21 18:35:32 2023 +0100
+
+    mover scripts
+
+commit 70e7d745788e4438341cdab9bbe3ba0948d5c87e
+Merge: 197fb5c b8f8583
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Tue Jul 18 23:35:39 2023 +0100
+
+    Merge pull request #12 from orangutanrider/EnemyBulletUpdates
+
+    230718 - (Enemy Bullet) Pre-Refactor Changes
+
+commit b8f858346b684efe03c20c8adabcf80b17e0137e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 18 23:30:54 2023 +0100
+
+    Misc Unity
+
+commit 7a829bdfc0110cfc950ef32f3e9244e87cb06f01
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 18 23:30:26 2023 +0100
+
+    Script Changes
+
+commit fae08fe4fc736485f5f0f29eb0cf49842d9c2d32
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 18 23:30:14 2023 +0100
+
+    New Scripts
+
+commit 473287c78cd6b425e3a82ace78d5ce8a1187ba6e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 18 23:29:14 2023 +0100
+
+    Wwise changes
+
+    the RTPCs were tweaked
+
+commit 197fb5c312071d8c1f5b8c9d17cbf142a2aefd21
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Jul 17 17:21:45 2023 +0100
+
+    EditorCoroutines package added
+
+commit cf8f58d51f3e80e5aff8c5083391e3922340a53f
+Merge: 34babb9 aaeaa99
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Sat Jul 15 00:13:52 2023 +0100
+
+    Merge pull request #11 from orangutanrider/BulletAudioFunctional
+
+    230714 -  Functional Bullet Audio
+
+commit aaeaa993d7102ee35816b2cd257b8bccefc9b4d5
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 20:39:10 2023 +0100
+
+    Prefab Changes
+
+commit 606d13158d41972192d8a6a142f5e2e29526a6a0
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 20:39:03 2023 +0100
+
+    Scriptable Object Changes
+
+commit 2b1c31492adf288af46f06efd7ffba84d57cde82
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 20:38:44 2023 +0100
+
+    New scriptable objects
+
+commit 8356d3e495e4c701b6d2b8decba7da8f683e2b3d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 20:38:21 2023 +0100
+
+    Moved BasicNoteParams to BasicBulletParams
+
+    There are also some other minor changes in this like the stop event being called when the object gets destroyed.
+
+commit 742fff53a17a41d32a6c8cee7decfe7709bf9cc4
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 20:36:34 2023 +0100
+
+    Wwise changes
+
+    This was just the soundbank being built (which it hasn't been in a while).
+
+commit 5af9503da03e25512ed542f1d8e603ab977f36ec
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 19:31:24 2023 +0100
+
+    Wwise changes
+
+commit eeec64b59c4457c86ccad47c4f740313191e7200
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 19:31:14 2023 +0100
+
+    System Changes
+
+commit f06f430dc0e320c8aac79e297e0e071b2648b086
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jul 14 19:30:59 2023 +0100
+
+    Deactivation Handler scripts
+
+commit 34babb9c863ea00e6c34ed79deace66031d90b29
+Merge: 6c4e8ff 601bb70
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jul 13 21:02:22 2023 +0100
+
+    Merge pull request #10 from orangutanrider/BulletAudio
+
+    230713 - Bullet Synth Audio + Bullet System Changes
+
+commit 601bb70111ea28f53f3a6c789a4ae4ee51a8e06b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 13 18:22:27 2023 +0100
+
+    Bullet System Changes
+
+    This is a minor rework of the system. It's still the same mechanically though. System changes are related to changes of it's inheritance. And there are some new additions for the audio too.
+
+    It's a bit stinky to have it all in one big commit like this, but I do it like this because all these essentially depend on each-other. If I was to separate it into parts (like having the audio stuff as a separate commit) then there'd be compiler errors if you were to for some-reason launch off of that commit. Maybe it's still the right thing to do though, I'm not sure.
+
+commit 2539b0065daaf88c5d73347023a289e0f77536ea
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 13 18:10:20 2023 +0100
+
+    Wwise Changes
+
+    I made a synth in wwise by using synthOne. Some of the changes may also be related to RTPC references I temporarily made, it's hard to tell with wwise what certain changes are.
+
+commit 6c4e8ffb72cb76e4d9d0790c9b71944046739328
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 13 17:42:09 2023 +0100
+
+    Delete UnityProj-VisualStudioProj.lnk
+
+commit 2fff459757cd85e2e1f436d04771318be5790e2b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 13 17:36:33 2023 +0100
+
+    Update .gitignore
+
+commit de5fbf3af7c6d450bbab7813936ba0f64a1361fa
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 13 17:32:17 2023 +0100
+
+    Update .gitignore
+
+commit 58b0b2ce76fffc897b1818ef81a9b879b7ce551a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 8 23:38:47 2023 +0100
+
+    Wwise updated to 2022.1.5.8242
+
+commit e52799aab555e63537d00ea1d36c83524837962c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 8 18:33:50 2023 +0100
+
+    Unity Version updated to 2022.3.4f1
+
+commit 4f4a10fc067377da6b7444238960639f1df694f3
+Merge: 022249d e85db28
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jul 7 00:29:49 2023 +0100
+
+    Merge pull request #9 from orangutanrider/EnemyHitManager-Rework
+
+    230706 - Enemy Hit Manager Rework
+
+commit e85db28aa016ddcdbaa63290b1c29722565574fc
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:56:37 2023 +0100
+
+    Build settings updated
+
+commit 45e6b6c33d5ec078bcb559a35ec8c23d889ffbd6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:56:29 2023 +0100
+
+    DemoEnemies scene changes
+
+    Added a hitmaster to it
+
+commit 1276965b86c5b0e5d22a7f60b543237a142ee907
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:55:55 2023 +0100
+
+    GameOverScene renamed
+
+    (was GameOverScreen) (I've decided to end all scene files names with "scene")
+
+commit 7a625f1b5cc9c932c450b381caeba107a19de722
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:54:49 2023 +0100
+
+    Level Gadgets added to DemoLoadStack
+
+    (and the misc scene reference group)
+
+commit 1aadbf4e7af5aa13ab55c9774da128ba73b368e3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:54:08 2023 +0100
+
+    New LevelGadgets scene
+
+commit fc9a1bc24de42d6cd569c3a6f75135a4f0f1667a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:53:24 2023 +0100
+
+    PlayerBulletManager minor changes
+
+commit 70faafe44152bfb270bbb367d5a252a846b5c4f0
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 23:52:57 2023 +0100
+
+    System Changes
+
+commit 022249d88e3a416c6ac57871400de2bca7b4ddd5
+Merge: 56ba139 7e24be7
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jul 6 18:30:41 2023 +0100
+
+    Merge pull request #8 from orangutanrider/Scene-Management
+
+    230706 - Scene Management System 2.0
+
+commit 7e24be7c38a80d83e2539aedc5baa7bb97d9b898
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:55:05 2023 +0100
+
+    build setting changes
+
+commit cbd62cd0c6cc3d072eb0f44509007cedfb75cf96
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:54:52 2023 +0100
+
+    Game over scene changes
+
+commit 472ad526e193c53107f448ea8a31fb9baf582630
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:54:41 2023 +0100
+
+    Main Menu Scene changes
+
+commit 233a547dd2cc70e0e323fd40f90dc9b2cfe5ca3f
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:53:35 2023 +0100
+
+    Demo level scene changes
+
+commit 1b5fefac9d2d5e4b3747429699a86867f9cec9c7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:53:20 2023 +0100
+
+    New scenes
+
+commit 3cff38aa047e6be0d9665d58e8091d029f5069b5
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:52:49 2023 +0100
+
+    Scene reference scriptable object changes
+
+commit eb68d82d84be746144e02f185edb83d61ee394fc
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:45:34 2023 +0100
+
+    HitManager changes
+
+    With how the project is being set-up now, the player will be contained in their own scene. This means that I can't have manually created references to and from the player, to outside things like enemies.
+    So, the player can't be the location of the HitManager anymore (as the HitManager needs to cache enemies to work (although, it could just do all that during runtime as well)).
+    And, the BasicBulletManager can no longer have a manual reference to the HitManager either. It still needs the HitManager of course, but now it gets and caches it during runtime, by getting a reference to it from the enemy they hit.
+
+    Also though, I'm realising now that I might want multiple scenes of enemies that I can load in, during run-time, which'd mean multiple HitManagers or atleast somekind of runtime system for adding them to a single HitManager that's already active. This is pretty silly though, cause my game is focused on the boss, there'll probably be barely any other enemies in the game. Yet, I'm considering making this big system for handling all those enemies.
+    I don't mind spending time on systems like that, it's satisfying; my concern is with time-management, even if I want to do it, and have the energy for it, can I justify it?
+    Well, I've got a lot of time right now, but it is a concern. The HitManager system probably will receive a rework eventually.
+
+commit f2f490821e65ec625084632d6bba31fb12c77875
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:40:38 2023 +0100
+
+    Scene loader UI script changes
+
+commit 1ae8941a7de529696b857d22fbfd3e829ff35fee
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:39:52 2023 +0100
+
+    New system
+
+    Out of these, what's actually new is the SceneLoadStack class.
+
+commit eb3c3b4b481473d65036534294982dbd73d09772
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jul 6 17:38:52 2023 +0100
+
+    Old system deleted
+
+    This wasn't done to replace the old system; The new system is basically the same. I just deleted the old scripts because I wanted to change the naming convention.
+
+commit 56ba1391a1b85ab08d81e1909b8a099580a19555
+Merge: bdb97d8 58e9ce5
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Wed Jul 5 00:19:42 2023 +0100
+
+    Merge pull request #7 from orangutanrider/Enemy-Bullets-Functional
+
+    230704 - Functional Enemy Bullet Emission
+
+commit 58e9ce5871d740c92550f2a52d10927fa5983aad
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:08:50 2023 +0100
+
+    Scene Changes
+
+commit 6467b3705b0c80c326215b9325554253d10fcd76
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:07:15 2023 +0100
+
+    Player Basic Bullet Prefab small update
+
+commit 2a25e03c22a7e8afe90dd16cc7c74be97de2938a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:06:47 2023 +0100
+
+    Enemy Basic Bullet Prefab
+
+commit 63db94b64bf7f3a58426c381a5b87991ef9c77a3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:06:29 2023 +0100
+
+    DemoScene SceneParams object
+
+commit 8ccc6cd137a4e3b77032df393b30ffd0427d5ee5
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:06:08 2023 +0100
+
+    Scriptable Objects
+
+commit fdd253f2bd6cb5c03359c6898f9b55bad875034b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:05:36 2023 +0100
+
+    Custom Scripts
+
+commit 2b273d5212ac6ac2315cef1489f4fb32b1e4bf7c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:05:09 2023 +0100
+
+    GameOverHandler update
+
+commit 21a6da519b7d8de2f0d1c0091694fb9260e06b0c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jul 5 00:04:53 2023 +0100
+
+    System Changes
+
+commit bdb97d819f9204a105cbc07299c08e4a5f47ee2d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 19:18:38 2023 +0100
+
+    Enemy Status minor changes
+
+    When I first made it I didn't properly understand how overrides works, this fixes the mistakes I made because of that.
+
+commit 4106bf037490f75c265d57415e7017f661026aa5
+Merge: b5c5d9f fa1f358
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Tue Jul 4 19:16:27 2023 +0100
+
+    Merge pull request #6 from orangutanrider/Enemy-Bullet-Emission-System
+
+    230704 - Enemy Bullet System
+
+commit fa1f358d68de337bc10693584ba1601f96bdd7a4
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:42:44 2023 +0100
+
+    Test Script Deleted
+
+commit 529242de1d377426649760553d21d83c9a183e3c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:27:36 2023 +0100
+
+    Scene Changes
+
+commit f9a4c90cc76b450339282701b8f2ef544cc35b5f
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:27:23 2023 +0100
+
+    Enemy Bullet System (new scripts)
+
+commit c0c5943bcea7fbcd39795706b030b64ede23addb
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:26:44 2023 +0100
+
+    Player Status System
+
+commit 3487f4327a249a441c844ed035b775cd406d0934
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:26:14 2023 +0100
+
+    PlayerBullet Changes
+
+commit b5c5d9f19652f162fb3d2b2eef424f096a7a87bd
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jul 4 17:09:27 2023 +0100
+
+    SceneLoadParams minor change
+
+    loadMode put under an "Additional Data" header.
+
+commit 5fce34291affabb08916e566c4c62f2d6a9a9bc6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jul 2 15:40:34 2023 +0100
+
+    SceneDataManagement minor changes
+
+commit dd334eaa3b379f46ce14f41ef5a8ba354246dd1d
+Merge: d0566a7 d16717b
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Sun Jul 2 00:01:29 2023 +0100
+
+    Merge pull request #5 from orangutanrider/Scene-Data-Management-System
+
+    230701 - Scene Data Management Stuff
+
+commit d16717b8b83a8a2f736932a3b9cde849cc05702c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:26:15 2023 +0100
+
+    BuidSettings update
+
+commit 90be6d4bc05b2880c2932c7a173604a93400dc42
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:25:51 2023 +0100
+
+    GameOver screen moved into its own scene
+
+commit df012a898a2161d920835d0c430a28c8a4d6e4ca
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:25:20 2023 +0100
+
+    New Scriptable Objects
+
+commit a6f29e5a4aee2fd69f022fc3a889ce71f740e645
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:24:54 2023 +0100
+
+    Misc additional script changes
+
+commit e94257860da9be1cbc1da8e547e915b552daa182
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:23:57 2023 +0100
+
+    Script Changes
+
+commit dce9f92d1d48ebaaf3ffb88f728e9c2ea3633909
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:22:05 2023 +0100
+
+    SceneLoadParams changes
+
+    (+ moved to new folder)
+
+commit 531e1022651c195d7d9f3708920354f8105de012
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 23:21:23 2023 +0100
+
+    New folders
+
+    (+ old scriptable objects deleted)
+
+commit d0566a7897093184349c96ce2417afa36dcebccd
+Merge: 3949cf5 692df38
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Sat Jul 1 00:33:26 2023 +0100
+
+    Merge pull request #4 from orangutanrider/UI-Basics
+
+    230630 - UI Basics
+
+commit 692df387dcd46610c500f925289ef3d0747f0b6a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:03:27 2023 +0100
+
+    Scene registry updated
+
+commit 45ec94e5f8cbd7357ab5a46bec231464bc05a7f1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:03:18 2023 +0100
+
+    Demo Scene Changes
+
+    (I added a game over canvas inside it)
+
+commit f2cd71bf792c7f471d4abd13afea4fefa3e93585
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:03:01 2023 +0100
+
+    Menu Scene
+
+commit c20acfbc9738cc8fa4e215f94dd8b54c7fab5615
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:02:53 2023 +0100
+
+    Placeholder sprites
+
+commit 239c876302ad7fa2d21784215026f342623e4ac6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:02:25 2023 +0100
+
+    New Scriptable Objects
+
+commit 0d9601aea975b7712ca19314fb6c5f63f8b6f966
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:01:21 2023 +0100
+
+    New Scripts
+
+commit 4518ce71ed689d4f1558c4c885551bfb53d0b8ef
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jul 1 00:00:58 2023 +0100
+
+    New folders
+
+commit 7db5e17124ac9cb48ac865b444c44fba37ccb898
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 23:59:35 2023 +0100
+
+    TextMeshPro installed
+
+    +gitattributes updated to include pdfs and font files (.ttf)
+
+commit 3949cf513d87678c23b586210124db52e6ec8ca5
+Merge: 06e1236 1d5d70e
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jun 30 21:04:17 2023 +0100
+
+    Merge pull request #3 from orangutanrider/Functional-Shooting
+
+    230630 - Functional Shooting
+
+commit 1d5d70e49525b22daa3cf1ea259ce306b02663bf
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:42:09 2023 +0100
+
+    Scene Updates
+
+commit 274855b19b4f174681fa9d3ecc1ee22a7569da3c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:41:59 2023 +0100
+
+    Basic Bullet Prefab
+
+commit 8818e5c77c49b9d2c05540a6526a203d2e5b51d3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:41:49 2023 +0100
+
+    New scriptable objects
+
+commit c29186689c71d46b2b695770531d713f0840bb43
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:41:37 2023 +0100
+
+    Player script updates
+
+commit 7d800c54f9faec342461ea52e55647bfbc3b1003
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:41:11 2023 +0100
+
+    Status System Updates
+
+commit b8b67b29929bc4d69f395ef76243e10bb1d7341f
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 20:38:01 2023 +0100
+
+    Assets Moved
+
+commit d2fd3c908ecb46b09881097c6d6e7ae1b5c9f900
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 19:58:00 2023 +0100
+
+    Gameplay Controls Updated
+
+commit 47873d9436ad1a3cced17ddfc76ca619194a2e72
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 19:57:13 2023 +0100
+
+    ReadMe files for prefab folders
+
+commit 2a1661c50d5e43309d0eeb9ac9e491483dc9fc7c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 19:56:32 2023 +0100
+
+    New Folders
+
+commit 06e1236044de3fa56f59cb1fe479644b9c8a3311
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 30 19:39:08 2023 +0100
+
+    Shortcut to the VisualStudio project.
+
+commit 5b35161d2497ef63fa4a7a217515e690168d1f0b
+Merge: 9d92163 169ba34
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Wed Jun 28 17:39:52 2023 +0100
+
+    Merge pull request #2 from orangutanrider/Player-Basics
+
+    230628 - Player Basics
+
+commit 169ba34ab6fdf63f7fe3938a1657eab29bb6dcc0
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:15:51 2023 +0100
+
+    Scene Changes
+
+commit b5503c3b261dcd968adadfaf0bcbffa40ed8ef98
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:15:40 2023 +0100
+
+    Tongue guy anim controller
+
+commit 9607f762a0b4ca019a640b801b426723947a3091
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:15:26 2023 +0100
+
+    Tongue guy object chase params scriptable object
+
+commit 516bd7ed6380c80c265d1c6aee5fa29dc1b168f7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:14:49 2023 +0100
+
+    Tongue guy sprites
+
+commit 8e24aa50398680aaedbc629876220c0e0c4564a3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:13:43 2023 +0100
+
+    ChaseTargetTransform generic script
+
+    It's basically a spring.
+
+commit 3fa55374399e0396c4a0ee93c693aa132c971c9e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:13:06 2023 +0100
+
+    Player Basic Weapons
+
+commit f7bc4d92aa614ea806b8a85e0f6ad9d7b87beea7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:11:43 2023 +0100
+
+    Player Input Actions
+
+commit e4c2d2b0beeb436f826da0ccdfe61628183d00d1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:03:19 2023 +0100
+
+    MovementParams scriptable object
+
+commit a24d79e572eb4dec127175017447f9235acf71b6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 17:02:25 2023 +0100
+
+    Player Movement scripts
+
+commit 9d92163b3eee95a31fe9cdf24242447063cb3e3b
+Merge: d5a5140 416369c
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Wed Jun 28 02:13:39 2023 +0100
+
+    Merge pull request #1 from orangutanrider/Enemy-Status-Core
+
+    230627 - Enemy Status System - Core
+
+commit 416369c2b74c14fe2d962d2233d4d4ec86b2e5d6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 01:00:38 2023 +0100
+
+    GenericEnemy status scripts
+
+commit fd78823c7c5521fd8f17742ff75170a32fa2f85a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 01:00:10 2023 +0100
+
+    EnemyStatus core system scripts
+
+commit c84295a2cbb5c9227ab5a2ee56c91391efa4c704
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 00:58:41 2023 +0100
+
+    ReadOnly Attribute
+
+commit d94e411d84d5fdc94baf6fe11fa5f909d500297d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 00:57:22 2023 +0100
+
+    Layer Changes
+
+commit d5a5140541172c54f17d70e616433fadd5ab13aa
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 00:52:16 2023 +0100
+
+    New Folders
+
+commit bbd253e5a1a4ffcd7cedaf44f5b12097ec1a8cd1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 00:46:12 2023 +0100
+
+    Unity project settings
+
+commit d177f87c1d134ad4abf6673d56cc9d34bc3bedfc
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Wed Jun 28 00:39:19 2023 +0100
+
+    Unity version control package removed
+
+commit fd1a0ba76f6f2fe8052e8fdae70ce360f1d464c8
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 18 15:56:54 2023 +0100
+
+    Unity Packages
+
+    Cinemachine and InputSystem
+    (and a gamefiles folder)
+
+    I was going to use a projectile engine package I found on the asset store too. I downloaded VariaBullet2D and imported it, but on closer inspection, I decided not to use it.
+
+commit 089280605ac5442078f839fdc984b528a55025c6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jun 17 19:24:32 2023 +0100
+
+    Unity+Wwise project init
+
+commit a6ee956b81fca91769b3837958345147f43ce301
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Jun 17 19:14:30 2023 +0100
+
+    Initial commit
