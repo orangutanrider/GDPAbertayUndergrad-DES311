@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1097980931	TestEvent			\Default Work Unit\TestEvent	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	166910869	sfx_button_box_confirmBody_01	C:\Users\domro\Desktop\Git Repositories\duplicates\MusicMachine-Git-Project\Music Machine (Unity Project)\Music Machine (Unity Project)_WwiseProject\.cache\Windows\SFX\sfx_button_box_confirmBody_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test Sound\sfx_button_box_confirmBody_01		176496
+	227861091	sfx_button_box_confirmGlassHit_01	C:\Users\domro\Desktop\Git Repositories\duplicates\MusicMachine-Git-Project\Music Machine (Unity Project)\Music Machine (Unity Project)_WwiseProject\.cache\Windows\SFX\sfx_button_box_confirmGlassHit_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test Sound\sfx_button_box_confirmGlassHit_01		176496
+	812621377	sfx_button_box_confirmMain_01	C:\Users\domro\Desktop\Git Repositories\duplicates\MusicMachine-Git-Project\Music Machine (Unity Project)\Music Machine (Unity Project)_WwiseProject\.cache\Windows\SFX\sfx_button_box_confirmMain_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Test Sound\sfx_button_box_confirmMain_01		176496
+

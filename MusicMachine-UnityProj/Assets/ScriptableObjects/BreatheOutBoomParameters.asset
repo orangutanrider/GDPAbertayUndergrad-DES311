@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b080735760b01ca4299aece57b707168, type: 3}
+  m_Name: BreatheOutBoomParameters
+  m_EditorClassIdentifier: 
+  projectileHitMask:
+    serializedVersion: 2
+    m_Bits: 513
+  explosionHitMask:
+    serializedVersion: 2
+    m_Bits: 577
+  explosionPrefab: {fileID: 5161121833251037284, guid: c7fa5ff0b1a810b40acd5d5d5f7d3909, type: 3}
+  explosionForceAgainstPower:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: 5.5075912
+      outSlope: 5.5075912
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.063595064
+    - serializedVersion: 3
+      time: 2
+      value: 8
+      inSlope: 0.118701845
+      outSlope: 4
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.09831852
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  projectileSizeAgainstPower:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0.36751685
+      outSlope: 0.36751685
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.056240365
+    - serializedVersion: 3
+      time: 2
+      value: 2
+      inSlope: 1.4537681
+      outSlope: 1.4537681
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.022342145
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  projectileRangeAgainstPower:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 100
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  explosionSizeEffector: 2
+  projectileSpeed: 12

@@ -1,0 +1,13 @@
+# Wwise gitignore
+
+/.cache/
+/.prof/
+/**/*.akd
+
+*.wsettings
+*.validationcache
+
+# Important files (don't ignore ever)
+!*.wwu
+!*.wproj
+

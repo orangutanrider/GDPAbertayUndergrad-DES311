@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{429C9D28-90F3-4376-8055-A4791654902D}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{429C9D28-90F3-4376-8055-A4791654902D}" PersistMode="Standalone">
+			<ChildrenList>
+				<BlendContainer Name="Test Sound" ID="{1BDE119A-6C56-4730-ADD5-62935714CBE5}" ShortID="780298396">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sfx_button_box_confirmMain_01" ID="{07CD5AA9-0FE8-4BCD-90A0-1842F9090BDE}" ShortID="931434261">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_button_box_confirmMain_01" ID="{7D684910-F197-49CD-A57A-F4178D592C45}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_button_box_confirmMain_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="812621377"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_button_box_confirmMain_01" ID="{7D684910-F197-49CD-A57A-F4178D592C45}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_button_box_confirmBody_01" ID="{650C9A64-E877-487B-875E-621F802C8A84}" ShortID="619769691">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_button_box_confirmBody_01" ID="{5389E950-87F6-42BA-A814-1A6279DF9561}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_button_box_confirmBody_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="166910869"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_button_box_confirmBody_01" ID="{5389E950-87F6-42BA-A814-1A6279DF9561}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="sfx_button_box_confirmGlassHit_01" ID="{98DC9854-2847-4A87-8FF5-8936C3F65258}" ShortID="1784215">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx_button_box_confirmGlassHit_01" ID="{C979697C-E4AB-45B8-B053-B426C0570EE0}">
+									<Language>SFX</Language>
+									<AudioFile>sfx_button_box_confirmGlassHit_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="227861091"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx_button_box_confirmGlassHit_01" ID="{C979697C-E4AB-45B8-B053-B426C0570EE0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="VintageDrum1" ID="{B384F8AB-8A3D-4027-886D-BAB68D360A8A}" ShortID="930386974">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum1" ID="{5A60A7A2-6522-49F3-8B1F-D84F48F6B12F}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="172978669"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum1" ID="{5A60A7A2-6522-49F3-8B1F-D84F48F6B12F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum2" ID="{562EDA5C-1B23-4821-B75D-6D07515FF6C3}" ShortID="380483817">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum2" ID="{67E139D2-5901-4EAF-8A13-537A8B53D48C}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="624513967"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum2" ID="{67E139D2-5901-4EAF-8A13-537A8B53D48C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum3" ID="{FE3B2369-47B0-4BEB-8A55-B6A5F75E508E}" ShortID="131765960">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum3" ID="{68822189-5B3C-4741-8661-F6AC9F2E1673}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="84665258"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum3" ID="{68822189-5B3C-4741-8661-F6AC9F2E1673}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum4" ID="{596A45FD-2E12-4A5F-A268-F636444019AB}" ShortID="650151213">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum4" ID="{AACDD97A-3A87-4950-8C0C-E02C254CEA31}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum4.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="988616785"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum4" ID="{AACDD97A-3A87-4950-8C0C-E02C254CEA31}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum5" ID="{7C143A7A-29DF-4D87-BE0A-9E94430AB283}" ShortID="14063430">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum5" ID="{7BDA55F7-685A-4BB3-8B46-B9C0D7A05657}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum5.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="164884701"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum5" ID="{7BDA55F7-685A-4BB3-8B46-B9C0D7A05657}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum6" ID="{50D2C90B-E77F-4EDE-B088-9CDA62F4C8D8}" ShortID="901766730">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum6" ID="{86313F6A-45EC-4403-8EAF-9000EDD73385}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum6.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="748744933"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum6" ID="{86313F6A-45EC-4403-8EAF-9000EDD73385}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum7" ID="{F5AA781F-B86A-4E92-B159-B87DCDED02B8}" ShortID="629187772">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum7" ID="{FDBE1C2B-8837-400B-BF2F-EF1B3903B1F7}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum7.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="398223436"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum7" ID="{FDBE1C2B-8837-400B-BF2F-EF1B3903B1F7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum8" ID="{81EC9A09-AF4B-4163-9A49-A473AB2FA384}" ShortID="751783541">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum8" ID="{510A5C17-1135-40AB-AFB1-071DA2628AA4}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum8.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="621713724"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum8" ID="{510A5C17-1135-40AB-AFB1-071DA2628AA4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum9" ID="{E30905D5-3B71-4AF3-A2B4-9C6FE943163A}" ShortID="451215239">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum9" ID="{3A7E1B6A-2F52-4B0D-B074-2ED7F5C02332}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum9.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="35712417"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum9" ID="{3A7E1B6A-2F52-4B0D-B074-2ED7F5C02332}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum10" ID="{CEAA0C8B-9D41-4B1B-83F2-573C01063C82}" ShortID="880518193">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum10" ID="{990A34F0-4273-45DC-B24C-A975EA4E42AB}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum10.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1038968195"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum10" ID="{990A34F0-4273-45DC-B24C-A975EA4E42AB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum11" ID="{3B0A3AC5-00D1-4AAD-A32C-AEF3FE17B9C1}" ShortID="558769440">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum11" ID="{EA955F14-147B-4E6A-AF0E-E8AB7A40A658}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum11.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="419506223"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum11" ID="{EA955F14-147B-4E6A-AF0E-E8AB7A40A658}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum12" ID="{B46DEAC2-3458-46B3-8311-50BE74C852E4}" ShortID="98038539">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum12" ID="{1C14D856-C064-4F42-A196-31CC0AFADFEE}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum12.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="277070523"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum12" ID="{1C14D856-C064-4F42-A196-31CC0AFADFEE}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="VintageDrum13" ID="{FB382122-106B-4FFD-9DCA-6C5F07AC3381}" ShortID="740108529">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F78C37F-7B6E-4AFB-8F94-D7239A4C6BE3}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{CFB04D8E-484D-4C4E-B968-A9DBF0A013CB}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="VintageDrum13" ID="{CF6CA607-D53D-406F-A883-733B0E0C6DA6}">
+							<Language>SFX</Language>
+							<AudioFile>VintageDrum13.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="827156557"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="VintageDrum13" ID="{CF6CA607-D53D-406F-A883-733B0E0C6DA6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

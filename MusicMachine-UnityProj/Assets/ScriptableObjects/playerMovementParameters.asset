@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3884a6ca954dcb047a5b10f5090a6c5a, type: 3}
+  m_Name: PlayerMovementParameters
+  m_EditorClassIdentifier: 
+  leftKey: 97
+  auxLeftKey: 276
+  rightKey: 100
+  auxRightKey: 275
+  downKey: 115
+  auxDownKey: 274
+  jumpKey: 32
+  auxJumpKey: 119
+  moveSpeed: 0.75
+  pivotTime: 0.05
+  maxMoveSpeed: 10
+  maxAcensionSpeed: 100
+  jumpStrength: 14
+  jumpReleaseVelocityNerf: 0.66
+  fallAcceleration: 3
+  peakFallAcceleration: 4
+  maximumFallSpeed: 20
+  jumpBufferTime: 0.4
+  jumpCoyoteTime: 0.1
+  groundCheckMask:
+    serializedVersion: 2
+    m_Bits: 1
+  groundCheckRelativePosition: {x: 0, y: -0.4, z: 0}
+  groundCheckSize: {x: 1, y: 0.3}
+  bumpMask:
+    serializedVersion: 2
+    m_Bits: 1
+  headCheckRelativePosition: {x: 0, y: 0.45, z: 0}
+  headCheckSize: {x: 0.77, y: 0.3}
