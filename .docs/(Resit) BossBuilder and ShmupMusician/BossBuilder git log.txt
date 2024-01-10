@@ -1,0 +1,330 @@
+commit b7d8423c10fa5bde0f38859834754117341da57b (HEAD -> main, origin/main, origin/HEAD)
+Merge: 1b2394d 3af4ec3
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Mon Jun 12 20:03:59 2023 +0100
+
+    Merge pull request #9 from orangutanrider/PlayerCharacterV0.1
+
+    Player Character V0.1
+
+commit 3af4ec3323a0c7795034143732f866b0375ab731
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Jun 12 19:58:40 2023 +0100
+
+    New scenes in moved scenes folder
+
+commit a2375998f3d9b449c6cb6e78cfe1337fe9b2cea3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Jun 12 19:57:12 2023 +0100
+
+    New Scriptable Objects
+
+commit 7f6fcb01b58b24f05a2a5994be83a822b858787a
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Jun 12 19:53:48 2023 +0100
+
+    Cinemachine Package Imported
+
+commit 1b2394d4bee82f2dcea5a9e9a3cdaf29ce827499
+Merge: a49ac09 2ed6e0a
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jun 9 23:21:08 2023 +0100
+
+    Merge pull request #8 from orangutanrider/Stun-System
+
+    Stun System + Goomba Stomp Override
+
+commit 2ed6e0aba0dba404684db32a7366d4a74d954f63
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:13:50 2023 +0100
+
+    Player scriptable objects moved
+
+commit 139d46a240d145c7ad4f2f5052a233bffa231e68
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:13:32 2023 +0100
+
+    Player folder in scriptable objects folder
+
+commit fbbb4435bba730af4f450073365318e1d7885210
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:13:10 2023 +0100
+
+    Goomba Stomp Override system implemented
+
+commit 5d4a0ceffa0714a4ea2f9b342b77c00e9cc48c7d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:11:56 2023 +0100
+
+    Stun System script changes
+
+commit 976ea7728f316d0923052ff0594ce2c23473b6b6
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:10:57 2023 +0100
+
+    Scripts for [ReadOnly] Attribute
+
+commit f25ecc54084e2d570e8c52864a9575c2e26ad107
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 23:10:31 2023 +0100
+
+    Editor folder in scripts
+
+commit a49ac099ea3c0957b62fec59365b24f150722f97
+Merge: 70ae275 de05424
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Fri Jun 9 16:51:37 2023 +0100
+
+    Merge pull request #7 from orangutanrider/HealthAndStatus-SystemRework
+
+    HealthAndStatus System Rework
+
+commit de054244db7b13b3eaba715f4927f2714d5212b7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 16:47:06 2023 +0100
+
+    Misc Minor Changes
+
+commit 67a054e7061e0c3e1c282a2108d9842da306d86f
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 16:46:44 2023 +0100
+
+    New scripts
+
+    Not completely new, it's still similar. For some of these the biggest difference is their naming.
+
+commit 86e1868437ca4ea0bc05f29d4d41ddb255058bb1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 16:45:32 2023 +0100
+
+    Scripts Moved
+
+    There are some minor syntax changes too
+
+commit 60548f81756aa53fd824da659a8dd71bc2bd862e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 16:44:14 2023 +0100
+
+    Script Deletions
+
+    They were deleted because I re-named them.
+
+commit 33a18bc209d1c275da0fb0790b6af527f023803c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Jun 9 16:31:03 2023 +0100
+
+    New Folders
+
+commit 70ae275b4b1431ff2404fb34fc568a2b331c1f6f
+Merge: 0a29c5c 6edf59d
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jun 8 20:56:03 2023 +0100
+
+    Merge pull request #6 from orangutanrider/Project-Rename
+
+    Project re-named (Missed folder re-named)
+
+commit 6edf59db243b9c506925288188a19ac053170383
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 20:53:59 2023 +0100
+
+    Missed folder re-named
+
+    The wwise project folder was what got missed.
+
+commit 0a29c5c81bfeff9e051a83f4da7a1e15112bb90f
+Merge: 61b9dac cb14cc0
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jun 8 20:35:33 2023 +0100
+
+    Merge pull request #5 from orangutanrider/Project-Rename
+
+    Project re-named
+
+commit cb14cc046b5ce5fe1633bd069b859894d6c99b01
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 20:27:19 2023 +0100
+
+    Project re-named
+
+    (+Unity player project settings edited)
+
+commit 61b9dac244b98534150512d71a7b19c85daa2d43
+Merge: fb0203c 0b4f63e
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jun 8 19:46:01 2023 +0100
+
+    Merge pull request #4 from orangutanrider/PlayerCollisionDamage-System-Base
+
+    PlayerCollisionDamage System Base
+
+commit 0b4f63e2629132adf2d5138652e27da8f97b76ab
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:39:21 2023 +0100
+
+    System Base
+
+commit fb0203c24e3ac438b3e503264ed195d64819e62d
+Merge: c71a693 36e8ff9
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Thu Jun 8 19:35:10 2023 +0100
+
+    Merge pull request #3 from orangutanrider/HealthAndStatus-SystemBase
+
+    HealthAndStatus System Base
+
+commit 36e8ff97119fd2a00c7dc06b607a9702100311a1
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:25:03 2023 +0100
+
+    Updated PlayerGizmoDisplay Headers
+
+commit 990c81f83c900104576d2087637940256f8bfacf
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:24:37 2023 +0100
+
+    StompParameters moved to their own scriptable object
+
+commit 7fd3978f7be8efe095168f015045c40708d9cf88
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:22:15 2023 +0100
+
+    PlayerHealthAndStatus script+parameters
+
+commit ca066fa5dba8dc5bb0a49fc3609bcedddccaaa39
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:18:58 2023 +0100
+
+    EnemyHealthAndStatus Interface
+
+commit 7b2320e67caab149feda132297ce2a50e5708fcc
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:16:33 2023 +0100
+
+    data struct scripts
+
+commit 43d9f40a3bdae09f3671e7c483db1d42b923dea2
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Jun 8 19:15:20 2023 +0100
+
+    Layer update
+
+commit c71a6939ae182f586375a03410b0d586e0688e80
+Merge: c1b2ad4 aafcf27
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Tue Jun 6 17:49:51 2023 +0100
+
+    Merge pull request #2 from orangutanrider/Player-Movement-Basics
+
+    Player Movement Basics
+
+commit aafcf278b5922d0e5b0bf5c8fb346e25ce6066f8
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:44:01 2023 +0100
+
+    TestScene Updates
+
+commit 1ec16a7036b45184f05752a2fce0f3e888aacfa7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:43:49 2023 +0100
+
+    ScriptableObjects created for player parameters
+
+commit 5c08aa58dd14026be647fed3858d90284d260b0e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:43:14 2023 +0100
+
+    new Layers
+
+commit b4373e17b20bc0d5f313173b7a6f45a5f180f147
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:42:43 2023 +0100
+
+    Relevant Scripts
+
+commit bb88f1b0546eac77cb874fd72b6e2d3e35e3b170
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:41:25 2023 +0100
+
+    ScriptableObjects folder
+
+commit f45a2aa014e21181727b60fd9a6181b2393819d9
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:40:59 2023 +0100
+
+    InputActions created for PlayerMovement
+
+commit df11e1d2d8ed37f2c0a6e14690c43d71ad33ff87
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:40:11 2023 +0100
+
+    unity InputSystem package imported
+
+commit 3fd84eea2c45f5e939b16a2fa81b04a8e8fa1c78
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:38:46 2023 +0100
+
+    Player scripts folder
+
+commit 6101722096328cf7a6921f82419b03009209e6af
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:38:37 2023 +0100
+
+    InputActions and Scripts folders
+
+commit 7774646cdb884228d34e3eb3af089ac3cca2ab3f
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Jun 6 17:38:20 2023 +0100
+
+    GameFiles folder
+
+commit c1b2ad4ca9c39687068d3729069a7d055824ae13
+Merge: 184038e 13add5d
+Author: Dominic Rooney <99553929+orangutanrider@users.noreply.github.com>
+Date:   Sun Jun 4 19:34:04 2023 +0100
+
+    Merge pull request #1 from orangutanrider/Wwise-Integration
+
+    Wwise integration
+
+commit 13add5d3c51aa1a532c21c021cd40468ae1561ff
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 19:31:39 2023 +0100
+
+    another automatic update
+
+commit 5336d716f8070d9522f6937e8900694382b79093
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 19:29:55 2023 +0100
+
+    soundbank update 2
+
+commit b685d88dd82ef774cd71c570361b522b18685551
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 19:28:08 2023 +0100
+
+    first soundbank
+
+commit b6f9db8734b793ae04fdc1fac4e69b5e045a3a92
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 19:18:11 2023 +0100
+
+    Wwise Integration
+
+commit 184038ed1cce0b1831d3901e543f763f96bc81c5
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 19:04:18 2023 +0100
+
+    Unity Project
+
+commit af02cd6bf95966de96c40474f9521cab71d8153c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 18:34:20 2023 +0100
+
+    Update .gitattributes
+
+commit d2f2555ed11733b4266d9c5e9134d4900477e433
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Jun 4 18:32:52 2023 +0100
+
+    Initial commit
