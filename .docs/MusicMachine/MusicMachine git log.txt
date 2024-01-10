@@ -1,0 +1,132 @@
+commit afd095fcf5c8aa2e6e53ddbeae67184d11d2a11b (HEAD -> main, origin/main, origin/HEAD)
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Apr 30 21:53:39 2023 +0100
+
+    Parameter Tweaking
+
+commit 833032a8914660592600b953e5592f6a926a3d40
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Apr 30 21:52:32 2023 +0100
+
+    Sound Import
+
+commit 3e9521252ab9097bce2d814b3aea531727a4aea4
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Apr 30 21:03:49 2023 +0100
+
+    Breathe mechanics re-worked
+
+commit 9cbcebe3cf57ee05160d815770e8966bcebf0a09
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Apr 29 01:39:50 2023 +0100
+
+    breath in rework progress
+
+commit 1c74dfafce7dd703812f9309e3ed5969838dbf16 (tag: v0.3)
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 28 20:19:59 2023 +0100
+
+    Final update before breathe-in rework
+
+commit 86ae07752f73e0a6c35bf061d7932f08bd5421c3
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Thu Apr 27 23:33:23 2023 +0100
+
+    Windmill progress
+
+commit a3367195576226f0e52e4c0257bb4d5dd67c7703
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Apr 24 00:34:46 2023 +0100
+
+    Breathe moves scale with power
+
+commit 7f9ae4372e8c6233e29c3949619b113c4a50839e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Apr 23 19:26:20 2023 +0100
+
+    Breathe movement done
+
+commit bbd1affd1b0d145a35f5c7767a4a0d290538eef8 (tag: v0.1)
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Apr 22 14:42:31 2023 +0100
+
+    final commit before project re-work
+
+commit b41250e63c0c2ba73eb6d61c550ccfc72b049af0
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 21 01:10:01 2023 +0100
+
+    Sequencer Display Functional
+
+commit 7dbe6c607bb2fa7633d95283c45cc2a91292581e
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Tue Apr 18 00:23:58 2023 +0100
+
+    Progress on rhythm display
+
+    wasted alot of time trying to make an lfo so I could make the screens flicker
+
+commit 6de6904337542aa8d4a840573b362b56f50b8ee4
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Mon Apr 17 03:01:15 2023 +0100
+
+    Sequencer Display Progress
+
+commit 07933c76d92a1f7ac107e49900a08c9422f4b53b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sun Apr 16 02:11:19 2023 +0100
+
+    Progress
+
+    Rhythm system reworked here and player character design altered.
+
+commit b15cea6f470c6afa332e8dd1cac6ec1fab890ff7
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 14 23:09:25 2023 +0100
+
+    Test
+
+    It works in engine, haven't tested re-cloning it yet.
+    Wwise seemingly auto re-formatted itself, I was going ignore some of these. However, they are different from the original, so I decided to keep them here, I'm expecting that these changes happened because it was the first time actually adding and playing the sounds.
+
+commit a5457998b9896195cd61541af58962d550e3307c
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 14 22:16:06 2023 +0100
+
+    Test sound created in wwise project
+
+commit 60ee79375569e6f949528152bd6ecaabcd4ade62
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 14 22:04:28 2023 +0100
+
+    Update .gitignore
+
+    It seems to work, haven't tested adding sounds yet though.
+
+commit b96ee6ccd480ae812aa9f0bfffd000172fb2dd69
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 14 21:37:24 2023 +0100
+
+    Wwise Project Init Commit
+
+    Unsure if these ignore and attribute settings will work, but am testing it.
+
+commit 644738c2780f8b3218f3cd34b94627c95defd03d
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Fri Apr 14 15:32:24 2023 +0100
+
+    player base
+
+    no sound elements
+
+commit e792f21b6ad0c20d40469b6ac1d0de8c079ce1c0
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Apr 8 17:41:42 2023 +0100
+
+    Init
+
+commit c4a6ba45bffdcd939d03bf41d458c11e4a27074b
+Author: Dominic Rooney <orangutanrider@gmail.com>
+Date:   Sat Apr 8 17:32:10 2023 +0100
+
+    Initial commit
