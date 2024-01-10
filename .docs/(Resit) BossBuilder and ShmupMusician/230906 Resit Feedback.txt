@@ -1,0 +1,20 @@
+========
+1 / 4.5 
+D
+
+========
+Overall Feedback
+
+Dominic, thank you for your submission. 
+
+The revised PDP provides a clear narrative of your approach to developing your previous submission for the resit. The rationale for developing the project is made clear and there are links to resources that have inspired the projects development. At several points there ar elinks to external sourcea dn it is great that the project was informed by a range of inspirational and informative sources, however, the addition of commentary that details what was learned from these resources or how they informed the development of the project would help to showcase the development of the project and your skills in your chosen specialist areas. The presentation of inspirational sources is helpful but it doesn't help to communicate learning or creative development. Please consider this further for future submissions. 
+
+The new concepts for the proejctis very appealing and considers player experience and potential for educational impact well. The addition of some research into games that aim to teach players about musical composition through games may also have added well to the research as it may have provided some tips regarding good (or poor) approaches to UX design and embedding education into a fun experience. 
+
+The portfolio is very reflective and you discuss the issues you've faced and potential solutions for them (where they might exist) very well. The use of GitHub as a development log is quite unusual but this has clearly worked well for you, as has outlining a regular working pattern. Whilst 9 to 5 does not currently work well for you, it may be worth considering how to make your regular working pattern work well with other professionals or potential clients. I mention this as a point for consideration for the future as you mention wanting to work on your own games and there may be a need to find a middle ground between your own working pattern and those of people who may help to fund your work such as clients/funders etc.  
+
+It is clear that you've learned a lost from DES310 and that has influenced you approach to this module. It also seems that a great deal of skills development has taken place in relation to programming, however, this isn't documented within the portfolio. The design, planning and development of the prototype is also not documented and whilst there is a summary on GitHub, it would have been beneficial to include the development process, learning and issues within the portfolio to help to more transparently communicate your learning and development. 
+
+The reflection demonstrates a very good understanding of the strengths and weaknesses of this process and acknowledges the issues with documentation mentioned previously within this feedback. The addition of a revised skills diamond is also helpful in showcasing skills development and assessment. 
+
+Overall, whilst this submission does not demonstrate a fully working prototype or development of game deisgn and music composition skills, it does showcase development in documentation and programming skills and showcases your development as a reflective practitioner. This learning is to be commended. Moving forward, it will be beneficial to plan projects on paper more thoroughly and to work more closely with classmates and module staff to develop, revise and iterate upon the plan and project to keep it on track. Communication, both written and through feedback and project discussions will greatly enhance the development of your skills and portfolio moving forward. 
