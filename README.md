@@ -31,3 +31,7 @@ Learning outcomes:
   3. Undertake a specialist project following self-directed tutorials and reading, leading to the generation of a portfolio of new game design work.
   4. Demonstrate the ability to assess and communicate one-s own development, and to devise effective strategies for ongoing personal improvement.
 
+#
+
+![230630 - gaming](https://github.com/orangutanrider/GDPAbertayUndergrad-DES311/assets/99553929/92460cf1-6de9-4d74-be4d-96688c1eef1f)
+
