@@ -23,6 +23,11 @@ Off the heels of DES311, I jumped into creating tools for my own purposes in Uni
 https://github.com/orangutanrider/GDPAbertayUndergrad-UnityToolsResearch
 
 ## Module Description
+It was a module for a games design and production (GDP) course, during my time at Abertay as an undergrad (2020-2024) (student number: 2002607). I was taught it in the 2nd term of year 3, in conjuction with another module DES310 (most of my time went into DES310).
+
+DES310: https://github.com/orangutanrider/AbertayUni-DES310-Moonsprite
+
+_Official module information:_
 The aim of this module is to provide students with the opportunity to undertake advanced independent study in a defined area of game design practice, with a view to developing relevant creative, technical, and professional skills.
 
 Learning outcomes:
